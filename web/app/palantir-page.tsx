@@ -1,9 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { PalantirStatCard } from "@/components/ui/palantir-stat-card"
-import { PalantirPanel } from "@/components/ui/palantir-panel"
-import { PalantirButton } from "@/components/ui/palantir-button"
+import { PalantirStatCard } from "../components/ui/palantir-stat-card"
+import { PalantirPanel } from "../components/ui/palantir-panel"
+import { PalantirButton } from "../components/ui/palantir-button"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   TrendingUp, Target, BarChart3, Zap, Database, Activity,

@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState, useMemo, useCallback } from "react"
-import { StatCard } from "@/components/ui/stat-card"
-import { GameCard } from "@/components/ui/game-card"
-import { WeeklyPerformanceChart } from "@/components/charts/weekly-performance-chart"
-import { ConfidenceChart } from "@/components/charts/confidence-chart"
+import { StatCard } from "../components/ui/stat-card"
+import { GameCard } from "../components/ui/game-card"
+import { WeeklyPerformanceChart } from "../components/charts/weekly-performance-chart"
+import { ConfidenceChart } from "../components/charts/confidence-chart"
 import { motion } from "framer-motion"
 import { TrendingUp, Target, BarChart3, Zap } from "lucide-react"
 
