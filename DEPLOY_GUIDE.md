@@ -48,3 +48,13 @@ vercel --prod
 - API endpoints return correct data
 - All imports resolve correctly
 
+## Vercel Settings Update Required
+
+**Important:** Update Vercel project settings:
+- Framework Preset: `Other` (not Next.js)
+- Root Directory: `web`
+- Build Command: `npm run build`
+- Output Directory: `.next`
+
+---
+*Last updated: $(date)*
