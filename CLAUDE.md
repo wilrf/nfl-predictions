@@ -339,6 +339,75 @@ Critical for preventing data leakage:
 - Comprehensive schemas in `database/comprehensive_schema.sql`
 - Team stats, EPA metrics, betting outcomes
 
+## Housecleaning Protocol
+
+When the user requests "commence with housecleaning" or "housecleaning scan", perform a comprehensive audit of the entire repository to ensure cleanliness and organization:
+
+### Housecleaning Checklist
+
+1. **Scan for Misplaced Code Files**
+   - Python files (`.py`) should be in: `src/`, `scripts/`, `tests/`, `database/`, `validation/`, `api/`
+   - TypeScript/JavaScript files (`.ts`, `.tsx`, `.js`) should be in: `web/`, `api/`, `scripts/`
+   - Report any code files outside expected directories
+
+2. **Scan for Misplaced Database Files**
+   - SQL files (`.sql`) should be in: `database/`, `ml_training_data/` (for imports only)
+   - Database files (`.db`, `.sqlite`) should be in: `database/` or `database/backups/`
+   - Report any database files in unexpected locations
+
+3. **Check for Duplicate Files**
+   - Use MD5 hashing to find duplicate `.py` files across directories
+   - Use MD5 hashing to find duplicate `.sql` files (excluding training data imports)
+   - Report duplicates with file paths and recommend which to keep/delete
+
+4. **Verify Large Files**
+   - Find files >1MB and verify they belong
+   - Check directory sizes to identify unexpected bloat
+   - Expected large directories:
+     - `web/web_frontend/node_modules/` (~506 MB)
+     - `saved_models/` (~9 MB)
+     - `ml_training_data/` (~5 MB)
+     - `database/` (~4 MB including backups)
+
+5. **Check File Organization**
+   - Verify documentation (`.md`) files are in `docs/` or root for important files
+   - Verify test files are in `tests/` or `web/tests/`
+   - Check for temp files, `.DS_Store`, cache files that should be removed
+
+### Housecleaning Commands
+
+```bash
+# Find misplaced Python files
+find . -name "*.py" -not -path "*/node_modules/*" -not -path "*/.next/*" -not -path "*/archive/*" -not -path "*/__pycache__/*" -not -path "*/.git/*"
+
+# Find misplaced SQL/database files
+find . -type f \( -name "*.sql" -o -name "*.db" -o -name "*.sqlite" \) -not -path "*/node_modules/*" -not -path "*/archive/*" -not -path "*/.git/*"
+
+# Find duplicate Python files (by MD5)
+find . -name "*.py" -not -path "*/node_modules/*" -not -path "*/archive/*" -not -path "*/__pycache__/*" -exec md5 {} \; | sort | uniq -d
+
+# Find large files >1MB
+find . -type f -not -path "*/node_modules/*" -not -path "*/.next/*" -not -path "*/archive/*" -not -path "*/.git/*" -size +1M -ls
+
+# Check directory sizes
+du -h -d 1 . | sort -rn | head -20
+```
+
+### Housecleaning Report Format
+
+After scanning, provide:
+1. ✅ **No Issues** sections (what's clean)
+2. ⚠️ **Issues Found** sections (what needs fixing)
+3. **Recommended Actions** with specific commands to execute
+4. **Wait for user approval** before executing any moves/deletes
+
+### Important Rules
+
+- **NEVER delete files without user approval**
+- **MOVE unique data, DELETE only confirmed duplicates**
+- **Verify duplicates with MD5 before recommending deletion**
+- **Follow FAIL FAST**: If unsure about a file's purpose, ask the user
+
 ## Performance Tips
 
 - Run data collection during off-peak hours
