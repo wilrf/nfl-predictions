@@ -364,7 +364,7 @@ When the user requests "commence with housecleaning" or "housecleaning scan", pe
    - Find files >1MB and verify they belong
    - Check directory sizes to identify unexpected bloat
    - Expected large directories:
-     - `web/web_frontend/node_modules/` (~506 MB)
+     - `web/node_modules/` (~506 MB)
      - `saved_models/` (~9 MB)
      - `ml_training_data/` (~5 MB)
      - `database/` (~4 MB including backups)
