@@ -4,38 +4,56 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**NFL Betting Suggestions System** - A professional-grade NFL betting analysis system that generates data-driven suggestions using machine learning models, with strict adherence to responsible gambling principles.
+**NFL Betting Suggestions System** - Professional-grade NFL betting analysis system that generates data-driven suggestions using machine learning models. The system provides suggestions only and never places bets.
+
+### Core Principle: FAIL FAST
+When coding, if something fails, don't try to get around it - report the error and stop immediately. No fallbacks, no synthetic data, no workarounds.
 
 ## Development Commands
 
-### Core System
+### Running the System
 ```bash
 # Main entry point - run NFL betting analysis
-cd improved_nfl_system
-python main.py
+python src/main.py
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run tests
-pytest tests/
-pytest web/tests/
-
 # Web interface
-cd web
-python launch.py
+python web_app/launch.py
 ```
 
 ### Testing
 ```bash
-# System tests (includes leakage-free backtesting)
+# Run all tests
+pytest tests/ -v
+
+# Run specific test file
 pytest tests/test_system.py -v
 
+# Run single test
+pytest tests/test_system.py::test_specific_function -v
+
 # Web integration tests
-pytest web/tests/test_integration.py -v
+pytest web_app/tests/test_integration.py -v
 
 # Playwright end-to-end tests
-pytest web/tests/test_playwright.py -v
+pytest web_app/tests/test_playwright.py -v
+```
+
+### Model Training
+```bash
+# Train XGBoost models
+python src/train_models.py
+
+# Train ensemble models
+python src/train_ensemble.py
+
+# Train Random Forest
+python src/train_random_forest.py
+
+# Compare model performance
+python src/compare_models.py
 ```
 
 ### Code Quality
@@ -44,150 +62,288 @@ pytest web/tests/test_playwright.py -v
 black .
 
 # Lint code
-pylint *.py
+pylint src/ database/
 ```
 
-## Architecture Overview
+## Architecture
 
-### Core System (`improved_nfl_system/`)
-This is an NFL betting suggestions system with strict "FAIL FAST" philosophy - no fallbacks or synthetic data.
-
-**Main Components:**
-- `main.py` - Entry point orchestrator with error handling
-- `nfl_betting_system.py` - Core betting logic with professional-grade features (CLV tracking, model versioning, etc.)
-- `data_pipeline.py` - Data collection with temporal integrity and freshness monitoring
-- `operations_runbook.py` - Weekly operations checklist and health monitoring
-
-**Key Principles:**
-- FAIL FAST: Any error stops execution completely
-- REAL DATA ONLY: Never uses synthetic/fake data
-- SUGGESTIONS ONLY: System suggests, never places bets
-- Professional-grade: CLV tracking, model versioning, risk management
-
-### Data Layer
-- `database/db_manager.py` - SQLite database operations
-- `data/nfl_data_fetcher.py` - NFL stats from nfl_data_py (free, unlimited)
-- `data/odds_client.py` - Betting odds from The Odds API (rate limited)
-
-### Enhanced Data Sources (`data_sources/`)
-- `nfl_official_client.py` - Official NFL data integration
-- `espn_client.py` - ESPN stats and metrics
-- `weather_client.py` - Weather data for game conditions
-
-### Models & Calculations
-- `models/model_integration.py` - XGBoost model integration
-- `calculators/confidence.py` - Confidence scoring (50-90 scale)
-- `calculators/margin.py` - Expected margin calculations (0-30 range)
-- `calculators/correlation.py` - Bet correlation analysis
-
-### Web Interface (`web/`)
-- `app.py` - FastAPI web application
-- `bridge/nfl_bridge.py` - Bridge between web and core system
-- `launch.py` - Web server launcher with health checks
-
-## Environment Setup
-
-### Required Files
-1. `.env` file with `ODDS_API_KEY` (from The Odds API)
-2. XGBoost models in `models/saved_models/`:
-   - `spread_model.pkl`
-   - `total_model.pkl`
-
-### Python Dependencies
-Install all dependencies:
-```bash
-cd improved_nfl_system
-pip install -r requirements.txt
+### Directory Structure
+```
+Sports Model/
+├── src/                    # Main system code
+│   ├── main.py            # Entry point orchestrator
+│   ├── operations_runbook.py  # Weekly operations checklist
+│   ├── calculators/       # Confidence, margin, correlation
+│   ├── data/             # NFL data fetcher, odds client
+│   └── data_sources/     # Enhanced data sources (ESPN, weather)
+├── database/              # Database layer
+│   ├── db_manager.py     # SQLite operations
+│   ├── schema.sql        # Database schema
+│   └── nfl_suggestions.db  # SQLite database
+├── saved_models/          # Machine learning models
+│   ├── model_integration.py  # Model loading & prediction
+│   └── saved_models/     # Pickled XGBoost models
+├── web_app/              # FastAPI web interface
+│   ├── app.py           # Web application
+│   ├── launch.py        # Server launcher
+│   ├── bridge/          # Core system integration
+│   └── tests/           # Web-specific tests
+├── tests/                # Core system tests
+├── scripts/              # Utility scripts
+├── docs/                 # Documentation
+└── logs/                 # System logs
 ```
 
-Key packages:
-- `xgboost` - Machine learning models
-- `nfl-data-py` - NFL statistics
-- `pandas`, `numpy` - Data processing
-- `fastapi`, `uvicorn` - Web interface
-- `pytest`, `playwright` - Testing
+### Key Principles
+
+**FAIL FAST Philosophy:**
+- Any error stops execution completely
+- No fallback mechanisms
+- No synthetic/fake data - real data only
+- Comprehensive logging to `logs/nfl_system.log`
+- Detailed error messages for troubleshooting
+
+**Data Sources:**
+- NFL stats: `nfl_data_py` (free, unlimited)
+- Betting odds: The Odds API (500 requests/month free tier)
+- Database: SQLite (local) + PostgreSQL via Supabase MCP (remote)
+
+**Professional Features:**
+- CLV (Closing Line Value) tracking
+- Model versioning and experiment tracking
+- Leakage-free backtesting with temporal validation
+- Kelly criterion optimization
+- Correlation analysis between bets
+
+### Database
+
+**SQLite (Local):**
+- Location: `database/nfl_suggestions.db`
+- Tables: games, odds_snapshots, suggestions, clv_tracking, correlation_warnings
+
+**Supabase (Remote via MCP):**
+- PostgreSQL database
+- 1,343 games loaded (2016-2024)
+- Accessed via MCP tools in Claude Code
+
+### Models
+
+**Location:** `saved_models/saved_models/`
+
+**Models:**
+- `spread_model.pkl` - XGBoost for spread predictions
+- `total_model.pkl` - XGBoost for totals predictions
+- `random_forest_spread_model.pkl` - Random Forest for spreads
+- `*_calibrator.pkl` - Calibration models
+- `*_metrics.json` - Model performance metrics
+- `ensemble_*_config.json` - Ensemble configurations
+
+**Feature Engineering:**
+- Team-specific stats (EPA, success rate, yards per play)
+- Situational efficiency (red zone, third down)
+- Game context (outdoor, time of day)
+- Weather and stadium factors
+- Recent form (uses temporal decay)
 
 ### API Rate Limiting
-Free tier allows 500 requests/month. Recommended schedule:
+
+The Odds API free tier: 500 requests/month
+
+**Recommended Schedule:**
 - Tuesday 6-8 AM: Opening lines (1 call)
 - Thursday 5-8 PM: Line movement (1 call)
 - Saturday 10 PM+: Pre-game update (1 call)
 - Sunday 8-11 AM: Closing lines for CLV (1 call)
 
-## Key Features
+Total: ~4 calls per week = 16 per month
 
-### Professional-Grade Components
-- **CLV Tracking**: Systematic closing line value monitoring
-- **Model Versioning**: Complete experiment tracking and governance
-- **Leakage-Free Backtesting**: Strict temporal validation with as-of data
-- **Risk Management**: Kelly optimization with correlation analysis
-- **Data Quality**: Freshness monitoring and health checks
+## Key Workflows
 
-### Operational Workflow
-- **Pre-betting Checklist**: 48-hour validation before betting (`operations_runbook.py`)
-- **Daily Health Checks**: 2-minute morning system validation
-- **Weekly Reports**: Complete CLV analysis and performance review
+### Weekly Betting Suggestions
 
-### Output Tiers
-- **Premium Picks**: 80+ confidence (exceptional opportunities)
-- **Standard Picks**: 65-79 confidence (solid opportunities)
-- **Reference Picks**: 50-64 confidence (marginal opportunities)
+1. **Tuesday Morning:** Fetch opening lines via Odds API
+2. **Wednesday-Friday:** Monitor injuries, weather updates
+3. **Saturday:** Generate betting suggestions
+4. **Sunday Pre-Game:** Capture closing lines
+5. **Monday:** Calculate CLV, update performance metrics
 
-## Database Schema
+### Pre-Betting Checklist (48 hours before games)
 
-Main tables:
-- `games` - NFL game data with stadium/weather info
-- `odds` - Betting lines with timestamp tracking
-- `suggestions` - Generated betting suggestions with metadata
-- `clv_tracking` - Closing line value analysis
+From `src/operations_runbook.py`:
+1. Verify injury data freshness (< 48 hours old)
+2. Confirm opening lines captured
+3. Check model calibration drift
+4. Validate data completeness
+5. Run leakage-free backtest
 
-## Error Handling
+### Suggestion Tiers
 
-System uses "FAIL FAST" approach:
-- Any missing data stops execution
-- No fallback mechanisms
-- Comprehensive logging to `logs/nfl_system.log`
-- Detailed error messages for troubleshooting
+- **Premium Picks** (80-90 confidence): Exceptional opportunities
+- **Standard Picks** (65-79 confidence): Solid opportunities
+- **Reference Picks** (50-64 confidence): Marginal opportunities
 
-## Documentation Files
+## Common Operations
 
-### Core Documentation
-- `README.md` - Main project documentation
-- `README_SETUP.md` - Detailed setup instructions
-- `IMPLEMENTATION_SUMMARY.md` - Technical implementation details
-- `WEB_INTERFACE_GUIDE.md` - Web interface usage guide
-- `ENHANCED_DATA_SOURCES.md` - Enhanced data source integration guide
+### Week 1 Predictions
+Week 1 uses prior season stats (with warnings) due to no current season data. Expect multiple warnings about reduced accuracy.
 
-### ML & Architecture Guides
-- `Theoretical Foundations for an Optimal NFL Spread Betting Model Architecture.pdf` - Model architecture theory
-- `NFL Algo_Model ML Dataset Training Best Practices.txt` - ML training best practices
+### CLV Tracking
+- Opening lines must be captured early in week
+- Closing lines captured Sunday morning
+- CLV calculated post-game
+- Health check: `system.check_clv_health(season, week)`
 
-## Test Files
-- `test_enhanced_sources.py` - Test enhanced data sources
-- `tests/test_system.py` - Core system tests
-- `web/tests/test_integration.py` - Web integration tests
-- `web/tests/test_playwright.py` - E2E browser tests
+### Model Validation
+- Features validated before predictions
+- Temporal validation ensures no data leakage
+- Correlation warnings applied to confidence scores
 
-## Development Notes
+### Error Handling
+All errors follow FAIL FAST:
+```python
+raise SystemError("Clear error message")  # System-level
+raise DatabaseError("Database issue")     # Database
+raise ModelError("Model problem")         # Model
+raise NFLDataError("Data fetch failed")   # NFL data
+raise OddsAPIError("API failed")          # Odds API
+```
 
-### Important Guidelines
-- All models expect specific feature formats - check `_create_features()` in `main.py`
-- Correlation warnings use threshold-based system (70%+ high, 40-70% moderate, <40% low)
-- Web interface includes real-time system health monitoring
-- Test suite includes temporal validation to prevent data leakage
-- Kitchen directory (`kitchen/ingredients/`) contains data processing components
-- Always verify data freshness before generating suggestions
-- Never modify production database without backups
-- Test all changes in isolated environment first
+## Environment Setup
 
-### Common Issues & Solutions
-- **Missing odds data**: Check API key and rate limits
-- **Model loading errors**: Ensure pickle files are in `models/saved_models/`
-- **Web interface not starting**: Check port 8000 availability
-- **Database locked**: Close other connections to SQLite
+### Required Files
+1. `.env` file with:
+   - `ODDS_API_KEY` - From The Odds API
+   - `SUPABASE_URL` - Supabase project URL
+   - `SUPABASE_KEY` - Supabase API key
 
-### Performance Tips
+2. Models in `saved_models/saved_models/`:
+   - XGBoost spread and total models
+   - Calibrator models
+   - Metrics files
+
+### Python Version
+- Requires Python 3.8+
+- Using `nfl_data_py` (deprecated, requires Python 3.10+ for `nflreadpy` migration)
+
+### Key Dependencies
+- `xgboost>=2.0.0` - Machine learning models
+- `nfl-data-py>=0.3.1` - NFL statistics
+- `pandas>=2.1.0`, `numpy>=1.24.0` - Data processing
+- `fastapi>=0.104.0`, `uvicorn>=0.24.0` - Web interface
+- `pytest>=7.4.0` - Testing
+- `scikit-learn>=1.3.0` - Model calibration
+
+## Important Guidelines
+
+### Feature Engineering
+- All models expect specific 22-feature format
+- Check `_create_features()` in `src/main.py:259-303` for feature list
+- Team-specific features are used (home/away EPA, success rates, etc.)
+- Features validated before predictions via `validate_features()`
+
+### Correlation Warnings
+Threshold-based system:
+- **High** (≥70%): 30% confidence penalty
+- **Moderate** (40-70%): 15% confidence penalty
+- **Low** (<40%): 5% confidence penalty
+
+Common correlations:
+- Same game favorite + over: 73%
+- Same game underdog + under: 68%
+- Same team spread + moneyline: 85%
+
+### Database Operations
+- Validation happens before DB inserts (not in DB layer)
+- All writes use transactions
+- Foreign keys enforced
+- Indexes on season/week, confidence, timestamps
+
+### Web Interface
+- Runs on port 8000 by default
+- FastAPI with Jinja2 templates
+- Real-time health monitoring
+- Bridge connects to core system
+
+## Common Issues & Solutions
+
+**Missing odds data:**
+- Check `ODDS_API_KEY` in `.env`
+- Verify API rate limits (500/month)
+- Check `api_usage` table for remaining credits
+
+**Model loading errors:**
+- Ensure `.pkl` files exist in `saved_models/saved_models/`
+- Check Python version compatibility
+- Verify model metrics files present
+
+**Web interface not starting:**
+- Check port 8000 availability: `lsof -i :8000`
+- Verify FastAPI/uvicorn installed
+- Check logs in `logs/`
+
+**Database locked:**
+- Close other SQLite connections
+- Check for zombie processes: `ps aux | grep python`
+- Restart if necessary
+
+**Week 1 predictions:**
+- Warnings expected (uses prior season data)
+- Accuracy significantly reduced
+- Consider skipping or reducing bet sizes
+
+**CLV tracking failures:**
+- Ensure opening lines captured Tuesday
+- Confirm closing lines captured Sunday morning
+- Run post-game CLV update if needed
+- Check `clv_tracking` table coverage
+
+## Testing Strategy
+
+### Test Categories
+1. **Unit Tests** - Individual components
+2. **Integration Tests** - System workflows
+3. **Validation Tests** - Temporal validation, no data leakage
+4. **Web Tests** - FastAPI endpoints
+5. **E2E Tests** - Playwright browser automation
+
+### Temporal Validation
+Critical for preventing data leakage:
+- Uses "as-of" dates for historical predictions
+- Week N predictions use only data through Week N-1
+- Strictly enforced in backtesting
+
+## Documentation
+
+**Core Docs:**
+- `README.md` - Project overview
+- `TECHNICAL_IMPLEMENTATION_PLAN.md` - Complete architecture
+- `docs/README_SETUP.md` - Detailed setup guide
+- `docs/WEB_INTERFACE_GUIDE.md` - Web interface usage
+
+**Reference:**
+- `docs/IMPLEMENTATION_SUMMARY.md` - Technical details
+- `docs/ENHANCED_DATA_SOURCES.md` - Data source integration
+- `docs/NFL Algo_Model ML Dataset Training Best Practices.txt` - ML best practices
+
+## Supabase Integration
+
+**MCP Tools Available:**
+- `mcp__supabase__list_tables` - List database tables
+- `mcp__supabase__execute_sql` - Run SQL queries
+- `mcp__supabase__apply_migration` - Apply migrations
+- `mcp__supabase__get_logs` - Fetch service logs
+- `mcp__supabase__get_advisors` - Security/performance checks
+
+**Data in Supabase:**
+- 1,343 games (2016-2024)
+- Comprehensive schemas in `database/comprehensive_schema.sql`
+- Team stats, EPA metrics, betting outcomes
+
+## Performance Tips
+
 - Run data collection during off-peak hours
 - Cache API responses when possible
 - Use batch processing for multiple games
-- Monitor log file size in `logs/`
+- Monitor log file sizes in `logs/`
+- Check API credits before large operations
+- Run health checks before generating suggestions
