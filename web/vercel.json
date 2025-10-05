@@ -6,14 +6,38 @@
       "use": "@vercel/next"
     },
     {
-      "src": "../web_app/app.py",
+      "src": "../api/*.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "../web_app/app.py"
+      "src": "/api/weekly_performance",
+      "dest": "../api/weekly_performance.py"
+    },
+    {
+      "src": "/api/stats",
+      "dest": "../api/stats.py"
+    },
+    {
+      "src": "/api/games",
+      "dest": "../api/games.py"
+    },
+    {
+      "src": "/api/confidence_analysis",
+      "dest": "../api/confidence_analysis.py"
+    },
+    {
+      "src": "/api/predictions",
+      "dest": "../api/predictions.py"
+    },
+    {
+      "src": "/api/health",
+      "dest": "../api/health.py"
+    },
+    {
+      "src": "/api",
+      "dest": "../api/index.py"
     },
     {
       "src": "/(.*)",
