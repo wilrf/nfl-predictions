@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useMemo, useCallback } from "react"
+import { useEffect, useState } from "react"
 import { PalantirStatCard } from "@/components/ui/palantir-stat-card"
 import { PalantirPanel } from "@/components/ui/palantir-panel"
 import { PalantirButton } from "@/components/ui/palantir-button"
@@ -50,13 +50,8 @@ const generateSparkline = (length: number = 10) => {
   return Array.from({ length }, () => Math.random() * 100)
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ||
-  (typeof window !== 'undefined' && window.location.origin.includes('vercel.app') ? '' : 'http://localhost:8000')
-
 export default function PalantirDashboard() {
   const [stats, setStats] = useState<Stats | null>(null)
-  const [games, setGames] = useState<Game[]>([])
-  const [selectedWeek, setSelectedWeek] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
   const [commandOpen, setCommandOpen] = useState(false)
 

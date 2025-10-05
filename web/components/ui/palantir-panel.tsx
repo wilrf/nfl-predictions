@@ -29,7 +29,6 @@ export function PalantirPanel({
   toolbar,
   status = "idle"
 }: PalantirPanelProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
   const [isMaximized, setIsMaximized] = useState(false)
 
   const statusIndicators = {
