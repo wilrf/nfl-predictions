@@ -20,31 +20,6 @@ interface Stats {
   high_confidence_accuracy: number
 }
 
-interface Game {
-  game_id: string
-  week: number
-  away_team: string
-  home_team: string
-  away_score?: number
-  home_score?: number
-  spread_prediction: {
-    predicted_winner: string
-    home_win_prob: number
-    away_win_prob: number
-    confidence: number
-    correct: boolean
-  }
-  total_prediction: {
-    predicted: string
-    over_prob: number
-    under_prob: number
-    confidence: number
-    correct: boolean
-  }
-  actual_winner: string
-  total_points?: number
-}
-
 // Mock data for sparklines
 const generateSparkline = (length: number = 10) => {
   return Array.from({ length }, () => Math.random() * 100)

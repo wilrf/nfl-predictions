@@ -58,8 +58,7 @@ export function PalantirPanel({
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{
         opacity: 1,
-        scale: 1,
-        height: isExpanded ? "auto" : "auto"
+        scale: 1
       }}
       transition={{
         duration: 0.3,
@@ -167,8 +166,8 @@ export function PalantirPanel({
       {/* Content */}
       <motion.div
         animate={{
-          opacity: isExpanded ? 1 : 0,
-          height: isExpanded ? "auto" : 0
+          opacity: 1,
+          height: "auto"
         }}
         transition={{
           duration: 0.3,
