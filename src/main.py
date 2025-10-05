@@ -608,21 +608,47 @@ class NFLSuggestionSystem:
             # Get opening line
             opening_line = self.db.get_opening_line(game_id, bet_type)
             if opening_line is None:
-                logger.debug(f"No opening line available for {game_id} {bet_type}")
+                logger.warning(f"⚠️  CLV tracking failed: No opening line available for {game_id} {bet_type}")
                 return
                 
             # Get closing line
             closing_data = self.db.get_closing_line(game_id, bet_type)
             if closing_data is None:
-                logger.debug(f"No closing line available for {game_id} {bet_type}")
+                logger.warning(f"⚠️  CLV tracking failed: No closing line available for {game_id} {bet_type}")
                 return
                 
             # Record CLV
             self.db.record_clv(suggestion_id, opening_line, closing_data['line'])
-            logger.info(f"Recorded CLV for suggestion {suggestion_id}: {opening_line} -> {closing_data['line']}")
+            logger.info(f"✅ Recorded CLV for suggestion {suggestion_id}: {opening_line} -> {closing_data['line']}")
             
         except DatabaseError as e:
-            logger.warning(f"Failed to track CLV for suggestion {suggestion_id}: {e}")
+            logger.warning(f"⚠️  Failed to track CLV for suggestion {suggestion_id}: {e}")
+
+    def calculate_postgame_clv(self, game_id: str) -> Dict:
+        """Calculate CLV for all suggestions for a completed game"""
+        try:
+            result = self.db.calculate_postgame_clv(game_id)
+            logger.info(f"Post-game CLV calculation for {game_id}: {result['success']}/{result['processed']} successful ({result['coverage']:.1%} coverage)")
+            return result
+        except DatabaseError as e:
+            logger.error(f"Post-game CLV calculation failed for {game_id}: {e}")
+            return {'processed': 0, 'errors': 0, 'success': 0, 'coverage': 0}
+
+    def get_clv_health_report(self) -> Dict:
+        """Get CLV tracking health report"""
+        try:
+            report = self.db.get_clv_health_report()
+            
+            # Log health status
+            if report['status'] == 'healthy':
+                logger.info(f"✅ CLV Health: {report['clv_coverage']:.1%} coverage ({report['clv_tracked']}/{report['total_suggestions']} suggestions)")
+            else:
+                logger.warning(f"⚠️  CLV Health: {report['clv_coverage']:.1%} coverage ({report['clv_tracked']}/{report['total_suggestions']} suggestions) - Needs attention")
+            
+            return report
+        except DatabaseError as e:
+            logger.error(f"CLV health report failed: {e}")
+            return {'status': 'error', 'clv_coverage': 0}
 
     def _is_outdoor_stadium(self, stadium: str) -> bool:
         """Check if stadium is outdoor"""
@@ -699,6 +725,40 @@ class NFLSuggestionSystem:
 
 def main():
     """Main entry point"""
+    import sys
+    
+    # Check for CLI arguments
+    if len(sys.argv) > 1:
+        if sys.argv[1] == '--clv-health':
+            try:
+                system = NFLSuggestionSystem()
+                report = system.get_clv_health_report()
+                
+                print("\n" + "=" * 60)
+                print("CLV TRACKING HEALTH REPORT")
+                print("=" * 60)
+                print(f"Total Suggestions: {report['total_suggestions']}")
+                print(f"CLV Tracked: {report['clv_tracked']}")
+                print(f"CLV Coverage: {report['clv_coverage']:.1%}")
+                print(f"Total Games: {report['total_games']}")
+                print(f"Games with Odds: {report['games_with_odds']}")
+                print(f"Odds Coverage: {report['odds_coverage']:.1%}")
+                print(f"Status: {report['status'].upper()}")
+                print("=" * 60)
+                
+                if report['status'] == 'needs_attention':
+                    print("\n⚠️  RECOMMENDATIONS:")
+                    if report['odds_coverage'] < 0.5:
+                        print("• Run odds fetching to capture opening/closing lines")
+                    if report['clv_coverage'] < 0.8:
+                        print("• Check for missing opening/closing line data")
+                    print("• Ensure odds fetching runs consistently")
+                
+                return
+            except Exception as e:
+                print(f"\n❌ CLV Health Check Failed: {e}")
+                sys.exit(1)
+    
     try:
         # Initialize system
         system = NFLSuggestionSystem()
@@ -708,6 +768,14 @@ def main():
 
         # Display results
         system.display_suggestions(suggestions)
+        
+        # Show CLV health status
+        try:
+            clv_report = system.get_clv_health_report()
+            if clv_report['status'] == 'needs_attention':
+                print(f"\n⚠️  CLV Health: {clv_report['clv_coverage']:.1%} coverage - Run 'python main.py --clv-health' for details")
+        except:
+            pass  # Don't fail main analysis if CLV check fails
 
     except SystemError as e:
         logger.error(f"System error: {e}")
