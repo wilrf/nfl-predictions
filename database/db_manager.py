@@ -288,12 +288,12 @@ class NFLDatabaseManager:
             raise DatabaseError(f"Failed to get latest odds: {e}")
 
     def get_opening_line(self, game_id: str, bet_type: str) -> Optional[float]:
-        """Get opening line for CLV calculation"""
+        """Get opening line for CLV calculation - uses earliest available line"""
         sql = """
             SELECT spread_home, total_over
             FROM odds_snapshots
-            WHERE game_id = ? AND snapshot_type = 'opening'
-            ORDER BY timestamp
+            WHERE game_id = ?
+            ORDER BY timestamp ASC
             LIMIT 1
         """
 
@@ -314,12 +314,12 @@ class NFLDatabaseManager:
             raise DatabaseError(f"Failed to get opening line: {e}")
 
     def get_closing_line(self, game_id: str, bet_type: str) -> Optional[Dict]:
-        """Get closing line for CLV calculation"""
+        """Get closing line for CLV calculation - uses latest available line"""
         sql = """
             SELECT spread_home, spread_away, total_over, total_under,
                    spread_odds_home, spread_odds_away, total_odds_over, total_odds_under
             FROM odds_snapshots
-            WHERE game_id = ? AND snapshot_type = 'closing'
+            WHERE game_id = ?
             ORDER BY timestamp DESC
             LIMIT 1
         """
@@ -381,6 +381,99 @@ class NFLDatabaseManager:
             self.conn.commit()
         except sqlite3.Error as e:
             raise DatabaseError(f"Failed to record CLV: {e}")
+
+    def calculate_postgame_clv(self, game_id: str) -> Dict:
+        """Calculate CLV for all suggestions for a completed game"""
+        try:
+            # Get all suggestions for this game
+            suggestions_sql = """
+                SELECT suggestion_id, game_id, bet_type, line
+                FROM suggestions
+                WHERE game_id = ? AND outcome != 'pending'
+            """
+            cursor = self.conn.execute(suggestions_sql, (game_id,))
+            suggestions = cursor.fetchall()
+            
+            if not suggestions:
+                return {'processed': 0, 'errors': 0, 'success': 0}
+            
+            processed = 0
+            errors = 0
+            success = 0
+            
+            for sugg in suggestions:
+                suggestion_id, game_id, bet_type, our_line = sugg
+                
+                try:
+                    # Get opening and closing lines
+                    opening_line = self.get_opening_line(game_id, bet_type)
+                    closing_data = self.get_closing_line(game_id, bet_type)
+                    
+                    if opening_line is None or closing_data is None:
+                        errors += 1
+                        continue
+                    
+                    # Record CLV
+                    self.record_clv(suggestion_id, opening_line, closing_data['line'])
+                    success += 1
+                    
+                except DatabaseError:
+                    errors += 1
+                
+                processed += 1
+            
+            return {
+                'processed': processed,
+                'errors': errors,
+                'success': success,
+                'coverage': success / processed if processed > 0 else 0
+            }
+            
+        except sqlite3.Error as e:
+            raise DatabaseError(f"Failed to calculate post-game CLV: {e}")
+
+    def get_clv_health_report(self) -> Dict:
+        """Get CLV tracking health report"""
+        try:
+            # Count total suggestions
+            total_sql = "SELECT COUNT(*) FROM suggestions"
+            cursor = self.conn.execute(total_sql)
+            total_suggestions = cursor.fetchone()[0]
+            
+            # Count suggestions with CLV tracked
+            clv_sql = """
+                SELECT COUNT(DISTINCT suggestion_id) 
+                FROM clv_tracking
+            """
+            cursor = self.conn.execute(clv_sql)
+            clv_tracked = cursor.fetchone()[0]
+            
+            # Count games with odds data
+            odds_sql = "SELECT COUNT(DISTINCT game_id) FROM odds_snapshots"
+            cursor = self.conn.execute(odds_sql)
+            games_with_odds = cursor.fetchone()[0]
+            
+            # Count total games
+            games_sql = "SELECT COUNT(*) FROM games"
+            cursor = self.conn.execute(games_sql)
+            total_games = cursor.fetchone()[0]
+            
+            # Calculate coverage
+            clv_coverage = clv_tracked / total_suggestions if total_suggestions > 0 else 0
+            odds_coverage = games_with_odds / total_games if total_games > 0 else 0
+            
+            return {
+                'total_suggestions': total_suggestions,
+                'clv_tracked': clv_tracked,
+                'clv_coverage': clv_coverage,
+                'total_games': total_games,
+                'games_with_odds': games_with_odds,
+                'odds_coverage': odds_coverage,
+                'status': 'healthy' if clv_coverage > 0.8 else 'needs_attention'
+            }
+            
+        except sqlite3.Error as e:
+            raise DatabaseError(f"Failed to get CLV health report: {e}")
 
     def close(self):
         """Close database connection"""
