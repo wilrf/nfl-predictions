@@ -1,0 +1,5 @@
+Fail Fast, No Fall Backs
+---
+alwaysApply: true
+---
+When Coding If something fails, dont try and get around it, just report the error back to me and stop immediatyl
