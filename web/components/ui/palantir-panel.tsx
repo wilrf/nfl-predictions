@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ReactNode } from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 import { X, Maximize2, Minimize2, MoreVertical } from "lucide-react"
 import { useState } from "react"
 

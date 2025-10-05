@@ -12,51 +12,35 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
-        # Mock confidence analysis - will connect to actual system later
-        analysis = {
-            "buckets": [
-                {
-                    "range": "80-90",
-                    "label": "Premium",
-                    "count": 12,
-                    "win_rate": 0.689,
-                    "avg_confidence": 83.2,
-                    "roi": 14.3
-                },
-                {
-                    "range": "70-79",
-                    "label": "Standard",
-                    "count": 34,
-                    "win_rate": 0.618,
-                    "avg_confidence": 74.1,
-                    "roi": 9.7
-                },
-                {
-                    "range": "60-69",
-                    "label": "Standard",
-                    "count": 45,
-                    "win_rate": 0.547,
-                    "avg_confidence": 64.8,
-                    "roi": 4.2
-                },
-                {
-                    "range": "50-59",
-                    "label": "Reference",
-                    "count": 65,
-                    "win_rate": 0.523,
-                    "avg_confidence": 54.3,
-                    "roi": 1.8
-                }
-            ],
-            "overall": {
-                "total_picks": 156,
-                "avg_confidence": 67.3,
-                "win_rate": 0.582,
-                "total_roi": 8.7
+        # Mock confidence analysis matching frontend interface
+        confidence_data = [
+            {
+                "bucket": "80-90%",
+                "min_confidence": 0.80,
+                "count": 12,
+                "accuracy": 0.689
+            },
+            {
+                "bucket": "70-79%",
+                "min_confidence": 0.70,
+                "count": 34,
+                "accuracy": 0.618
+            },
+            {
+                "bucket": "60-69%",
+                "min_confidence": 0.60,
+                "count": 45,
+                "accuracy": 0.547
+            },
+            {
+                "bucket": "50-59%",
+                "min_confidence": 0.50,
+                "count": 65,
+                "accuracy": 0.523
             }
-        }
+        ]
 
-        self.wfile.write(json.dumps(analysis).encode())
+        self.wfile.write(json.dumps(confidence_data).encode())
         return
 
     def do_OPTIONS(self):

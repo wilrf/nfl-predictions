@@ -12,16 +12,15 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
-        # Mock stats - will connect to actual system later
+        # Mock stats matching frontend interface
         stats = {
-            "total_predictions": 156,
-            "win_rate": 0.582,
-            "average_confidence": 67.3,
-            "premium_win_rate": 0.689,
-            "standard_win_rate": 0.547,
-            "total_roi": 8.7,
-            "current_week": 5,
-            "current_season": 2025
+            "total_games": 156,
+            "spread_accuracy": 0.582,
+            "total_accuracy": 0.547,
+            "spread_correct": 91,
+            "total_correct": 85,
+            "high_confidence_count": 46,
+            "high_confidence_accuracy": 0.689
         }
 
         self.wfile.write(json.dumps(stats).encode())

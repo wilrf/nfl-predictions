@@ -3,7 +3,7 @@
 import { motion, HTMLMotionProps } from "framer-motion"
 import { LucideIcon } from "lucide-react"
 import { forwardRef } from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 
 interface PalantirButtonProps extends Omit<HTMLMotionProps<"button">, "ref"> {
   variant?: "primary" | "secondary" | "ghost" | "danger" | "success"

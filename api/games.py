@@ -13,50 +13,79 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
-        # Mock game data - will connect to actual system later
-        now = datetime.utcnow()
+        # Mock game data matching frontend interface
         games = [
             {
-                "id": "2025_05_BUF_HOU",
-                "home_team": "HOU",
+                "game_id": "2025_05_BUF_HOU",
+                "week": 5,
                 "away_team": "BUF",
-                "week": 5,
-                "season": 2025,
-                "kickoff": (now + timedelta(hours=2)).isoformat() + "Z",
-                "spread_pick": "BUF -2.5",
-                "spread_confidence": 72,
-                "total_pick": "OVER 47.5",
-                "total_confidence": 68,
-                "tier": "standard",
-                "expected_margin": 3.1
+                "home_team": "HOU",
+                "away_score": None,
+                "home_score": None,
+                "spread_prediction": {
+                    "predicted_winner": "BUF",
+                    "home_win_prob": 0.28,
+                    "away_win_prob": 0.72,
+                    "confidence": 0.72,
+                    "correct": None
+                },
+                "total_prediction": {
+                    "predicted": "OVER",
+                    "over_prob": 0.68,
+                    "under_prob": 0.32,
+                    "confidence": 0.68,
+                    "correct": None
+                },
+                "actual_winner": None,
+                "total_points": None
             },
             {
-                "id": "2025_05_GB_LAR",
-                "home_team": "LAR",
+                "game_id": "2025_05_GB_LAR",
+                "week": 5,
                 "away_team": "GB",
-                "week": 5,
-                "season": 2025,
-                "kickoff": (now + timedelta(hours=5)).isoformat() + "Z",
-                "spread_pick": "GB -3.5",
-                "spread_confidence": 81,
-                "total_pick": "UNDER 48.5",
-                "total_confidence": 65,
-                "tier": "premium",
-                "expected_margin": 5.2
+                "home_team": "LAR",
+                "away_score": None,
+                "home_score": None,
+                "spread_prediction": {
+                    "predicted_winner": "GB",
+                    "home_win_prob": 0.19,
+                    "away_win_prob": 0.81,
+                    "confidence": 0.81,
+                    "correct": None
+                },
+                "total_prediction": {
+                    "predicted": "UNDER",
+                    "over_prob": 0.35,
+                    "under_prob": 0.65,
+                    "confidence": 0.65,
+                    "correct": None
+                },
+                "actual_winner": None,
+                "total_points": None
             },
             {
-                "id": "2025_05_KC_NO",
-                "home_team": "NO",
-                "away_team": "KC",
+                "game_id": "2025_05_KC_NO",
                 "week": 5,
-                "season": 2025,
-                "kickoff": (now + timedelta(hours=8)).isoformat() + "Z",
-                "spread_pick": "KC -7.5",
-                "spread_confidence": 75,
-                "total_pick": "OVER 45.5",
-                "total_confidence": 70,
-                "tier": "standard",
-                "expected_margin": 8.4
+                "away_team": "KC",
+                "home_team": "NO",
+                "away_score": None,
+                "home_score": None,
+                "spread_prediction": {
+                    "predicted_winner": "KC",
+                    "home_win_prob": 0.25,
+                    "away_win_prob": 0.75,
+                    "confidence": 0.75,
+                    "correct": None
+                },
+                "total_prediction": {
+                    "predicted": "OVER",
+                    "over_prob": 0.70,
+                    "under_prob": 0.30,
+                    "confidence": 0.70,
+                    "correct": None
+                },
+                "actual_winner": None,
+                "total_points": None
             }
         ]
 

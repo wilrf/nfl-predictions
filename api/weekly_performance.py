@@ -12,25 +12,51 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
-        # Mock weekly performance data - will connect to actual system later
-        performance = {
-            "weeks": [
-                {"week": 1, "win_rate": 0.625, "roi": 5.2, "picks": 8},
-                {"week": 2, "win_rate": 0.571, "roi": 3.8, "picks": 7},
-                {"week": 3, "win_rate": 0.667, "roi": 8.4, "picks": 9},
-                {"week": 4, "win_rate": 0.500, "roi": -1.2, "picks": 10},
-                {"week": 5, "win_rate": 0.600, "roi": 6.5, "picks": 5}
-            ],
-            "season_summary": {
-                "total_picks": 39,
-                "overall_win_rate": 0.590,
-                "overall_roi": 5.8,
-                "best_week": 3,
-                "worst_week": 4
+        # Mock weekly performance data matching frontend interface
+        weekly_data = [
+            {
+                "week": 1,
+                "games": 8,
+                "spread_accuracy": 0.625,
+                "total_accuracy": 0.500,
+                "spread_correct": 5,
+                "total_correct": 4
+            },
+            {
+                "week": 2,
+                "games": 7,
+                "spread_accuracy": 0.571,
+                "total_accuracy": 0.429,
+                "spread_correct": 4,
+                "total_correct": 3
+            },
+            {
+                "week": 3,
+                "games": 9,
+                "spread_accuracy": 0.667,
+                "total_accuracy": 0.556,
+                "spread_correct": 6,
+                "total_correct": 5
+            },
+            {
+                "week": 4,
+                "games": 10,
+                "spread_accuracy": 0.500,
+                "total_accuracy": 0.600,
+                "spread_correct": 5,
+                "total_correct": 6
+            },
+            {
+                "week": 5,
+                "games": 5,
+                "spread_accuracy": 0.600,
+                "total_accuracy": 0.400,
+                "spread_correct": 3,
+                "total_correct": 2
             }
-        }
+        ]
 
-        self.wfile.write(json.dumps(performance).encode())
+        self.wfile.write(json.dumps(weekly_data).encode())
         return
 
     def do_OPTIONS(self):
