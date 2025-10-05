@@ -1,9 +1,0 @@
-{
-  "retrain_date": "2025-10-02T13:06:50.017893",
-  "training_games": 2487,
-  "validation_games": 200,
-  "training_range": "2015-2025 week 4",
-  "spread_accuracy": 0.67,
-  "total_accuracy": 0.465,
-  "median_total": 44.0
-}
