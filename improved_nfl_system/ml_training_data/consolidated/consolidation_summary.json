@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-10-02T12:45:40.310188",
+  "total_games": 2687,
+  "seasons": {
+    "min": 2015,
+    "max": 2025,
+    "count": 11
+  },
+  "splits": {
+    "train": {
+      "games": 2351,
+      "seasons": "2015-2023",
+      "percentage": 87.5
+    },
+    "validation": {
+      "games": 272,
+      "seasons": "2024",
+      "percentage": 10.1
+    },
+    "test": {
+      "games": 64,
+      "seasons": "2025 weeks 1-4",
+      "percentage": 2.4
+    }
+  },
+  "features": {
+    "total_columns": 29,
+    "feature_columns": 17,
+    "target_columns": 3,
+    "metadata_columns": 9
+  },
+  "data_quality": {
+    "completed_games": 2687,
+    "completion_rate": 100.0,
+    "null_epa": 0
+  }
+}

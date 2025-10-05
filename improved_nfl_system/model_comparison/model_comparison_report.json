@@ -1,0 +1,460 @@
+{
+  "timestamp": "2025-10-05T15:22:56.859860",
+  "spread_comparison": {
+    "XGBoost (Raw)": {
+      "accuracy": 0.7669902912621359,
+      "log_loss": 0.5504740761058429,
+      "auc": 0.8371234670794142,
+      "brier": 0.18235102711054058
+    },
+    "XGBoost (Calibrated)": {
+      "accuracy": 0.7718446601941747,
+      "log_loss": 0.49329856195543764,
+      "auc": 0.8344564829146328,
+      "brier": 0.1627397352329103
+    },
+    "Random Forest (Raw)": {
+      "accuracy": 0.6723300970873787,
+      "log_loss": 0.6278380988654074,
+      "auc": 0.6982140731039409,
+      "brier": 0.2182997814022339
+    },
+    "Random Forest (Calibrated)": {
+      "accuracy": 0.6577669902912622,
+      "log_loss": 0.6473543577337099,
+      "auc": 0.6753542088343851,
+      "brier": 0.2274929281505598
+    }
+  },
+  "total_comparison": {
+    "XGBoost Total (Raw)": {
+      "accuracy": 0.6262135922330098,
+      "log_loss": 0.6720054945028408,
+      "auc": 0.7193479132752966,
+      "brier": 0.23946225778398883
+    },
+    "XGBoost Total (Calibrated)": {
+      "accuracy": 0.6529126213592233,
+      "log_loss": 0.6409289639736276,
+      "auc": 0.7142873994385069,
+      "brier": 0.21482626757040915
+    },
+    "Random Forest Total": {
+      "rmse": 13.25155295639899,
+      "r2": 0.04495576406336255,
+      "mae": 10.296479899746274,
+      "accuracy": 0.5339805825242718
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "is_home",
+      "importance": "0.0",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "week_number",
+      "importance": "0.04816817",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "is_divisional",
+      "importance": "0.042310864",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "epa_differential",
+      "importance": "0.122988336",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "home_off_epa",
+      "importance": "0.059996452",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "home_def_epa",
+      "importance": "0.055167302",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "away_off_epa",
+      "importance": "0.068888225",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "away_def_epa",
+      "importance": "0.055778816",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "home_off_success_rate",
+      "importance": "0.07011624",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "away_off_success_rate",
+      "importance": "0.06776993",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "home_redzone_td_pct",
+      "importance": "0.053594332",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "away_redzone_td_pct",
+      "importance": "0.054412726",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "home_third_down_pct",
+      "importance": "0.05620096",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "away_third_down_pct",
+      "importance": "0.052603055",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "home_games_played",
+      "importance": "0.061910097",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "away_games_played",
+      "importance": "0.07551031",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "is_outdoor",
+      "importance": "0.05458423",
+      "model": "XGBoost"
+    },
+    {
+      "feature": "is_home",
+      "importance": 0.0,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "week_number",
+      "importance": 0.03520422735611208,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "is_divisional",
+      "importance": 0.007016197727566308,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "home_off_epa",
+      "importance": 0.08038367901587629,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "home_def_epa",
+      "importance": 0.07019752984294776,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "away_off_epa",
+      "importance": 0.09918980434670666,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "away_def_epa",
+      "importance": 0.05958905838378747,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "epa_differential",
+      "importance": 0.1515840627657491,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "home_off_success_rate",
+      "importance": 0.08146419469828185,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "away_off_success_rate",
+      "importance": 0.1015198561587018,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "home_redzone_td_pct",
+      "importance": 0.05018155252194902,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "away_redzone_td_pct",
+      "importance": 0.05867572646809044,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "home_third_down_pct",
+      "importance": 0.06441795564052004,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "away_third_down_pct",
+      "importance": 0.07346115551347063,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "home_games_played",
+      "importance": 0.031460606902878545,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "away_games_played",
+      "importance": 0.02848629105296492,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "is_outdoor",
+      "importance": 0.006540345689136745,
+      "model": "Random Forest"
+    },
+    {
+      "feature": "is_playoff",
+      "importance": 0.0006277559152604191,
+      "model": "Random Forest"
+    }
+  ],
+  "metrics_summary": {
+    "spread_metrics": {
+      "model": "spread",
+      "timestamp": "2025-10-02T12:46:41.035875",
+      "training": {
+        "samples": 2351,
+        "features": 17,
+        "best_iteration": 261
+      },
+      "validation": {
+        "accuracy": 0.6727941176470589,
+        "log_loss": 0.6255419893303811,
+        "auc_roc": 0.7108878631550366,
+        "brier_score": 0.21753020444749105,
+        "calibrated_log_loss": 0.592777297716799
+      },
+      "test": {
+        "accuracy": 0.640625,
+        "log_loss": 0.6388354638778565
+      }
+    },
+    "total_metrics": {
+      "model": "total",
+      "timestamp": "2025-10-02T12:46:41.383494",
+      "median_total": 44.0,
+      "training": {
+        "samples": 2351,
+        "features": 17,
+        "best_iteration": 159
+      },
+      "validation": {
+        "accuracy": 0.5514705882352942,
+        "log_loss": 0.6788940017525418,
+        "auc_roc": 0.5836721418116767,
+        "brier_score": 0.24305121142411382,
+        "calibrated_log_loss": 0.6606101739002771
+      },
+      "test": {
+        "accuracy": 0.453125,
+        "log_loss": 0.713355483282857
+      }
+    },
+    "random_forest_spread_metrics": {
+      "model": "random_forest_spread",
+      "timestamp": "2025-10-05T15:21:50.942732",
+      "training": {
+        "samples": 1920,
+        "features": 18,
+        "n_estimators": 200,
+        "max_depth": 10
+      },
+      "validation": {
+        "accuracy": 0.6301703163017032,
+        "log_loss": 0.6598654957884208,
+        "auc_roc": 0.6404461828190642,
+        "brier_score": 0.2337900370546862,
+        "calibrated_log_loss": 0.573564635863399
+      },
+      "test": {
+        "accuracy": 0.6577669902912622,
+        "log_loss": 0.6473543577337099
+      },
+      "feature_importance": [
+        {
+          "feature": "epa_differential",
+          "importance": 0.1515840627657491
+        },
+        {
+          "feature": "away_off_success_rate",
+          "importance": 0.1015198561587018
+        },
+        {
+          "feature": "away_off_epa",
+          "importance": 0.09918980434670666
+        },
+        {
+          "feature": "home_off_success_rate",
+          "importance": 0.08146419469828185
+        },
+        {
+          "feature": "home_off_epa",
+          "importance": 0.08038367901587629
+        },
+        {
+          "feature": "away_third_down_pct",
+          "importance": 0.07346115551347063
+        },
+        {
+          "feature": "home_def_epa",
+          "importance": 0.07019752984294776
+        },
+        {
+          "feature": "home_third_down_pct",
+          "importance": 0.06441795564052004
+        },
+        {
+          "feature": "away_def_epa",
+          "importance": 0.05958905838378747
+        },
+        {
+          "feature": "away_redzone_td_pct",
+          "importance": 0.05867572646809044
+        },
+        {
+          "feature": "home_redzone_td_pct",
+          "importance": 0.05018155252194902
+        },
+        {
+          "feature": "week_number",
+          "importance": 0.03520422735611208
+        },
+        {
+          "feature": "home_games_played",
+          "importance": 0.031460606902878545
+        },
+        {
+          "feature": "away_games_played",
+          "importance": 0.02848629105296492
+        },
+        {
+          "feature": "is_divisional",
+          "importance": 0.007016197727566308
+        },
+        {
+          "feature": "is_outdoor",
+          "importance": 0.006540345689136745
+        },
+        {
+          "feature": "is_playoff",
+          "importance": 0.0006277559152604191
+        },
+        {
+          "feature": "is_home",
+          "importance": 0.0
+        }
+      ]
+    },
+    "random_forest_total_metrics": {
+      "model": "random_forest_total",
+      "timestamp": "2025-10-05T15:21:51.218256",
+      "training": {
+        "samples": 1920,
+        "features": 18,
+        "n_estimators": 200,
+        "max_depth": 10
+      },
+      "validation": {
+        "rmse": 13.408183157496538,
+        "r2": 0.011079580727039628,
+        "mae": 10.823184364457168,
+        "mse": 179.77937558497382
+      },
+      "test": {
+        "rmse": 13.25155295639899,
+        "r2": 0.04495576406336255,
+        "mae": 10.296479899746274,
+        "mse": 175.60365575624684
+      },
+      "feature_importance": [
+        {
+          "feature": "home_off_epa",
+          "importance": 0.09877647886090093
+        },
+        {
+          "feature": "away_off_epa",
+          "importance": 0.08727241894189004
+        },
+        {
+          "feature": "away_redzone_td_pct",
+          "importance": 0.08234788889700102
+        },
+        {
+          "feature": "away_third_down_pct",
+          "importance": 0.0794995229540039
+        },
+        {
+          "feature": "away_off_success_rate",
+          "importance": 0.0779683395897855
+        },
+        {
+          "feature": "away_def_epa",
+          "importance": 0.07481874221511026
+        },
+        {
+          "feature": "home_off_success_rate",
+          "importance": 0.07465973382967249
+        },
+        {
+          "feature": "home_third_down_pct",
+          "importance": 0.07243522622523367
+        },
+        {
+          "feature": "home_def_epa",
+          "importance": 0.07077241794273335
+        },
+        {
+          "feature": "epa_differential",
+          "importance": 0.06984565059456643
+        },
+        {
+          "feature": "home_redzone_td_pct",
+          "importance": 0.06110282638858694
+        },
+        {
+          "feature": "home_games_played",
+          "importance": 0.03883321832367277
+        },
+        {
+          "feature": "week_number",
+          "importance": 0.037473918496072
+        },
+        {
+          "feature": "away_games_played",
+          "importance": 0.035646889403877134
+        },
+        {
+          "feature": "is_outdoor",
+          "importance": 0.02780854327380079
+        },
+        {
+          "feature": "is_divisional",
+          "importance": 0.009642559517919558
+        },
+        {
+          "feature": "is_playoff",
+          "importance": 0.0010956245451732207
+        },
+        {
+          "feature": "is_home",
+          "importance": 0.0
+        }
+      ]
+    }
+  }
+}

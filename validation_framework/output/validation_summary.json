@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-10-05T16:30:26.446401",
+  "all_gates_passed": true,
+  "basic_accuracy": 0.6838235294117647,
+  "walk_forward_accuracy": 0.5384615384615384,
+  "calibration_error": 0.053823163647596706,
+  "model_stability": 0.8700239723484675,
+  "overall_assessment": {
+    "model_quality": "Good",
+    "production_ready": true,
+    "recommendations": [
+      "Consider additional feature engineering to improve accuracy",
+      "Model may need more frequent retraining"
+    ]
+  }
+}

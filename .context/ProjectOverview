@@ -1,0 +1,424 @@
+Creating `context/PROJECT_OVERVIEW.md` with the project overview content.
+
+
+[2 tools called]
+
+Creating `context/PROJECT_OVERVIEW.md`:
+
+```markdown
+# NFL Betting System - Project Overview & Context
+
+## 🏈 Project Overview
+
+The **NFL Betting Suggestions System** is a professional-grade NFL betting analysis platform that generates data-driven betting suggestions using machine learning models. The system follows strict "FAIL FAST" principles and focuses on suggestions only, never automated betting.
+
+## 🏗️ System Architecture
+
+### Core Components
+
+#### 1. Main Orchestrator (`main.py`)
+- **Entry point** for the entire system
+- **FAIL FAST** error handling
+- Coordinates data collection, model predictions, and suggestion generation
+- Comprehensive logging to `logs/nfl_system.log`
+
+#### 2. Betting Engine (`nfl_betting_system.py`)
+- **Core betting logic** with professional-grade features
+- **CLV tracking** (Closing Line Value)
+- **Model versioning** and experiment tracking
+- **Risk management** with Kelly optimization
+- **Ensemble predictions** from multiple models
+
+#### 3. Data Pipeline (`data_pipeline.py`)
+- **Data collection** from multiple sources
+- **Temporal integrity** validation
+- **Data freshness** monitoring
+- **Multi-source integration** with fallback handling
+
+#### 4. Database Layer (`database/`)
+- **SQLite database** with `db_manager.py`
+- **Comprehensive schema** in `schema.sql`
+- **FAIL FAST** validation on all operations
+- **Foreign key constraints** for data integrity
+
+### Data Sources
+
+#### Primary Sources
+- **nfl_data_py** (deprecated → migrate to nflreadpy)
+- **The Odds API** (rate-limited, $35-299/month)
+- **ESPN API** (free, real-time stats)
+- **NFL.com Official** (free, official data)
+- **Weather APIs** (free, game conditions)
+
+#### Data Volume
+- **2,687+ games** (2015-2025)
+- **1.2M+ data records** available
+- **372 play-by-play columns** per play
+- **24,814 Next Gen Stats** records
+- **49,488 injury reports**
+
+### Machine Learning Pipeline
+
+#### Models
+- **XGBoost spread model** (67% validation accuracy)
+- **XGBoost totals model** (55% validation accuracy)
+- **Isotonic regression** calibration
+- **Ensemble predictions** with confidence scoring
+
+#### Features (8 current, 50+ planned)
+- **Team performance**: EPA differential, success rate
+- **Situational**: Home field, divisional games, outdoor games
+- **Market-derived**: Line movement, CLV potential
+- **Temporal**: Week number, games played
+
+#### Training Process (`train_models.py`)
+- **Temporal validation** (train/val/test splits)
+- **Isotonic calibration** for probability scores
+- **Comprehensive metrics** (accuracy, log loss, ROC-AUC, Brier score)
+- **Model persistence** to `models/saved_models/`
+
+### Web Interface
+
+#### FastAPI Backend (`web/app.py`)
+- **Real-time suggestions** with auto-refresh
+- **System health monitoring**
+- **API endpoints** for stats and games
+- **FAIL FAST** startup validation
+
+#### Frontend Options
+1. **Basic Dashboard** (`web/`)
+   - HTMX + Tailwind CSS
+   - Chart.js visualizations
+   - Real-time updates
+
+2. **Premium Dashboard** (`web_frontend/`)
+   - Next.js 14 + TypeScript
+   - Framer Motion animations
+   - Recharts visualizations
+
+3. **Legacy App** (`web_app/`)
+   - FastAPI + HTML templates
+   - Chart.js integration
+
+### Calculators and Analysis
+
+#### Confidence Calculator (`calculators/confidence.py`)
+- **50-90 scale** confidence scoring
+- **Edge-based** calculations
+- **Model certainty** integration
+
+#### Margin Calculator (`calculators/margin.py`)
+- **Expected margin** calculations (0-30 range)
+- **Kelly sizing** optimization
+- **Bankroll management**
+
+#### Correlation Engine (`calculators/correlation.py`)
+- **Bet correlation** analysis
+- **Portfolio optimization**
+- **Risk diversification**
+
+## 📊 System Status
+
+### ✅ Operational Components
+- **Data import**: 2,687 games imported
+- **ML models**: XGBoost trained and ready
+- **Web interface**: localhost:8000
+- **Database**: SQLite with comprehensive schema
+- **API integration**: The Odds API connected
+
+### ⚠️ Current Limitations
+- **Missing playoff games** (109 games)
+- **Basic feature set** (8/50+ features)
+- **Simple validation** (no walk-forward)
+- **No CLV benchmarking**
+- **Deprecated library** (nfl_data_py)
+
+### 📈 Performance Metrics
+- **Spread accuracy**: 67% validation
+- **Totals accuracy**: 55% validation
+- **High-confidence picks**: 100% accuracy (6 picks)
+- **Data utilization**: ~7% of available data
+
+## 🚀 Development Workflow
+
+### Setup
+```bash
+# Clone and navigate
+cd improved_nfl_system
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+cp .env.example .env
+# Add ODDS_API_KEY to .env
+
+# Run system
+python main.py
+```
+
+### Training Models
+```bash
+# Train new models
+python train_models.py
+
+# Generate predictions
+python predict_week5.py
+```
+
+### Web Interface
+```bash
+# Launch web interface
+cd web
+python launch.py
+# Access: http://localhost:8000
+```
+
+### Testing
+```bash
+# Run tests
+pytest tests/ -v
+pytest web/tests/ -v
+
+# E2E tests
+pytest web/tests/test_playwright.py -v
+```
+
+## ⚙️ Configuration
+
+### Environment Variables (`.env`)
+```bash
+# Required
+ODDS_API_KEY=your_api_key_here
+
+# Optional
+DATABASE_PATH=database/nfl_suggestions.db
+MODELS_DIR=models/saved_models
+BANKROLL=10000
+MIN_EDGE=0.02
+MAX_KELLY=0.25
+```
+
+### System Configuration (`config/improved_config.json`)
+- **Model ensemble weights**
+- **Feature engineering parameters**
+- **Validation settings**
+- **Risk management rules**
+
+## 🗄️ Database Schema
+
+### Core Tables
+- `games`: NFL game data with stadium/weather
+- `odds_snapshots`: Betting lines with timestamps
+- `suggestions`: Generated suggestions with metadata
+- `clv_tracking`: Closing line value analysis
+- `team_epa_stats`: Team performance metrics
+- `game_features`: Engineered features
+
+### Data Relationships
+- Games → Odds (1:many)
+- Games → Suggestions (1:many)
+- Games → Features (1:1)
+- Teams → EPA Stats (1:many)
+
+## 🎯 Key Principles
+
+### FAIL FAST
+- **No fallbacks** or synthetic data
+- **Any error stops** execution
+- **Strict validation** on all inputs
+- **Comprehensive error messages**
+
+### Data Integrity
+- **Temporal validation** (no future data leakage)
+- **Data freshness** monitoring
+- **Source validation** and verification
+- **Comprehensive logging**
+
+### Professional-Grade Features
+- **CLV tracking** (Closing Line Value)
+- **Model versioning** and experiment tracking
+- **Risk management** with Kelly optimization
+- **Performance monitoring** and alerting
+
+## 📋 Output Tiers
+
+### Suggestion Classification
+- **Premium Picks**: 80+ confidence (exceptional opportunities)
+- **Standard Picks**: 65-79 confidence (solid opportunities)
+- **Reference Picks**: 50-64 confidence (marginal opportunities)
+
+### Confidence Scoring
+- **Edge-based** calculations
+- **Model certainty** integration
+- **Market efficiency** analysis
+- **Risk-adjusted** recommendations
+
+## 🔌 API Integration
+
+### The Odds API
+- **Rate limit**: 500 requests/month (free tier)
+- **Endpoints**: Spread, totals, moneyline
+- **Books**: 40+ sportsbooks
+- **Historical data**: 2020+
+
+### NFL Data Sources
+- **nfl_data_py**: Deprecated, migrate to nflreadpy
+- **nflreadpy**: Active replacement (same API)
+- **ESPN**: Real-time stats and scores
+- **NFL.com**: Official data and schedules
+
+## 📊 Monitoring and Logging
+
+### Logging
+- **File**: `logs/nfl_system.log`
+- **Levels**: INFO, WARNING, ERROR
+- **Rotation**: Daily
+- **Monitoring**: Real-time health checks
+
+### Performance Tracking
+- **Model accuracy** over time
+- **CLV performance** tracking
+- **API usage** monitoring
+- **System health** metrics
+
+## 🔒 Security and Compliance
+
+### Data Security
+- **API keys** in environment variables
+- **No hardcoded** credentials
+- **Secure database** connections
+- **Input validation** on all endpoints
+
+### Responsible Gambling
+- **Suggestions only** (no automated betting)
+- **Risk warnings** and disclaimers
+- **Educational focus** on analysis
+- **Compliance** with gambling regulations
+
+## 🚀 Future Development
+
+### Phase 1: Data Expansion
+- **Migrate to nflreadpy** (deprecated library)
+- **Add playoff games** (109 missing)
+- **Integrate Next Gen Stats** (24,814 records)
+- **Expand feature set** (8 → 50+ features)
+
+### Phase 2: Model Enhancement
+- **Walk-forward validation** (industry standard)
+- **CLV benchmarking** (profitability metric)
+- **Ensemble improvements** (multiple models)
+- **Hyperparameter tuning** (Bayesian optimization)
+
+### Phase 3: Production Readiness
+- **Scalability improvements** (Redis caching)
+- **Advanced monitoring** (Prometheus/Grafana)
+- **Automated deployment** (Docker/Kubernetes)
+- **Performance optimization** (async processing)
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+- **Missing odds data**: Check API key and rate limits
+- **Model loading errors**: Verify pickle files in `models/saved_models/`
+- **Web interface not starting**: Check port 8000 availability
+- **Database locked**: Close other SQLite connections
+
+### Debugging
+- **Check logs**: `logs/nfl_system.log`
+- **Validate data**: `data_quality_audit.py`
+- **Test components**: `test_models_quick.py`
+- **Health check**: `operations_runbook.py`
+
+## 📚 Documentation Structure
+
+### Core Documentation
+- `README.md`: Main project documentation
+- `README_SETUP.md`: Detailed setup instructions
+- `WEB_INTERFACE_GUIDE.md`: Web interface usage guide
+- `ENHANCED_DATA_SOURCES.md`: Enhanced data source integration
+
+### Context Documentation (`context/`)
+- `CURRENT_SYSTEM_STATUS.md`: Current system status
+- `IMPLEMENTATION_PLAN.md`: Development roadmap
+- `NFL_DATA_COMPREHENSIVE_AUDIT.md`: Data source audit
+- `BUG_ANALYSIS_REPORT.md`: Known issues and fixes
+
+### Technical Documentation (`docs/`)
+- `ClaudeResearch.md`: Research findings
+- `NFL Algo_Model ML Dataset Training Best Practices.txt`: ML best practices
+- `Theoretical Foundations for an Optimal NFL Spread Betting Model Architecture.pdf`: Model architecture
+
+## 🎯 Getting Started
+
+### For New Developers
+1. **Read this overview** to understand the system
+2. **Review `CLAUDE.md`** for development guidelines
+3. **Check `CURRENT_SYSTEM_STATUS.md`** for current state
+4. **Follow `README_SETUP.md`** for setup instructions
+5. **Run `python main.py`** to test the system
+
+### For AI Assistants
+1. **Understand FAIL FAST** principles
+2. **Check data integrity** before processing
+3. **Use existing logging** infrastructure
+4. **Follow established** error handling patterns
+5. **Validate all inputs** and outputs
+
+This system is designed for professional-grade NFL betting analysis with strict data integrity, comprehensive monitoring, and responsible gambling principles.
+```
+
+Updating `CLAUDE.md` with current details:
+
+
+[1 tool called]
+
+Created `context/PROJECT_OVERVIEW.md` and updated `CLAUDE.md`.
+
+## Files created/updated
+
+### 1. `context/PROJECT_OVERVIEW.md`
+New project overview covering:
+- System architecture and components
+- Data sources and ML pipeline
+- Web interface options
+- System status and performance metrics
+- Development workflow and setup
+- Configuration and database schema
+- Key principles (FAIL FAST, data integrity)
+- API integration and monitoring
+- Security and compliance
+- Future development roadmap
+- Troubleshooting and documentation structure
+
+### 2. Updated `CLAUDE.md`
+Refreshed with current details:
+- Corrected file paths and structure
+- Updated system status and capabilities
+- Current data sources and limitations
+- Web interface options and endpoints
+- Database schema and relationships
+- Development guidelines and troubleshooting
+- Performance metrics and monitoring
+
+## Benefits
+
+### For new AI assistants
+- Quick understanding of architecture and principles
+- Clear development guidelines and workflows
+- Current system status and limitations
+- Troubleshooting guidance
+
+### For developers
+- Complete project overview
+- Setup and configuration instructions
+- Architecture and component relationships
+- Development workflow and best practices
+
+### For project management
+- Current capabilities and limitations
+- Future development roadmap
+- Performance metrics and monitoring
+- Documentation structure
+
+These files provide a clear introduction to the NFL betting system and support onboarding and ongoing development.

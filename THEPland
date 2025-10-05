@@ -1,0 +1,1113 @@
+Analyzing the current project state to draft the implementation plan.
+
+
+[5 tools called]
+
+# **Ultimate NFL Moneyline Model: Implementation Plan**
+
+## **Current system status**
+
+### **What we have**
+- **Database**: Supabase with 18,746+ records
+- **Games**: 2,476 games (2016-2024) + 2025 through Week 4
+- **Models**: XGBoost + Random Forest ensemble (76.7% accuracy)
+- **Features**: 17-18 basic features (EPA-based)
+- **Infrastructure**: Web interface, data pipeline, model training scripts
+
+### **What we need**
+- **Data**: Export expanded features from Supabase (544 games with 48 features)
+- **Model**: Convert from spread/total to moneyline prediction
+- **Real-time**: Weekly update system with self-improvement
+- **Features**: Expand from 17 to 50+ features
+
+---
+
+## **Phase 1: Data foundation (Week 1)**
+
+### **Day 1-2: Export and prepare data**
+
+#### **1.1 Export expanded features from Supabase**
+```python
+# File: improved_nfl_system/export_expanded_features.py
+#!/usr/bin/env python3
+"""
+Export Expanded Features from Supabase for Moneyline Model Training
+Exports 544 games with 48 features for 2016-2025 training
+"""
+
+import pandas as pd
+import numpy as np
+from supabase import create_client, Client
+from pathlib import Path
+import logging
+from datetime import datetime
+import json
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class ExpandedFeatureExporter:
+    def __init__(self):
+        self.supabase_url = "https://cqslvbxsqsgjagjkpiro.supabase.co"
+        self.supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."  # Your key
+        self.supabase = create_client(self.supabase_url, self.supabase_key)
+        self.output_dir = Path('ml_training_data/moneyline')
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+    
+    def export_all_features(self):
+        """Export all expanded features from Supabase"""
+        logger.info("Exporting expanded features from Supabase...")
+        
+        # Fetch all games with expanded features
+        result = self.supabase.table('expanded_game_features').select('*').execute()
+        df = pd.DataFrame(result.data)
+        
+        logger.info(f"Exported {len(df)} games with {len(df.columns)} features")
+        
+        # Split by season for training
+        train_df = df[df['season'].isin([2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023])]
+        val_df = df[df['season'] == 2024]
+        test_df = df[df['season'] == 2025]
+        
+        # Save to CSV
+        train_df.to_csv(self.output_dir / 'train_moneyline.csv', index=False)
+        val_df.to_csv(self.output_dir / 'val_moneyline.csv', index=False)
+        test_df.to_csv(self.output_dir / 'test_moneyline.csv', index=False)
+        
+        logger.info(f"Train: {len(train_df)} games")
+        logger.info(f"Val: {len(val_df)} games")
+        logger.info(f"Test: {len(test_df)} games")
+        
+        # Create feature reference
+        self.create_feature_reference(df)
+        
+        return train_df, val_df, test_df
+    
+    def create_feature_reference(self, df):
+        """Create feature reference documentation"""
+        feature_ref = {
+            'total_features': len(df.columns),
+            'feature_columns': list(df.columns),
+            'target_column': 'home_won',
+            'data_range': {
+                'seasons': sorted(df['season'].unique().tolist()),
+                'total_games': len(df)
+            },
+            'feature_categories': {
+                'core_game': ['game_id', 'season', 'week', 'home_team', 'away_team', 'home_score', 'away_score'],
+                'ngs_passing': [col for col in df.columns if 'cpoe' in col or 'time_to_throw' in col or 'aggressiveness' in col],
+                'ngs_rushing': [col for col in df.columns if 'rush' in col and 'efficiency' in col],
+                'ngs_receiving': [col for col in df.columns if 'separation' in col or 'cushion' in col],
+                'injury': [col for col in df.columns if 'injury' in col or 'qb_status' in col],
+                'weather': [col for col in df.columns if 'temperature' in col or 'wind' in col or 'humidity' in col],
+                'advanced': [col for col in df.columns if 'epa' in col or 'efficiency' in col or 'rate' in col]
+            }
+        }
+        
+        with open(self.output_dir / 'feature_reference.json', 'w') as f:
+            json.dump(feature_ref, f, indent=2)
+        
+        logger.info("Created feature_reference.json")
+
+if __name__ == "__main__":
+    exporter = ExpandedFeatureExporter()
+    exporter.export_all_features()
+```
+
+#### **1.2 Create moneyline training script**
+```python
+# File: improved_nfl_system/train_moneyline_model.py
+#!/usr/bin/env python3
+"""
+Train Ultimate Moneyline Model
+Uses 50+ features for 2016-2025 training with real-time learning capability
+"""
+
+import pandas as pd
+import numpy as np
+import xgboost as xgb
+import lightgbm as lgb
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, brier_score_loss
+from sklearn.calibration import CalibratedClassifierCV
+from sklearn.model_selection import TimeSeriesSplit
+import pickle
+import json
+from pathlib import Path
+import logging
+from datetime import datetime
+import optuna
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class UltimateMoneylineTrainer:
+    def __init__(self):
+        self.data_dir = Path('ml_training_data/moneyline')
+        self.output_dir = Path('models/moneyline_models')
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Load feature reference
+        with open(self.data_dir / 'feature_reference.json', 'r') as f:
+            self.feature_ref = json.load(f)
+        
+        # Define feature columns (excluding metadata)
+        self.feature_cols = [col for col in self.feature_ref['feature_columns'] 
+                           if col not in ['game_id', 'season', 'week', 'home_team', 'away_team', 
+                                        'home_score', 'away_score', 'created_at']]
+        
+        logger.info(f"Using {len(self.feature_cols)} features for training")
+    
+    def train_foundation_model(self):
+        """Train foundation moneyline model on 2016-2023 data"""
+        logger.info("=" * 60)
+        logger.info("TRAINING FOUNDATION MONEYLINE MODEL")
+        logger.info("=" * 60)
+        
+        # Load data
+        train_df = pd.read_csv(self.data_dir / 'train_moneyline.csv')
+        val_df = pd.read_csv(self.data_dir / 'val_moneyline.csv')
+        
+        # Prepare features and target
+        X_train = train_df[self.feature_cols]
+        y_train = train_df['home_won']
+        X_val = val_df[self.feature_cols]
+        y_val = val_df['home_won']
+        
+        logger.info(f"Train: {len(train_df)} games, {len(self.feature_cols)} features")
+        logger.info(f"Val: {len(val_df)} games")
+        logger.info(f"Target distribution: {y_train.mean():.3f} home win rate")
+        
+        # Train multiple models
+        models = self._train_multiple_models(X_train, y_train, X_val, y_val)
+        
+        # Create ensemble
+        ensemble_model = self._create_ensemble(models, X_val, y_val)
+        
+        # Save models
+        self._save_models(models, ensemble_model)
+        
+        return ensemble_model
+    
+    def _train_multiple_models(self, X_train, y_train, X_val, y_val):
+        """Train multiple model types"""
+        models = {}
+        
+        # XGBoost
+        logger.info("Training XGBoost model...")
+        xgb_model = xgb.XGBClassifier(
+            n_estimators=2000,
+            max_depth=10,
+            learning_rate=0.01,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            reg_alpha=0.1,
+            reg_lambda=1.0,
+            random_state=42,
+            eval_metric='logloss',
+            early_stopping_rounds=50
+        )
+        xgb_model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+        models['xgboost'] = xgb_model
+        
+        # LightGBM
+        logger.info("Training LightGBM model...")
+        lgb_model = lgb.LGBMClassifier(
+            n_estimators=2000,
+            max_depth=10,
+            learning_rate=0.01,
+            num_leaves=31,
+            feature_fraction=0.8,
+            bagging_fraction=0.8,
+            random_state=42,
+            verbose=-1
+        )
+        lgb_model.fit(X_train, y_train, eval_set=[(X_val, y_val)], callbacks=[lgb.early_stopping(50)])
+        models['lightgbm'] = lgb_model
+        
+        # Random Forest
+        logger.info("Training Random Forest model...")
+        rf_model = RandomForestClassifier(
+            n_estimators=1000,
+            max_depth=15,
+            min_samples_split=10,
+            min_samples_leaf=5,
+            max_features='sqrt',
+            random_state=42,
+            n_jobs=-1
+        )
+        rf_model.fit(X_train, y_train)
+        models['random_forest'] = rf_model
+        
+        # Neural Network
+        logger.info("Training Neural Network model...")
+        nn_model = MLPClassifier(
+            hidden_layer_sizes=(512, 256, 128, 64),
+            activation='relu',
+            solver='adam',
+            alpha=0.001,
+            learning_rate='adaptive',
+            max_iter=1000,
+            random_state=42
+        )
+        nn_model.fit(X_train, y_train)
+        models['neural_network'] = nn_model
+        
+        return models
+    
+    def _create_ensemble(self, models, X_val, y_val):
+        """Create ensemble model with optimized weights"""
+        logger.info("Creating ensemble model...")
+        
+        # Get predictions from all models
+        predictions = {}
+        for name, model in models.items():
+            if name in ['xgboost', 'lightgbm']:
+                pred_proba = model.predict_proba(X_val)[:, 1]
+            else:
+                pred_proba = model.predict_proba(X_val)[:, 1]
+            predictions[name] = pred_proba
+        
+        # Optimize ensemble weights
+        best_weights = self._optimize_ensemble_weights(predictions, y_val)
+        
+        # Create ensemble model
+        ensemble_model = EnsembleModel(models, best_weights)
+        
+        return ensemble_model
+    
+    def _optimize_ensemble_weights(self, predictions, y_val):
+        """Optimize ensemble weights using validation data"""
+        model_names = list(predictions.keys())
+        best_score = float('inf')
+        best_weights = None
+        
+        # Test different weight combinations
+        for w1 in np.arange(0.1, 0.9, 0.1):
+            for w2 in np.arange(0.1, 0.9, 0.1):
+                for w3 in np.arange(0.1, 0.9, 0.1):
+                    w4 = 1 - w1 - w2 - w3
+                    if w4 > 0:
+                        weights = [w1, w2, w3, w4]
+                        ensemble_pred = sum(w * predictions[name] for w, name in zip(weights, model_names))
+                        score = log_loss(y_val, ensemble_pred)
+                        
+                        if score < best_score:
+                            best_score = score
+                            best_weights = dict(zip(model_names, weights))
+        
+        logger.info(f"Best ensemble weights: {best_weights}")
+        logger.info(f"Best validation log loss: {best_score:.4f}")
+        
+        return best_weights
+    
+    def _save_models(self, models, ensemble_model):
+        """Save all trained models"""
+        logger.info("Saving models...")
+        
+        # Save individual models
+        for name, model in models.items():
+            with open(self.output_dir / f'{name}_moneyline_model.pkl', 'wb') as f:
+                pickle.dump(model, f)
+        
+        # Save ensemble model
+        with open(self.output_dir / 'ensemble_moneyline_model.pkl', 'wb') as f:
+            pickle.dump(ensemble_model, f)
+        
+        # Save model metadata
+        metadata = {
+            'timestamp': datetime.now().isoformat(),
+            'feature_count': len(self.feature_cols),
+            'feature_columns': self.feature_cols,
+            'training_games': len(pd.read_csv(self.data_dir / 'train_moneyline.csv')),
+            'validation_games': len(pd.read_csv(self.data_dir / 'val_moneyline.csv'))
+        }
+        
+        with open(self.output_dir / 'model_metadata.json', 'w') as f:
+            json.dump(metadata, f, indent=2)
+        
+        logger.info("Models saved successfully")
+
+class EnsembleModel:
+    """Ensemble model combining multiple base models"""
+    
+    def __init__(self, models, weights):
+        self.models = models
+        self.weights = weights
+    
+    def predict_proba(self, X):
+        """Predict probabilities using ensemble"""
+        predictions = []
+        
+        for name, model in self.models.items():
+            if name in ['xgboost', 'lightgbm']:
+                pred_proba = model.predict_proba(X)[:, 1]
+            else:
+                pred_proba = model.predict_proba(X)[:, 1]
+            predictions.append(pred_proba)
+        
+        # Weighted average
+        ensemble_pred = sum(w * pred for w, pred in zip(self.weights.values(), predictions))
+        
+        # Convert to probability matrix
+        return np.column_stack([1 - ensemble_pred, ensemble_pred])
+
+if __name__ == "__main__":
+    trainer = UltimateMoneylineTrainer()
+    trainer.train_foundation_model()
+```
+
+### **Day 3-4: Validation and testing**
+
+#### **1.3 Create validation framework**
+```python
+# File: improved_nfl_system/validate_moneyline_model.py
+#!/usr/bin/env python3
+"""
+Validate Moneyline Model Performance
+Comprehensive validation with walk-forward testing
+"""
+
+import pandas as pd
+import numpy as np
+import pickle
+import json
+from pathlib import Path
+import logging
+from datetime import datetime
+from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, brier_score_loss
+from sklearn.calibration import calibration_curve
+import matplotlib.pyplot as plt
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class MoneylineValidator:
+    def __init__(self):
+        self.data_dir = Path('ml_training_data/moneyline')
+        self.models_dir = Path('models/moneyline_models')
+        
+        # Load model metadata
+        with open(self.models_dir / 'model_metadata.json', 'r') as f:
+            self.metadata = json.load(f)
+        
+        # Load ensemble model
+        with open(self.models_dir / 'ensemble_moneyline_model.pkl', 'rb') as f:
+            self.ensemble_model = pickle.load(f)
+    
+    def comprehensive_validation(self):
+        """Run comprehensive validation suite"""
+        logger.info("=" * 60)
+        logger.info("COMPREHENSIVE MONEYLINE MODEL VALIDATION")
+        logger.info("=" * 60)
+        
+        # Load test data
+        test_df = pd.read_csv(self.data_dir / 'test_moneyline.csv')
+        val_df = pd.read_csv(self.data_dir / 'val_moneyline.csv')
+        
+        # Prepare features
+        feature_cols = self.metadata['feature_columns']
+        X_test = test_df[feature_cols]
+        y_test = test_df['home_won']
+        X_val = val_df[feature_cols]
+        y_val = val_df['home_won']
+        
+        # Validation set performance
+        logger.info("\n1. Validation Set Performance:")
+        val_results = self._evaluate_model(X_val, y_val, "Validation")
+        
+        # Test set performance
+        logger.info("\n2. Test Set Performance:")
+        test_results = self._evaluate_model(X_test, y_test, "Test")
+        
+        # Walk-forward validation
+        logger.info("\n3. Walk-Forward Validation:")
+        wf_results = self._walk_forward_validation()
+        
+        # Calibration analysis
+        logger.info("\n4. Calibration Analysis:")
+        calibration_results = self._calibration_analysis(X_test, y_test)
+        
+        # Feature importance analysis
+        logger.info("\n5. Feature Importance Analysis:")
+        feature_importance = self._analyze_feature_importance()
+        
+        # Generate comprehensive report
+        report = self._generate_validation_report(val_results, test_results, wf_results, calibration_results, feature_importance)
+        
+        # Save results
+        self._save_validation_results(report)
+        
+        return report
+    
+    def _evaluate_model(self, X, y, dataset_name):
+        """Evaluate model performance on given dataset"""
+        # Get predictions
+        y_pred_proba = self.ensemble_model.predict_proba(X)[:, 1]
+        y_pred = (y_pred_proba > 0.5).astype(int)
+        
+        # Calculate metrics
+        accuracy = accuracy_score(y, y_pred)
+        logloss = log_loss(y, y_pred_proba)
+        auc = roc_auc_score(y, y_pred_proba)
+        brier = brier_score_loss(y, y_pred_proba)
+        
+        # Confidence analysis
+        confidence = np.abs(y_pred_proba - 0.5) * 2
+        high_conf_mask = confidence > 0.7
+        high_conf_accuracy = accuracy_score(y[high_conf_mask], y_pred[high_conf_mask]) if high_conf_mask.sum() > 0 else 0
+        
+        results = {
+            'dataset': dataset_name,
+            'accuracy': accuracy,
+            'log_loss': logloss,
+            'auc_roc': auc,
+            'brier_score': brier,
+            'high_confidence_accuracy': high_conf_accuracy,
+            'high_confidence_count': high_conf_mask.sum(),
+            'total_games': len(y)
+        }
+        
+        logger.info(f"  Accuracy: {accuracy:.3f} ({accuracy*100:.1f}%)")
+        logger.info(f"  Log Loss: {logloss:.3f}")
+        logger.info(f"  AUC-ROC: {auc:.3f}")
+        logger.info(f"  Brier Score: {brier:.3f}")
+        logger.info(f"  High Confidence (>70%): {high_conf_accuracy:.3f} ({high_conf_mask.sum()}/{len(y)} games)")
+        
+        return results
+    
+    def _walk_forward_validation(self):
+        """Perform walk-forward validation"""
+        # Load all data
+        train_df = pd.read_csv(self.data_dir / 'train_moneyline.csv')
+        val_df = pd.read_csv(self.data_dir / 'val_moneyline.csv')
+        test_df = pd.read_csv(self.data_dir / 'test_moneyline.csv')
+        
+        # Combine and sort by date
+        all_df = pd.concat([train_df, val_df, test_df]).sort_values(['season', 'week'])
+        
+        feature_cols = self.metadata['feature_columns']
+        results = []
+        
+        # Walk-forward validation (train on past, test on future)
+        for i in range(100, len(all_df)):
+            train_data = all_df.iloc[:i]
+            test_data = all_df.iloc[i:i+1]
+            
+            if len(test_data) == 0:
+                continue
+            
+            # Train model on historical data
+            X_train = train_data[feature_cols]
+            y_train = train_data['home_won']
+            X_test = test_data[feature_cols]
+            y_test = test_data['home_won']
+            
+            # Quick retrain (simplified for validation)
+            from sklearn.ensemble import RandomForestClassifier
+            model = RandomForestClassifier(n_estimators=100, random_state=42)
+            model.fit(X_train, y_train)
+            
+            # Predict
+            y_pred = model.predict(X_test)[0]
+            y_actual = y_test.iloc[0]
+            
+            results.append({
+                'game_id': test_data['game_id'].iloc[0],
+                'season': test_data['season'].iloc[0],
+                'week': test_data['week'].iloc[0],
+                'predicted': y_pred,
+                'actual': y_actual,
+                'correct': y_pred == y_actual
+            })
+        
+        # Calculate walk-forward accuracy
+        wf_accuracy = sum(r['correct'] for r in results) / len(results)
+        
+        logger.info(f"  Walk-Forward Accuracy: {wf_accuracy:.3f} ({wf_accuracy*100:.1f}%)")
+        logger.info(f"  Games Tested: {len(results)}")
+        
+        return {
+            'accuracy': wf_accuracy,
+            'games_tested': len(results),
+            'results': results
+        }
+    
+    def _calibration_analysis(self, X, y):
+        """Analyze model calibration"""
+        y_pred_proba = self.ensemble_model.predict_proba(X)[:, 1]
+        
+        # Calculate calibration curve
+        fraction_of_positives, mean_predicted_value = calibration_curve(y, y_pred_proba, n_bins=10)
+        
+        # Calculate calibration error
+        calibration_error = np.mean(np.abs(fraction_of_positives - mean_predicted_value))
+        
+        logger.info(f"  Calibration Error: {calibration_error:.3f}")
+        
+        return {
+            'calibration_error': calibration_error,
+            'fraction_of_positives': fraction_of_positives.tolist(),
+            'mean_predicted_value': mean_predicted_value.tolist()
+        }
+    
+    def _analyze_feature_importance(self):
+        """Analyze feature importance across models"""
+        # Load individual models
+        models = {}
+        for model_name in ['xgboost', 'lightgbm', 'random_forest']:
+            try:
+                with open(self.models_dir / f'{model_name}_moneyline_model.pkl', 'rb') as f:
+                    models[model_name] = pickle.load(f)
+            except FileNotFoundError:
+                continue
+        
+        feature_importance = {}
+        feature_cols = self.metadata['feature_columns']
+        
+        for name, model in models.items():
+            if hasattr(model, 'feature_importances_'):
+                importance = model.feature_importances_
+                feature_importance[name] = dict(zip(feature_cols, importance))
+        
+        # Calculate average importance
+        if feature_importance:
+            avg_importance = {}
+            for feature in feature_cols:
+                avg_importance[feature] = np.mean([imp.get(feature, 0) for imp in feature_importance.values()])
+            
+            # Sort by importance
+            sorted_features = sorted(avg_importance.items(), key=lambda x: x[1], reverse=True)
+            
+            logger.info("  Top 10 Most Important Features:")
+            for i, (feature, importance) in enumerate(sorted_features[:10]):
+                logger.info(f"    {i+1}. {feature}: {importance:.4f}")
+        
+        return feature_importance
+    
+    def _generate_validation_report(self, val_results, test_results, wf_results, calibration_results, feature_importance):
+        """Generate comprehensive validation report"""
+        report = {
+            'timestamp': datetime.now().isoformat(),
+            'model_metadata': self.metadata,
+            'validation_results': val_results,
+            'test_results': test_results,
+            'walk_forward_results': wf_results,
+            'calibration_results': calibration_results,
+            'feature_importance': feature_importance,
+            'summary': {
+                'validation_accuracy': val_results['accuracy'],
+                'test_accuracy': test_results['accuracy'],
+                'walk_forward_accuracy': wf_results['accuracy'],
+                'calibration_error': calibration_results['calibration_error'],
+                'overall_performance': 'Excellent' if test_results['accuracy'] > 0.85 else 'Good' if test_results['accuracy'] > 0.75 else 'Needs Improvement'
+            }
+        }
+        
+        return report
+    
+    def _save_validation_results(self, report):
+        """Save validation results"""
+        output_file = self.models_dir / 'validation_report.json'
+        with open(output_file, 'w') as f:
+            json.dump(report, f, indent=2)
+        
+        logger.info(f"Validation report saved to {output_file}")
+
+if __name__ == "__main__":
+    validator = MoneylineValidator()
+    validator.comprehensive_validation()
+```
+
+### **Day 5: Performance optimization**
+
+#### **1.4 Hyperparameter optimization**
+```python
+# File: improved_nfl_system/optimize_moneyline_model.py
+#!/usr/bin/env python3
+"""
+Optimize Moneyline Model Hyperparameters
+Uses Optuna for Bayesian optimization
+"""
+
+import pandas as pd
+import numpy as np
+import optuna
+import xgboost as xgb
+import lightgbm as lgb
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score, TimeSeriesSplit
+from sklearn.metrics import accuracy_score, log_loss
+import pickle
+import json
+from pathlib import Path
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class MoneylineOptimizer:
+    def __init__(self):
+        self.data_dir = Path('ml_training_data/moneyline')
+        self.output_dir = Path('models/moneyline_models')
+        
+        # Load data
+        train_df = pd.read_csv(self.data_dir / 'train_moneyline.csv')
+        val_df = pd.read_csv(self.data_dir / 'val_moneyline.csv')
+        
+        # Prepare features
+        with open(self.output_dir / 'model_metadata.json', 'r') as f:
+            metadata = json.load(f)
+        
+        self.feature_cols = metadata['feature_columns']
+        self.X_train = train_df[self.feature_cols]
+        self.y_train = train_df['home_won']
+        self.X_val = val_df[self.feature_cols]
+        self.y_val = val_df['home_won']
+        
+        logger.info(f"Optimizing with {len(self.X_train)} training samples")
+    
+    def optimize_xgboost(self, n_trials=100):
+        """Optimize XGBoost hyperparameters"""
+        logger.info("Optimizing XGBoost hyperparameters...")
+        
+        def objective(trial):
+            params = {
+                'n_estimators': trial.suggest_int('n_estimators', 500, 3000),
+                'max_depth': trial.suggest_int('max_depth', 6, 15),
+                'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3),
+                'subsample': trial.suggest_float('subsample', 0.6, 1.0),
+                'colsample_bytree': trial.suggest_float('colsample_bytree', 0.6, 1.0),
+                'reg_alpha': trial.suggest_float('reg_alpha', 0, 1.0),
+                'reg_lambda': trial.suggest_float('reg_lambda', 0, 1.0),
+                'random_state': 42
+            }
+            
+            model = xgb.XGBClassifier(**params)
+            
+            # Use time series cross-validation
+            tscv = TimeSeriesSplit(n_splits=5)
+            scores = cross_val_score(model, self.X_train, self.y_train, cv=tscv, scoring='accuracy')
+            
+            return scores.mean()
+        
+        study = optuna.create_study(direction='maximize')
+        study.optimize(objective, n_trials=n_trials)
+        
+        logger.info(f"Best XGBoost parameters: {study.best_params}")
+        logger.info(f"Best XGBoost score: {study.best_value:.4f}")
+        
+        return study.best_params
+    
+    def optimize_lightgbm(self, n_trials=100):
+        """Optimize LightGBM hyperparameters"""
+        logger.info("Optimizing LightGBM hyperparameters...")
+        
+        def objective(trial):
+            params = {
+                'n_estimators': trial.suggest_int('n_estimators', 500, 3000),
+                'max_depth': trial.suggest_int('max_depth', 6, 15),
+                'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3),
+                'num_leaves': trial.suggest_int('num_leaves', 31, 127),
+                'feature_fraction': trial.suggest_float('feature_fraction', 0.6, 1.0),
+                'bagging_fraction': trial.suggest_float('bagging_fraction', 0.6, 1.0),
+                'random_state': 42,
+                'verbose': -1
+            }
+            
+            model = lgb.LGBMClassifier(**params)
+            
+            # Use time series cross-validation
+            tscv = TimeSeriesSplit(n_splits=5)
+            scores = cross_val_score(model, self.X_train, self.y_train, cv=tscv, scoring='accuracy')
+            
+            return scores.mean()
+        
+        study = optuna.create_study(direction='maximize')
+        study.optimize(objective, n_trials=n_trials)
+        
+        logger.info(f"Best LightGBM parameters: {study.best_params}")
+        logger.info(f"Best LightGBM score: {study.best_value:.4f}")
+        
+        return study.best_params
+    
+    def optimize_ensemble_weights(self):
+        """Optimize ensemble weights"""
+        logger.info("Optimizing ensemble weights...")
+        
+        # Load trained models
+        models = {}
+        for model_name in ['xgboost', 'lightgbm', 'random_forest']:
+            try:
+                with open(self.output_dir / f'{model_name}_moneyline_model.pkl', 'rb') as f:
+                    models[model_name] = pickle.load(f)
+            except FileNotFoundError:
+                continue
+        
+        if not models:
+            logger.error("No trained models found for ensemble optimization")
+            return None
+        
+        def objective(trial):
+            # Generate weights for each model
+            weights = []
+            for i, model_name in enumerate(models.keys()):
+                if i == len(models) - 1:
+                    # Last weight is 1 - sum of others
+                    weight = 1 - sum(weights)
+                else:
+                    weight = trial.suggest_float(f'weight_{model_name}', 0.1, 0.9)
+                weights.append(weight)
+            
+            # Normalize weights
+            weights = np.array(weights)
+            weights = weights / weights.sum()
+            
+            # Get predictions from each model
+            predictions = []
+            for model in models.values():
+                pred_proba = model.predict_proba(self.X_val)[:, 1]
+                predictions.append(pred_proba)
+            
+            # Weighted ensemble prediction
+            ensemble_pred = sum(w * pred for w, pred in zip(weights, predictions))
+            
+            # Calculate log loss
+            score = log_loss(self.y_val, ensemble_pred)
+            
+            return score
+        
+        study = optuna.create_study(direction='minimize')
+        study.optimize(objective, n_trials=50)
+        
+        # Create weight dictionary
+        model_names = list(models.keys())
+        weights = {}
+        for i, model_name in enumerate(model_names):
+            if i == len(model_names) - 1:
+                weight = 1 - sum(weights.values())
+            else:
+                weight = study.best_params[f'weight_{model_name}']
+            weights[model_name] = weight
+        
+        logger.info(f"Best ensemble weights: {weights}")
+        logger.info(f"Best ensemble score: {study.best_value:.4f}")
+        
+        return weights
+    
+    def run_full_optimization(self):
+        """Run full optimization pipeline"""
+        logger.info("=" * 60)
+        logger.info("FULL MONEYLINE MODEL OPTIMIZATION")
+        logger.info("=" * 60)
+        
+        # Optimize individual models
+        xgb_params = self.optimize_xgboost(n_trials=50)
+        lgb_params = self.optimize_lightgbm(n_trials=50)
+        
+        # Optimize ensemble weights
+        ensemble_weights = self.optimize_ensemble_weights()
+        
+        # Save optimization results
+        optimization_results = {
+            'timestamp': pd.Timestamp.now().isoformat(),
+            'xgboost_params': xgb_params,
+            'lightgbm_params': lgb_params,
+            'ensemble_weights': ensemble_weights
+        }
+        
+        with open(self.output_dir / 'optimization_results.json', 'w') as f:
+            json.dump(optimization_results, f, indent=2)
+        
+        logger.info("Optimization complete!")
+        return optimization_results
+
+if __name__ == "__main__":
+    optimizer = MoneylineOptimizer()
+    optimizer.run_full_optimization()
+```
+
+---
+
+## **Phase 2: Real-time learning system (Week 2)**
+
+### **Day 1-2: Real-time pipeline**
+
+#### **2.1 Create real-time learning system**
+```python
+# File: improved_nfl_system/real_time_learning_system.py
+#!/usr/bin/env python3
+"""
+Real-Time Learning System for Moneyline Model
+Updates model after each NFL week with self-improvement
+"""
+
+import pandas as pd
+import numpy as np
+import pickle
+import json
+from pathlib import Path
+import logging
+from datetime import datetime, timedelta
+from sklearn.metrics import accuracy_score, log_loss
+from supabase import create_client, Client
+import requests
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class RealTimeLearningSystem:
+    def __init__(self):
+        self.supabase_url = "https://cqslvbxsqsgjagjkpiro.supabase.co"
+        self.supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."  # Your key
+        self.supabase = create_client(self.supabase_url, self.supabase_key)
+        
+        self.models_dir = Path('models/moneyline_models')
+        self.data_dir = Path('ml_training_data/moneyline')
+        self.learning_dir = Path('learning_data')
+        self.learning_dir.mkdir(exist_ok=True)
+        
+        # Load foundation model
+        with open(self.models_dir / 'ensemble_moneyline_model.pkl', 'rb') as f:
+            self.foundation_model = pickle.load(f)
+        
+        # Load model metadata
+        with open(self.models_dir / 'model_metadata.json', 'r') as f:
+            self.metadata = json.load(f)
+        
+        self.feature_cols = self.metadata['feature_columns']
+        self.adaptation_threshold = 0.05  # 5% accuracy drop triggers retraining
+        
+        # Learning state
+        self.learning_state = self._load_learning_state()
+    
+    def weekly_update_cycle(self, week_number):
+        """Execute complete weekly update cycle"""
+        logger.info("=" * 60)
+        logger.info(f"WEEKLY UPDATE CYCLE - WEEK {week_number}")
+        logger.info("=" * 60)
+        
+        # Step 1: Collect week's games
+        week_games = self._collect_week_games(week_number)
+        
+        # Step 2: Analyze predictions vs actuals
+        analysis = self._analyze_week_predictions(week_games)
+        
+        # Step 3: Update learning state
+        self._update_learning_state(analysis)
+        
+        # Step 4: Check if retraining is needed
+        if self._should_retrain():
+            self._retrain_model()
+        
+        # Step 5: Update feature importance
+        self._update_feature_importance(analysis)
+        
+        # Step 6: Generate improvement report
+        report = self._generate_improvement_report(analysis)
+        
+        # Step 7: Prepare for next week
+        self._prepare_next_week(week_number + 1)
+        
+        return report
+    
+    def _collect_week_games(self, week_number):
+        """Collect games for the specified week"""
+        logger.info(f"Collecting games for week {week_number}...")
+        
+        # Query Supabase for week's games
+        result = self.supabase.table('expanded_game_features').select('*').eq('week', week_number).execute()
+        week_games = pd.DataFrame(result.data)
+        
+        logger.info(f"Found {len(week_games)} games for week {week_number}")
+        
+        # Store for analysis
+        week_games.to_csv(self.learning_dir / f'week_{week_number}_games.csv', index=False)
+        
+        return week_games
+    
+    def _analyze_week_predictions(self, week_games):
+        """Analyze predictions vs actual results"""
+        logger.info("Analyzing week predictions...")
+        
+        if len(week_games) == 0:
+            return {'error': 'No games found for analysis'}
+        
+        # Get model predictions
+        X = week_games[self.feature_cols]
+        y_pred_proba = self.foundation_model.predict_proba(X)[:, 1]
+        y_pred = (y_pred_proba > 0.5).astype(int)
+        
+        # Get actual results
+        y_actual = week_games['home_won']
+        
+        # Calculate metrics
+        accuracy = accuracy_score(y_actual, y_pred)
+        logloss = log_loss(y_actual, y_pred_proba)
+        
+        # Analyze errors
+        errors = self._analyze_prediction_errors(week_games, y_pred, y_actual, y_pred_proba)
+        
+        # Confidence analysis
+        confidence = np.abs(y_pred_proba - 0.5) * 2
+        high_conf_mask = confidence > 0.7
+        high_conf_accuracy = accuracy_score(y_actual[high_conf_mask], y_pred[high_conf_mask]) if high_conf_mask.sum() > 0 else 0
+        
+        analysis = {
+            'week': week_games['week'].iloc[0] if len(week_games) > 0 else None,
+            'total_games': len(week_games),
+            'accuracy': accuracy,
+            'log_loss': logloss,
+            'high_confidence_accuracy': high_conf_accuracy,
+            'high_confidence_count': high_conf_mask.sum(),
+            'errors': errors,
+            'confidence_distribution': {
+                'mean': confidence.mean(),
+                'std': confidence.std(),
+                'min': confidence.min(),
+                'max': confidence.max()
+            }
+        }
+        
+        logger.info(f"Week {analysis['week']} Analysis:")
+        logger.info(f"  Accuracy: {accuracy:.3f} ({accuracy*100:.1f}%)")
+        logger.info(f"  Log Loss: {logloss:.3f}")
+        logger.info(f"  High Confidence Accuracy: {high_conf_accuracy:.3f}")
+        logger.info(f"  Total Games: {len(week_games)}")
+        
+        return analysis
+    
+    def _analyze_prediction_errors(self, week_games, y_pred, y_actual, y_pred_proba):
+        """Analyze where predictions went wrong"""
+        errors = []
+        
+        for i, (pred, actual, proba) in enumerate(zip(y_pred, y_actual, y_pred_proba)):
+            if pred != actual:
+                game = week_games.iloc[i]
+                error = {
+                    'game_id': game['game_id'],
+                    'home_team': game['home_team'],
+                    'away_team': game['away_team'],
+                    'predicted': pred,
+                    'actual': actual,
+                    'probability': proba,
+                    'confidence': abs(proba - 0.5) * 2,
+                    'error_type': self._classify_error(pred, actual, proba),
+                    'features': {
+                        'spread_line': game.get('spread_line', 0),
+                        'total_line': game.get('total_line', 0),
+                        'home_cpoe': game.get('home_cpoe', 0),
+                        'away_cpoe': game.get('away_cpoe', 0),
+                        'home_qb_status': game.get('home_qb_status', 0),
+                        'away_qb_status': game.get('away_qb_status', 0)
+                    }
+                }
+                errors.append(error)
+        
+        # Analyze error patterns
+        error_patterns = self._identify_error_patterns(errors)
+        
+        return {
+            'errors': errors,
+            'error_count': len(errors),
+            'error_rate': len(errors) / len(week_games),
+            'patterns': error_patterns
+        }
+    
+    def _classify_error(self, pred, actual, proba):
+        """Classify error type"""
+        if pred == 1 and actual == 0:
+            return 'overconfident_home' if proba > 0.7 else 'wrong_home'
+        elif pred == 0 and actual == 1:
+            return 'overconfident_away' if proba < 0.3 else 'wrong_away'
+        else:
+            return 'correct'
+    
+    def _identify_error_patterns(self, errors):
+        """Identify common error patterns"""
+        if not errors:
+            return {}
+        
+        patterns = {
+            'high_confidence_errors': len([e for e in errors if e['confidence'] > 0.7]),
+            'home_team_errors': len([e for e in errors if e['predicted'] == 1]),
+            'away_team_errors': len([e for e in errors if e['predicted'] == 0]),
+            'injury_related_errors': len([e for e in errors if e['features']['home_qb_status'] == 0 or e['features']['away_qb_status'] == 0]),
+            'close_game_errors': len([e for e in errors if abs(e['features']['spread_line']) < 3])
+        }
+        
+        return patterns
+    
+    def _update_learning_state(self, analysis):
+        """Update learning state with new analysis"""
+        if 'error' in analysis:
+            return
+        
+        # Add to learning history
+        self.learning_state['weekly_history'].append(analysis)
+        
+        # Update running averages
+        recent_weeks = self.learning_state['weekly_history'][-4:]  # Last 4 weeks
+        if len(recent_weeks) >= 2:
+            recent_accuracy = np.mean([w['accuracy'] for w in recent_weeks])
+            self.learning_state['recent_accuracy'] = recent_accuracy
+            
+            # Check for performance degradation
+            if len(self.learning_state['weekly_history']) >= 4:
+                older_weeks = self.learning_state['weekly_history'][-8:-4]
+                older_accuracy = np.mean([w['accuracy'] for w in older_weeks])
+                accuracy_drop = older_accuracy - recent_accuracy
+                self.learning_state['accuracy_drop'] = accuracy_drop
+        
+        # Save updated state
+        self._save_learning_state()
+    
+    def _should_retrain(self):
+        """Determine if model should be retrained"""
+        if 'accuracy_drop' not in self.learning_state:
+            return False
+        
+        return self.learning_state['accuracy_drop'] > self.adaptation_threshold
+    
+    def _retrain_model(self):
+        """Retrain model with updated data"""
+        logger.info("Retraining model due to performance degradation...")
+        
+        # Load all available data
+        train_df = pd.read_csv(self.data_dir / 'train_moneyline.csv')
+        val_df = pd.read_csv(self.data_dir / 'val_moneyline.csv')
+        
+        # Add recent weeks to training data
+        recent_games = []
+        for week_data in self.learning_state['weekly_history'][-4:]:  # Last 4 weeks
+            week_file = self.learning_dir / f'week_{week_data["week"]}_games.csv'
+            if week_file.exists():
+                week_df = pd.read_csv(week_file)
+                recent_games.append(week_df)
+        
+        if recent_games:
+            recent_df = pd.concat(recent_games, ignore_index=True)
+            updated_train_df = pd.concat([train_df, recent_df], ignore_index=True)
+            
+            # Retrain model
+            from train_moneyline_model import UltimateMoneylineTrainer
+            trainer = UltimateMoneylineTrainer()
+            trainer.data_dir = self.data_dir
+            
+            # Update training data
+            updated_train_df.to_csv(self.data_dir / 'train_moneyline.csv', index=False)
+            
+            # Retrain
+            new_model = trainer.train_foundation_model()
+            
+            # Update foundation model
+            self.foundation_model = new_model
+            
+            logger.info("Model retrained successfully")
+    
+    def _update_feature_importance(self, analysis):
+        """Update feature importance based on error analysis"""
+        # Analyze which features were most problematic in errors
+        if 'errors' not in analysis or not analysis['errors']:
+            return

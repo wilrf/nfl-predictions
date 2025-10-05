@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Error {{ code }} - NFL Betting Suggestions{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto text-center">
+    <div class="mb-8">
+        {% if code == 404 %}
+            <div class="text-8xl mb-4">🔍</div>
+            <h1 class="text-4xl font-bold mb-4">Page Not Found</h1>
+            <p class="text-gray-400 text-lg">The page you're looking for doesn't exist.</p>
+        {% elif code == 500 %}
+            <div class="text-8xl mb-4">⚠️</div>
+            <h1 class="text-4xl font-bold mb-4">Internal Server Error</h1>
+            <p class="text-gray-400 text-lg">Something went wrong on our end. Please try again later.</p>
+        {% else %}
+            <div class="text-8xl mb-4">❌</div>
+            <h1 class="text-4xl font-bold mb-4">Error {{ code }}</h1>
+            <p class="text-gray-400 text-lg">{{ error }}</p>
+        {% endif %}
+    </div>
+
+    <div class="space-y-4">
+        <a href="/" class="inline-block bg-primary hover:bg-green-600 px-6 py-3 rounded font-medium transition-colors">
+            🏠 Back to Dashboard
+        </a>
+
+        <div class="text-sm text-gray-500">
+            <p>If this problem persists, please check:</p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>Your internet connection</li>
+                <li>API key configuration</li>
+                <li>System logs for more details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

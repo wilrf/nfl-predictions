@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL ML Predictions - Live Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-value {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .chart-title {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .games-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .week-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .week-tab {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .week-tab:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .week-tab.active {
+            background: #fff;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .games-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .team {
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .team-score {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .prediction {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .prediction-winner {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .probability-bar {
+            width: 200px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+
+        .probability-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: width 0.5s ease;
+        }
+
+        .correct {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .wrong {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.5em;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏈 NFL ML Predictions Dashboard</h1>
+            <p class="subtitle">XGBoost Machine Learning Model • Real-time Predictions • 2025 Season</p>
+        </header>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading statistics...</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <div class="chart-container">
+                <h3 class="chart-title">📊 Weekly Performance</h3>
+                <canvas id="weeklyChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">🎯 Confidence vs Accuracy</h3>
+                <canvas id="confidenceChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Games Section -->
+        <div class="games-section">
+            <h2 class="section-title">Game Predictions & Results</h2>
+
+            <div class="week-tabs" id="weekTabs">
+                <div class="loading">Loading weeks...</div>
+            </div>
+
+            <div class="games-grid" id="gamesGrid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading games...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Powered by XGBoost ML • Trained on 2,351 games (2015-2023) • 64.1% Accuracy</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Data: nfl_data_py • Models: Isotonic Calibrated Probabilities</p>
+        </footer>
+    </div>
+
+    <script>
+        let allGames = [];
+        let currentWeek = 1;
+
+        // Load stats
+        async function loadStats() {
+            const response = await fetch('/api/stats');
+            const stats = await response.json();
+
+            const statsHtml = `
+                <div class="stat-card">
+                    <div class="stat-label">Total Games</div>
+                    <div class="stat-value">${stats.total_games}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Spread Accuracy</div>
+                    <div class="stat-value">${(stats.spread_accuracy * 100).toFixed(1)}%</div>
+                    <div style="font-size: 0.9em; opacity: 0.8;">${stats.spread_correct}/${stats.total_games} correct</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Accuracy</div>
+                    <div class="stat-value">${(stats.total_accuracy * 100).toFixed(1)}%</div>
+                    <div style="font-size: 0.9em; opacity: 0.8;">${stats.total_correct}/${stats.total_games} correct</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">High Confidence</div>
+                    <div class="stat-value">${(stats.high_confidence_accuracy * 100).toFixed(1)}%</div>
+                    <div style="font-size: 0.9em; opacity: 0.8;">${stats.high_confidence_count} games</div>
+                </div>
+            `;
+
+            document.getElementById('statsGrid').innerHTML = statsHtml;
+        }
+
+        // Load weekly performance chart
+        async function loadWeeklyChart() {
+            const response = await fetch('/api/weekly_performance');
+            const data = await response.json();
+
+            const ctx = document.getElementById('weeklyChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(w => `Week ${w.week}`),
+                    datasets: [{
+                        label: 'Spread Accuracy',
+                        data: data.map(w => w.spread_accuracy * 100),
+                        borderColor: '#4CAF50',
+                        backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'Total Accuracy',
+                        data: data.map(w => w.total_accuracy * 100),
+                        borderColor: '#2196F3',
+                        backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load confidence chart
+        async function loadConfidenceChart() {
+            const response = await fetch('/api/confidence_analysis');
+            const data = await response.json();
+
+            const ctx = document.getElementById('confidenceChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.map(d => {
+                        const names = {'very_high': '>75%', 'high': '65-75%', 'medium': '55-65%', 'low': '50-55%'};
+                        return names[d.bucket] || d.bucket;
+                    }),
+                    datasets: [{
+                        label: 'Accuracy',
+                        data: data.map(d => d.accuracy * 100),
+                        backgroundColor: [
+                            'rgba(76, 175, 80, 0.8)',
+                            'rgba(139, 195, 74, 0.8)',
+                            'rgba(255, 193, 7, 0.8)',
+                            'rgba(255, 152, 0, 0.8)'
+                        ],
+                        borderColor: [
+                            '#4CAF50',
+                            '#8BC34A',
+                            '#FFC107',
+                            '#FF9800'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load games
+        async function loadGames() {
+            const response = await fetch('/api/games');
+            allGames = await response.json();
+
+            // Create week tabs
+            const weeks = [...new Set(allGames.map(g => g.week))].sort((a, b) => a - b);
+            const tabsHtml = weeks.map(w => `
+                <button class="week-tab ${w === currentWeek ? 'active' : ''}" onclick="showWeek(${w})">
+                    Week ${w}
+                </button>
+            `).join('');
+
+            document.getElementById('weekTabs').innerHTML = tabsHtml;
+
+            // Show first week
+            showWeek(weeks[0]);
+        }
+
+        function showWeek(week) {
+            currentWeek = week;
+
+            // Update active tab
+            document.querySelectorAll('.week-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter games
+            const weekGames = allGames.filter(g => g.week === week);
+
+            // Render games
+            const gamesHtml = weekGames.map(game => {
+                const homeWin = game.spread_prediction.predicted_winner === game.home_team;
+                const prob = homeWin ? game.spread_prediction.home_win_prob : game.spread_prediction.away_win_prob;
+
+                return `
+                    <div class="game-card">
+                        <div class="team">
+                            <div class="team-name">${game.away_team}</div>
+                            ${game.away_score !== null ? `<div class="team-score">${game.away_score}</div>` : ''}
+                        </div>
+
+                        <div class="prediction">
+                            <div class="prediction-winner">
+                                Predicted: <strong>${game.spread_prediction.predicted_winner}</strong>
+                            </div>
+                            <div class="probability-bar">
+                                <div class="probability-fill" style="width: ${prob * 100}%">
+                                    ${(prob * 100).toFixed(0)}%
+                                </div>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Result: <span class="${game.spread_prediction.correct ? 'correct' : 'wrong'}">
+                                    ${game.spread_prediction.correct ? '✓ Correct' : '✗ Wrong'}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="team">
+                            <div class="team-name">${game.home_team}</div>
+                            ${game.home_score !== null ? `<div class="team-score">${game.home_score}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('gamesGrid').innerHTML = gamesHtml;
+        }
+
+        // Initialize
+        async function init() {
+            await loadStats();
+            await loadWeeklyChart();
+            await loadConfidenceChart();
+            await loadGames();
+        }
+
+        init();
+    </script>
+</body>
+</html>

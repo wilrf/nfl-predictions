@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-10-05T16:30:00.352180",
+  "validation_summary": {
+    "all_gates_passed": true,
+    "total_gates": 7,
+    "passed_gates": 7
+  },
+  "basic_performance": {
+    "passed": true,
+    "accuracy": 0.6838235294117647,
+    "log_loss": 0.5922345078488049,
+    "auc_roc": 0.7441759435243008,
+    "brier_score": 0.20399048741686002,
+    "validation_games": 272
+  },
+  "walk_forward_validation": {
+    "passed": true,
+    "accuracy": 0.5384615384615384,
+    "games_tested": 39,
+    "results": [
+      {
+        "game_id": "2017_16_LA_TEN",
+        "season": 

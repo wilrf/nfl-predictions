@@ -1,0 +1,73 @@
+{
+  "consolidation_date": "2025-10-02T13:10:13.994621",
+  "total_games": 2743,
+  "regular_season_games": 2623,
+  "playoff_games": 120,
+  "seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "train_games": 1920,
+  "validation_games": 411,
+  "test_games": 412,
+  "by_season": {
+    "2015": {
+      "regular": 256,
+      "playoff": 11,
+      "total": 267
+    },
+    "2016": {
+      "regular": 256,
+      "playoff": 11,
+      "total": 267
+    },
+    "2017": {
+      "regular": 256,
+      "playoff": 11,
+      "total": 267
+    },
+    "2018": {
+      "regular": 256,
+      "playoff": 11,
+      "total": 267
+    },
+    "2019": {
+      "regular": 256,
+      "playoff": 11,
+      "total": 267
+    },
+    "2020": {
+      "regular": 256,
+      "playoff": 13,
+      "total": 269
+    },
+    "2021": {
+      "regular": 272,
+      "playoff": 13,
+      "total": 285
+    },
+    "2022": {
+      "regular": 271,
+      "playoff": 13,
+      "total": 284
+    },
+    "2023": {
+      "regular": 272,
+      "playoff": 13,
+      "total": 285
+    },
+    "2024": {
+      "regular": 272,
+      "playoff": 13,
+      "total": 285
+    }
+  }
+}

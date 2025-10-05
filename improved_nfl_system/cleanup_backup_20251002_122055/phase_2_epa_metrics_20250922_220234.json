@@ -1,0 +1,22 @@
+{
+  "data_source": "epa_metrics",
+  "validation_timestamp": "2025-09-22T22:02:34.908533",
+  "phase": "Phase 2: Market-Aware Validation",
+  "market_efficiency": {
+    "data_source": "epa_metrics",
+    "theoretical_edge_mean": -0.05685598156067927,
+    "theoretical_edge_std": 0.43279890717845,
+    "actual_roi": 4.546904551017926e+95,
+    "win_rate": 0.5124282982791587,
+    "efficiency_score": 0,
+    "exploitable": false,
+    "recommendation": "monitor",
+    "confidence_level": 0.6000000000000001,
+    "sample_size": 1343,
+    "total_bets_placed": 523,
+    "sharpe_ratio": 1.0505813382618279e+96
+  },
+  "interaction_effects": {},
+  "recommendation": "Monitor closely: Marginal edge detected",
+  "phase_2_success": true
+}

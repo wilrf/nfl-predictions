@@ -1,0 +1,386 @@
+{
+  "team_epa_stats_teams": [
+    {
+      "team": "ARI",
+      "len": 3,
+      "count": 85
+    },
+    {
+      "team": "ATL",
+      "len": 3,
+      "count": 84
+    },
+    {
+      "team": "BAL",
+      "len": 3,
+      "count": 91
+    },
+    {
+      "team": "BUF",
+      "len": 3,
+      "count": 95
+    },
+    {
+      "team": "CAR",
+      "len": 3,
+      "count": 84
+    },
+    {
+      "team": "CHI",
+      "len": 3,
+      "count": 85
+    },
+    {
+      "team": "CIN",
+      "len": 3,
+      "count": 90
+    },
+    {
+      "team": "CLE",
+      "len": 3,
+      "count": 87
+    },
+    {
+      "team": "DAL",
+      "len": 3,
+      "count": 88
+    },
+    {
+      "team": "DEN",
+      "len": 3,
+      "count": 85
+    },
+    {
+      "team": "DET",
+      "len": 3,
+      "count": 88
+    },
+    {
+      "team": "GB",
+      "len": 2,
+      "count": 90
+    },
+    {
+      "team": "HOU",
+      "len": 3,
+      "count": 88
+    },
+    {
+      "team": "IND",
+      "len": 3,
+      "count": 85
+    },
+    {
+      "team": "JAX",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "KC",
+      "len": 2,
+      "count": 100
+    },
+    {
+      "team": "LA",
+      "len": 2,
+      "count": 93
+    },
+    {
+      "team": "LAC",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "LV",
+      "len": 2,
+      "count": 85
+    },
+    {
+      "team": "MIA",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "MIN",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "NE",
+      "len": 2,
+      "count": 85
+    },
+    {
+      "team": "NO",
+      "len": 2,
+      "count": 86
+    },
+    {
+      "team": "NYG",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "NYJ",
+      "len": 3,
+      "count": 84
+    },
+    {
+      "team": "PHI",
+      "len": 3,
+      "count": 93
+    },
+    {
+      "team": "PIT",
+      "len": 3,
+      "count": 88
+    },
+    {
+      "team": "SEA",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "SF",
+      "len": 2,
+      "count": 93
+    },
+    {
+      "team": "TB",
+      "len": 2,
+      "count": 94
+    },
+    {
+      "team": "TEN",
+      "len": 3,
+      "count": 86
+    },
+    {
+      "team": "WAS",
+      "len": 3,
+      "count": 88
+    }
+  ],
+  "team_features_teams": [
+    {
+      "team": "ARI",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "ATL",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "BAL",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "BUF",
+      "len": 3,
+      "count": 67
+    },
+    {
+      "team": "CAR",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "CHI",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "CIN",
+      "len": 3,
+      "count": 67
+    },
+    {
+      "team": "CLE",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "DAL",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "DEN",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "DET",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "GB",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "HOU",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "IND",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "JAX",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "KC",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "LA",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "LAC",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "LV",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "MIA",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "MIN",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "NE",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "NO",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "NYG",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "NYJ",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "PHI",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "PIT",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "SEA",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "SF",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "TB",
+      "len": 2,
+      "count": 68
+    },
+    {
+      "team": "TEN",
+      "len": 3,
+      "count": 68
+    },
+    {
+      "team": "WAS",
+      "len": 3,
+      "count": 68
+    }
+  ],
+  "game_features_game_ids": [
+    {
+      "id_length": 13,
+      "count": 87,
+      "sample_min": "2020_01_TB_NO",
+      "sample_max": "2024_18_NO_TB"
+    },
+    {
+      "id_length": 14,
+      "count": 498,
+      "sample_min": "2020_01_ARI_SF",
+      "sample_max": "2024_18_SF_ARI"
+    },
+    {
+      "id_length": 15,
+      "count": 758,
+      "sample_min": "2020_01_CHI_DET",
+      "sample_max": "2024_18_WAS_DAL"
+    }
+  ],
+  "betting_outcomes_game_ids": [
+    {
+      "id_length": 13,
+      "count": 68,
+      "sample_min": "2021_01_GB_NO",
+      "sample_max": "2024_18_NO_TB"
+    },
+    {
+      "id_length": 14,
+      "count": 408,
+      "sample_min": "2021_01_BAL_LV",
+      "sample_max": "2024_18_SF_ARI"
+    },
+    {
+      "id_length": 15,
+      "count": 611,
+      "sample_min": "2021_01_ARI_TEN",
+      "sample_max": "2024_18_WAS_DAL"
+    }
+  ],
+  "epa_metrics_game_ids": [
+    {
+      "id_length": 13,
+      "count": 68,
+      "sample_min": "2021_01_GB_NO",
+      "sample_max": "2024_18_NO_TB"
+    },
+    {
+      "id_length": 14,
+      "count": 408,
+      "sample_min": "2021_01_BAL_LV",
+      "sample_max": "2024_18_SF_ARI"
+    },
+    {
+      "id_length": 15,
+      "count": 611,
+      "sample_min": "2021_01_ARI_TEN",
+      "sample_max": "2024_18_WAS_DAL"
+    }
+  ]
+}

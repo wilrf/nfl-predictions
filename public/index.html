@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Edge Analytics | Professional Betting Intelligence</title>
+
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">NFL EDGE</span>
+                        <span class="logo-secondary">ANALYTICS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-view="dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="nav-tab" data-view="predictions">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Predictions</span>
+                    </button>
+                    <button class="nav-tab" data-view="live">
+                        <i class="fas fa-bolt"></i>
+                        <span>Live Edge</span>
+                        <span class="live-indicator"></span>
+                    </button>
+                    <button class="nav-tab" data-view="analytics">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </button>
+                    <button class="nav-tab" data-view="bankroll">
+                        <i class="fas fa-wallet"></i>
+                        <span>Bankroll</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Season ROI</span>
+                        <span class="stat-value positive">+18.4%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Win Rate</span>
+                        <span class="stat-value">67.2%</span>
+                    </div>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=Pro+Bettor&background=6366f1&color=fff" alt="User">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Quick Filters</h3>
+                <div class="filter-group">
+                    <button class="filter-btn active">All Games</button>
+                    <button class="filter-btn">High Confidence</button>
+                    <button class="filter-btn">Live Now</button>
+                    <button class="filter-btn">Closing Line Value</button>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Bet Types</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked>
+                        <span>Spread</span>
+                        <span class="count">12</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked>
+                        <span>Total</span>
+                        <span class="count">8</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span>Moneyline</span>
+                        <span class="count">4</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span>Props</span>
+                        <span class="count">15</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Model Confidence</h3>
+                <div class="confidence-slider">
+                    <input type="range" min="50" max="90" value="65" id="confidenceSlider">
+                    <div class="slider-labels">
+                        <span>50%</span>
+                        <span id="confidenceValue">65%</span>
+                        <span>90%</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-title">Hot Streak</span>
+                        <span class="stat-number">7-2</span>
+                        <span class="stat-subtitle">Last 9 Bets</span>
+                    </div>
+                    <div class="stat-chart">
+                        <canvas id="miniChart1"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon success">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-title">Today's Edge</span>
+                        <span class="stat-number">+4.2%</span>
+                        <span class="stat-subtitle">Avg vs Market</span>
+                    </div>
+                    <div class="stat-chart">
+                        <canvas id="miniChart2"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon warning">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-title">AI Confidence</span>
+                        <span class="stat-number">82.5%</span>
+                        <span class="stat-subtitle">Week 5 Avg</span>
+                    </div>
+                    <div class="stat-chart">
+                        <canvas id="miniChart3"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon info">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-title">Bankroll</span>
+                        <span class="stat-number">$12,450</span>
+                        <span class="stat-subtitle">+$2,450 MTD</span>
+                    </div>
+                    <div class="stat-chart">
+                        <canvas id="miniChart4"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Picks Section -->
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    Premium Picks
+                    <span class="badge badge-live">LIVE</span>
+                </h2>
+                <div class="section-actions">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Export
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-sync"></i>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <!-- Game Cards Grid -->
+            <div class="picks-grid">
+                <!-- Premium Pick Card 1 -->
+                <div class="pick-card premium">
+                    <div class="pick-header">
+                        <div class="teams-info">
+                            <div class="team">
+                                <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="BUF" class="team-logo">
+                                <div class="team-details">
+                                    <span class="team-name">Buffalo Bills</span>
+                                    <span class="team-record">3-1</span>
+                                </div>
+                            </div>
+                            <div class="vs-indicator">
+                                <span class="game-time">1:00 PM ET</span>
+                                <span class="vs">@</span>
+                            </div>
+                            <div class="team">
+                                <img src="https://a.espncdn.com/i/teamlogos/nfl/500/hou.png" alt="HOU" class="team-logo">
+                                <div class="team-details">
+                                    <span class="team-name">Houston Texans</span>
+                                    <span class="team-record">2-2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="confidence-badge elite">
+                            <span class="confidence-value">87%</span>
+                            <span class="confidence-label">ELITE</span>
+                        </div>
+                    </div>
+
+                    <div class="pick-body">
+                        <div class="bet-recommendation">
+                            <div class="bet-type">
+                                <i class="fas fa-chart-line"></i>
+                                <span>SPREAD</span>
+                            </div>
+                            <div class="bet-details">
+                                <span class="bet-selection">Bills -3.5</span>
+                                <span class="bet-odds">-110</span>
+                            </div>
+                            <div class="bet-edge">
+                                <span class="edge-label">Edge</span>
+                                <span class="edge-value">+4.8%</span>
+                            </div>
+                        </div>
+
+                        <div class="model-insights">
+                            <div class="insight-item">
+                                <i class="fas fa-wind"></i>
+                                <span>Weather advantage</span>
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-chart-area"></i>
+                                <span>EPA differential +0.18</span>
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-arrows-alt-h"></i>
+                                <span>Line moving our way</span>
+                            </div>
+                        </div>
+
+                        <div class="bet-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Kelly Size</span>
+                                <span class="metric-value">2.3%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">CLV Potential</span>
+                                <span class="metric-value">+1.5</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Correlation</span>
+                                <span class="metric-value">Low</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pick-footer">
+                        <button class="btn btn-sm btn-ghost">
+                            <i class="fas fa-chart-bar"></i>
+                            Analysis
+                        </button>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Add to Slip
+                        </button>
+                    </div>
+                </div>
+
+                <!-- More pick cards would go here -->
+            </div>
+
+            <!-- Live Tracking Section -->
+            <div class="live-tracking-section">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-satellite-dish"></i>
+                    Live Game Tracking
+                </h3>
+                <div class="live-games-ticker">
+                    <div class="ticker-item winning">
+                        <span class="ticker-teams">KC @ MIN</span>
+                        <span class="ticker-bet">KC -3.5</span>
+                        <span class="ticker-score">KC 21-17</span>
+                        <span class="ticker-status">Q3 8:45</span>
+                        <span class="ticker-indicator">COVERING</span>
+                    </div>
+                    <div class="ticker-item losing">
+                        <span class="ticker-teams">DAL @ SF</span>
+                        <span class="ticker-bet">Over 47.5</span>
+                        <span class="ticker-score">14-10</span>
+                        <span class="ticker-status">Q2 2:15</span>
+                        <span class="ticker-indicator">UNDER PACE</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Bet Slip -->
+        <aside class="bet-slip">
+            <div class="bet-slip-header">
+                <h3>Bet Slip</h3>
+                <span class="bet-count">3 Bets</span>
+            </div>
+
+            <div class="bet-slip-content">
+                <div class="bet-slip-item">
+                    <div class="bet-info">
+                        <span class="bet-game">BUF @ HOU</span>
+                        <span class="bet-pick">Bills -3.5 (-110)</span>
+                    </div>
+                    <input type="number" class="bet-amount" placeholder="Risk" value="100">
+                    <button class="remove-bet">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="bet-slip-summary">
+                    <div class="summary-row">
+                        <span>Total Risk:</span>
+                        <span>$300</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Potential Win:</span>
+                        <span class="win-amount">$572.73</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Expected Value:</span>
+                        <span class="ev-amount positive">+$48.20</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block">
+                    Place Bets
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/websocket.js"></script>
+</body>
+</html>

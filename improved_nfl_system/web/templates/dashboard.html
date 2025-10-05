@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - NFL Betting Suggestions{% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Main Suggestions Column -->
+    <div class="lg:col-span-2">
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <h2 class="text-3xl font-bold">Current Suggestions</h2>
+                <p class="text-gray-400 mt-1">Confidence-based betting opportunities</p>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <!-- Auto-refresh toggle -->
+                <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="auto-refresh" checked class="sr-only">
+                    <div class="relative">
+                        <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                        <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-400">Auto-refresh</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Loading indicator -->
+        <div id="loading" class="htmx-indicator text-center py-8 bg-gray-800 rounded-lg">
+            <div class="inline-flex items-center">
+                <div class="spinner mr-3"></div>
+                <span>Loading suggestions...</span>
+            </div>
+        </div>
+
+        <!-- Suggestions container -->
+        <div id="suggestions-container"
+             hx-get="/api/suggestions"
+             hx-trigger="load, every {{ config.UPDATE_INTERVALS.suggestions }}s[auto-refresh-enabled]"
+             hx-indicator="#loading"
+             class="fade-in">
+            <div class="text-gray-400 p-8 text-center bg-gray-800 rounded-lg">
+                <div class="spinner mx-auto mb-4"></div>
+                <p>Loading suggestions...</p>
+            </div>
+        </div>
+
+        <!-- Suggestions summary -->
+        <div id="suggestions-summary" class="mt-6 grid grid-cols-3 gap-4 text-center">
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-green-400" id="premium-count">-</div>
+                <div class="text-sm text-gray-400">Premium</div>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-yellow-400" id="standard-count">-</div>
+                <div class="text-sm text-gray-400">Standard</div>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-gray-400" id="reference-count">-</div>
+                <div class="text-sm text-gray-400">Reference</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="space-y-6">
+        <!-- Performance Chart -->
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+                📊 CLV Performance
+                <span class="ml-2 text-xs bg-gray-700 px-2 py-1 rounded">30 days</span>
+            </h3>
+            <div class="relative">
+                <canvas id="clv-chart" width="300" height="200"></canvas>
+                <div id="chart-loading" class="absolute inset-0 flex items-center justify-center bg-gray-800 rounded">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Status -->
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-4">📡 System Status</h3>
+            <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-400">API Credits:</span>
+                    <span id="api-credits" class="font-semibold">-</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-400">Total Suggestions:</span>
+                    <span id="total-suggestions" class="font-semibold">-</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-400">Avg Confidence:</span>
+                    <span id="avg-confidence" class="font-semibold">-</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-400">System Health:</span>
+                    <span id="system-health" class="font-semibold text-green-400">Healthy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-4">⚡ Quick Actions</h3>
+            <div class="space-y-3">
+                <button
+                    class="w-full bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded text-sm transition-colors"
+                    hx-get="/api/suggestions"
+                    hx-target="#suggestions-container"
+                    hx-indicator="#loading">
+                    🔄 Force Refresh
+                </button>
+
+                <button
+                    class="w-full bg-gray-600 hover:bg-gray-700 py-2 px-4 rounded text-sm transition-colors"
+                    onclick="clearCache()">
+                    🗑️ Clear Cache
+                </button>
+
+                <button
+                    class="w-full bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded text-sm transition-colors"
+                    onclick="exportSuggestions()">
+                    📄 Export CSV
+                </button>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-4">📖 Legend</h3>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-green-500 rounded mr-2"></div>
+                    <span>Premium (80+ confidence)</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-yellow-500 rounded mr-2"></div>
+                    <span>Standard (65-79 confidence)</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-gray-500 rounded mr-2"></div>
+                    <span>Reference (50-64 confidence)</span>
+                </div>
+                <div class="mt-3 pt-2 border-t border-gray-700">
+                    <p class="text-xs text-gray-400">
+                        <strong>Edge:</strong> Expected betting advantage<br>
+                        <strong>Margin:</strong> Expected value score<br>
+                        <strong>Kelly:</strong> Recommended bet size
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Auto-refresh management
+let autoRefreshEnabled = true;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize auto-refresh toggle
+    const toggle = document.getElementById('auto-refresh');
+    if (toggle) {
+        toggle.addEventListener('change', function() {
+            autoRefreshEnabled = this.checked;
+            document.documentElement.setAttribute('auto-refresh-enabled', autoRefreshEnabled ? 'true' : 'false');
+
+            // Update visual state
+            const dot = this.parentElement.querySelector('.dot');
+            if (this.checked) {
+                dot.style.transform = 'translateX(24px)';
+                dot.parentElement.querySelector('.block').classList.remove('bg-gray-600');
+                dot.parentElement.querySelector('.block').classList.add('bg-primary');
+            } else {
+                dot.style.transform = 'translateX(0px)';
+                dot.parentElement.querySelector('.block').classList.remove('bg-primary');
+                dot.parentElement.querySelector('.block').classList.add('bg-gray-600');
+            }
+        });
+
+        // Trigger initial state
+        toggle.checked = true;
+        toggle.dispatchEvent(new Event('change'));
+    }
+
+    // Initialize charts and status
+    initCLVChart();
+    updateSystemStatus();
+
+    // Update statistics when suggestions refresh
+    document.body.addEventListener('htmx:afterRequest', function(event) {
+        if (event.detail.elt.id === 'suggestions-container') {
+            setTimeout(updateSuggestionStats, 100); // Small delay for DOM update
+        }
+    });
+
+    // Periodic status updates
+    setInterval(updateSystemStatus, {{ config.UPDATE_INTERVALS.performance * 1000 }});
+});
+
+async function initCLVChart() {
+    try {
+        const response = await fetch('/api/performance');
+        const data = await response.json();
+
+        document.getElementById('chart-loading').style.display = 'none';
+
+        if (data.status === 'error' || !data.clv_data || data.clv_data.dates.length === 0) {
+            document.getElementById('clv-chart').style.display = 'none';
+            const chartContainer = document.getElementById('clv-chart').parentElement;
+            chartContainer.innerHTML = '<div class="text-gray-400 text-center py-8">No CLV data available</div>';
+            return;
+        }
+
+        const ctx = document.getElementById('clv-chart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.clv_data.dates,
+                datasets: [{
+                    label: 'CLV %',
+                    data: data.clv_data.values,
+                    borderColor: '#10B981',
+                    backgroundColor: '#10B98120',
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1F2937',
+                        titleColor: '#F9FAFB',
+                        bodyColor: '#F9FAFB',
+                        borderColor: '#10B981',
+                        borderWidth: 1
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#374151', lineWidth: 1 },
+                        ticks: {
+                            color: '#9CA3AF',
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { color: '#374151', lineWidth: 1 },
+                        ticks: { color: '#9CA3AF' }
+                    }
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Chart initialization failed:', error);
+        document.getElementById('chart-loading').style.display = 'none';
+        const chartContainer = document.getElementById('clv-chart').parentElement;
+        chartContainer.innerHTML = '<div class="text-red-400 text-center py-8">Chart load failed</div>';
+    }
+}
+
+function updateSuggestionStats() {
+    // Count suggestions by tier
+    const container = document.getElementById('suggestions-container');
+    if (!container) return;
+
+    const premiumCards = container.querySelectorAll('h3:contains("PREMIUM")').length ||
+                        container.querySelectorAll('.text-green-400').length;
+    const standardCards = container.querySelectorAll('h3:contains("STANDARD")').length ||
+                         container.querySelectorAll('.text-yellow-400').length;
+    const referenceCards = container.querySelectorAll('h3:contains("REFERENCE")').length ||
+                          container.querySelectorAll('.text-gray-400').length;
+
+    // Update counts (more reliable method)
+    const allCards = container.querySelectorAll('.bg-gray-800');
+    let premium = 0, standard = 0, reference = 0;
+
+    allCards.forEach(card => {
+        const confidenceEl = card.querySelector('.text-2xl');
+        if (confidenceEl) {
+            const confidence = parseFloat(confidenceEl.textContent);
+            if (confidence >= {{ config.CONFIDENCE_TIERS.premium }}) premium++;
+            else if (confidence >= {{ config.CONFIDENCE_TIERS.standard }}) standard++;
+            else reference++;
+        }
+    });
+
+    // Update display
+    document.getElementById('premium-count').textContent = premium;
+    document.getElementById('standard-count').textContent = standard;
+    document.getElementById('reference-count').textContent = reference;
+    document.getElementById('total-suggestions').textContent = premium + standard + reference;
+
+    // Calculate average confidence
+    const confidences = Array.from(allCards).map(card => {
+        const confidenceEl = card.querySelector('.text-2xl');
+        return confidenceEl ? parseFloat(confidenceEl.textContent) : 0;
+    }).filter(c => c > 0);
+
+    if (confidences.length > 0) {
+        const avgConfidence = confidences.reduce((sum, conf) => sum + conf, 0) / confidences.length;
+        document.getElementById('avg-confidence').textContent = avgConfidence.toFixed(1);
+    } else {
+        document.getElementById('avg-confidence').textContent = '-';
+    }
+}
+
+async function updateSystemStatus() {
+    try {
+        const response = await fetch('/api/status');
+        const data = await response.json();
+
+        document.getElementById('api-credits').textContent = data.api_credits || '-';
+        document.getElementById('system-health').textContent = data.status === 'error' ? 'Error' : 'Healthy';
+        document.getElementById('system-health').className = data.status === 'error' ?
+            'font-semibold text-red-400' : 'font-semibold text-green-400';
+
+    } catch (error) {
+        console.error('Status update failed:', error);
+        document.getElementById('system-health').textContent = 'Unknown';
+        document.getElementById('system-health').className = 'font-semibold text-yellow-400';
+    }
+}
+
+function clearCache() {
+    // Clear local storage
+    localStorage.clear();
+
+    // Force refresh suggestions
+    document.querySelector('[hx-get="/api/suggestions"]').click();
+
+    // Show feedback
+    const button = event.target;
+    const originalText = button.textContent;
+    button.textContent = '✓ Cleared';
+    button.disabled = true;
+
+    setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+    }, 2000);
+}
+
+function exportSuggestions() {
+    const container = document.getElementById('suggestions-container');
+    const cards = container.querySelectorAll('.bg-gray-800');
+
+    if (cards.length === 0) {
+        alert('No suggestions to export');
+        return;
+    }
+
+    // Build CSV data
+    let csvContent = 'Team,Bet Type,Line,Odds,Confidence,Edge,Margin,Kelly\n';
+
+    cards.forEach(card => {
+        const team = card.querySelector('h4').textContent.split(' ').slice(0, -1).join(' ');
+        const betType = card.querySelector('h4').textContent.split(' ').pop();
+        const lineOdds = card.querySelector('p').textContent;
+        const confidence = card.querySelector('.text-2xl').textContent;
+
+        const stats = card.querySelectorAll('.text-sm span');
+        const edge = stats[0] ? stats[0].textContent.replace('Edge: ', '') : '';
+        const margin = stats[1] ? stats[1].textContent.replace('Margin: ', '') : '';
+        const kelly = stats[2] ? stats[2].textContent.replace('Kelly: ', '') : '';
+
+        csvContent += `"${team}","${betType}","${lineOdds}","${confidence}","${edge}","${margin}","${kelly}"\n`;
+    });
+
+    // Download CSV
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `nfl_suggestions_${new Date().toISOString().split('T')[0]}.csv`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+</script>
+{% endblock %}

@@ -1,0 +1,1009 @@
+season,week,game_type,team,gsis_id,player_name,position,report_primary_injury,report_secondary_injury,report_status,practice_primary_injury,practice_secondary_injury,practice_status,date_modified,severity_score,games_missed,created_at
+2023,1,REG,ARI,00-0034473,Dennis Gardeck,LB,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,ARI,00-0029316,Kelvin Beachum,T,Hand,,Out,Hand,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,ARI,00-0035662,Marquise Brown,WR,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,ARI,00-0030061,Zach Ertz,TE,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,ATL,00-0033858,Jonnu Smith,TE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,ATL,00-0036274,Jeff Okudah,CB,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,ATL,00-0034854,KhaDarel Hodge,WR,Ankle,,Questionable,Ankle,,Full Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,ATL,00-0030578,Cordarrelle Patterson,RB,Thigh,,Questionable,Thigh,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,BAL,00-0031235,Odell Beckham,WR,,,,Ankle,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,BAL,00-0032965,Ronnie Stanley,T,,,,Ankle,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,BAL,00-0033281,Marlon Humphrey,CB,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,BAL,00-0034753,Mark Andrews,TE,Quadricep,,Questionable,Quadricep,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,BUF,00-0030090,Micah Hyde,S,,,,Back,,Full Participation in Practice,2023-09-09,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CAR,00-0036037,Sam Franklin,S,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CAR,00-0036955,Terrace Marshall,WR,,,,Back,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CAR,00-0036635,Ihmir Smith-Marsette,WR,,,,Ankle,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CAR,00-0031795,DeShawn Williams,DT,,,,Illness,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CAR,00-0034777,D.J. Chark,WR,Hamstring,,Out,Hamstring,,Limited Participation in Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,CAR,00-0030035,Adam Thielen,WR,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0038135,Jaquan Brisker,S,,,,Groin,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0035649,Nate Davis,G,,,,Not injury related - personal matter,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0033784,Eddie Jackson,S,,,,Ankle,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0024243,Marcedes Lewis,TE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0033782,DeMarcus Walker,DE,,,,Calf,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0033757,Robert Tonyan,TE,Back,,Questionable,,,"
+    ",2023-09-09,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,CHI,00-0033765,Dylan Cole,LB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,CIN,00-0033009,Tyler Boyd,WR,,,,Toe,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CIN,00-0036442,Joe Burrow,QB,,,,Calf,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CIN,00-0036852,D'Ante Smith,G,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CIN,00-0033548,Chidobe Awuzie,CB,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CIN,00-0036902,Joseph Ossai,DE,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0031426,Joel Bitonio,G,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0033057,Jack Conklin,T,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0031544,Amari Cooper,WR,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0034856,Denzel Ward,CB,,,,Concussion,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0037251,Alex Wright,DE,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0030068,Marquise Goodwin,WR,,,,Illness,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,CLE,00-0035625,Juan Thornhill,S,Calf,,Questionable,Calf,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,DAL,00-0033928,Jourdan Lewis,CB,,,,Foot,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DAL,00-0037243,Tyler Smith,T,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,DAL,00-0035301,Donovan Wilson,S,Calf,,Doubtful,Calf,,Did Not Participate In Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,DAL,00-0033877,Malik Hooker,S,Illness,,Questionable,,,"
+    ",2023-09-09,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,DAL,00-0037665,Sam Williams,DE,Foot,,Questionable,Foot,,Full Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,DAL,00-0027947,Tyron Smith,T,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,DEN,00-0037252,Greg Dulcich,TE,,,,Not injury related - personal matter,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DEN,00-0031484,Chris Manhertz,TE,,,,Chest,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DEN,00-0036874,Patrick Surtain,CB,,,,Ankle,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DEN,00-0036407,Jerry Jeudy,WR,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,DEN,00-0038552,Riley Moss,CB,Abdomen,,Questionable,Abdomen,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,DET,00-0035219,Isaiah Buggs,DT,,,,Illness,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DET,00-0036993,Ifeatu Melifonwu,S,,,,Hamstring,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DET,00-0034345,Frank Ragnow,C,,,,Toe,Not injury related - resting p,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,DET,00-0034096,Emmanuel Moseley,CB,Knee,,Out,Knee,,Limited Participation in Practice,2023-09-06,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,GB,00-0030074,David Bakhtiari,T,,,,Not injury related - resting player,Knee,Did Not Participate In Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,GB,00-0038411,Anthony Johnson,CB,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,GB,00-0038393,Dontayvion Wicks,WR,,,,Hamstring,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,GB,00-0034967,Rashan Gary,LB,,,,Knee,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,GB,00-0038124,Christian Watson,WR,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,GB,00-0037816,Romeo Doubs,WR,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,HOU,00-0037823,Christian Harris,LB,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,HOU,00-0035276,Blake Cashman,LB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,HOU,00-0037614,John Metchie,WR,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,HOU,00-0031298,Jimmie Ward,S,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,HOU,00-0033854,Dare Ogunbowale,RB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,IND,00-0039156,Julius Brents,CB,,,,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,IND,00-0034846,Shaquille Leonard,LB,,,,Concussion,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,IND,00-0032378,DeForest Buckner,DT,,,,Forearm,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,IND,00-0036251,Zack Moss,RB,Forearm,,Questionable,Forearm,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,JAX,00-0038596,Antonio Johnson,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,JAX,00-0038940,Tyler Lacy,DE,Hip,,Out,Hip,,Limited Participation in Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0035149,Nick Allegretti,G,,,,Pectoral,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0034286,Richie James,WR,,,,Knee,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0038986,Nic Jones,CB,,,,Hand,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0036374,L'Jarius Sneed,CB,,,,Knee,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0038983,B.J. Thompson,DE,,,,Hamstring,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0036913,Kadarius Toney,WR,,,,Knee,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0035890,Tershawn Wharton,DT,,,,Knee,,Full Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,KC,00-0030506,Travis Kelce,TE,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-06,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,LA,00-0034804,Brian Allen,C,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,LA,00-0036415,Van Jefferson,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,LA,00-0039107,Stetson Bennett,QB,right Shoulder,,Questionable,right Shoulder,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,LA,00-0033908,Cooper Kupp,WR,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,LA,00-0037004,Hunter Long,TE,Thigh,,Questionable,Thigh,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,LAC,00-0038553,Daiyan Henley,LB,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,LAC,00-0036867,Chris Rumph,LB,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,LV,00-0034545,Brandon Facyson,CB,Shin,,Out,Shin,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,LV,00-0029585,Chandler Jones,DE,Not injury related - personal matter,,Out,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,LV,00-0031763,DeAndre Carter,WR,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0039040,Devon Achane,RB,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0036020,Salvon Ahmed,RB,,,,Back,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0036213,Raekwon Davis,DT,,,,Elbow,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0037010,Liam Eichenberg,T,,,,Ribs,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0036221,Brandon Jones,S,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0036613,Jaylen Waddle,WR,,,,Oblique,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0034352,Connor Williams,C,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0030067,Terron Armstead,T,Back,"ankle, knee",Out,Back,Ankle / Knee,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0034248,Elijah Campbell,S,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0029530,Justin Bethel,CB,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIA,00-0038720,Julian Hill,TE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIN,00-0036338,Troy Dye,LB,,,,Elbow,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIN,00-0037500,Ryan Wright,P,,,,Ankle,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,MIN,00-0034344,Marcus Davenport,DE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NE,00-0032071,Trenton Brown,T,,,,Illness,,Limited Participation in Practice,2023-09-06,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NE,00-0038039,Jack Jones,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,NE,00-0038132,Matt Corral,QB,Not injury related - personal matter,,Questionable,Not Injury Related,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,7,REG,PHI,00-0038487,Eli Ricks,CB,,,,Knee,,Full Participation in Practice,2023-10-20,0,0,2025-10-05T19:30:59.749493
+2023,1,REG,NE,00-0036875,Rhamondre Stevenson,RB,Illness,,Questionable,Illness,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NE,00-0036198,Michael Onwenu,G,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NE,00-0031547,DeVante Parker,WR,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NE,00-0038103,Cole Strange,G,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NO,00-0027696,Jimmy Graham,TE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NO,00-0033874,Marshon Lattimore,CB,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NO,00-0033888,Ryan Ramczyk,T,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NO,00-0034116,J.T. Gray,S,Shoulder,,Out,Shoulder,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,NO,00-0034765,Tre'Quan Smith,WR,Groin,,Out,Groin,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,NO,00-0038551,Kendre Miller,RB,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0036569,Gary Brightwell,RB,,,,Knee,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0036145,Lawrence Cager,TE,,,,Ankle,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0037758,Cordale Flott,CB,Hamstring,,Doubtful,Hamstring,,Limited Participation in Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0038413,Gervarrius Owens,S,Hamstring,,Doubtful,Hamstring,,Limited Participation in Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0038117,Wan'Dale Robinson,WR,Knee,,Doubtful,Knee,,Limited Participation in Practice,2023-09-08,2,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0036400,Cam Brown,LB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0037260,D.J. Davidson,DT,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYG,00-0031610,Darren Waller,TE,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYJ,00-0036501,Michael Carter,CB,,,,Elbow,,Full Participation in Practice,2023-09-09,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYJ,00-0036284,Mekhi Becton,T,Knee,Illness,Questionable,Knee,Illness,Full Participation in Practice,2023-09-09,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYJ,00-0026166,Duane Brown,T,Shoulder,,Questionable,Shoulder,,Full Participation in Practice,2023-09-09,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,NYJ,00-0038120,Breece Hall,RB,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-09,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,PHI,00-0037136,Mario Goodrich,CB,,,,Illness,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,PHI,00-0037137,Josh Jobe,CB,,,,Illness,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,PIT,00-0027969,Cameron Heyward,DT,,,,Not injury related - resting player,Stomach,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,PIT,00-0033905,Larry Ogunjobi,DT,Foot,,Questionable,Foot,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0036409,Jordyn Brooks,LB,,,,Not injury related - resting player,Knee,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0039047,Derick Hall,LB,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0038133,Boye Mafe,LB,,,,Illness,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0038591,Mike Morris,DE,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0032387,Jarran Reed,DT,,,,Toe,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0038543,Jaxon Smith-Njigba,WR,,,,Wrist,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0036413,Darrell Taylor,LB,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0035164,Cody Thompson,WR,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0038134,Kenneth Walker,RB,,,,Groin,,Limited Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0033872,Jamal Adams,S,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0038636,Kenny McIntosh,RB,Knee,Hamstring,Out,Knee,Hamstring,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0036417,Damien Lewis,G,Shoulder,,Questionable,Shoulder,,Full Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,SEA,00-0039169,Devon Witherspoon,CB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0035717,Nick Bosa,DE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0034754,Oren Burks,LB,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0032151,Jon Feliciano,C,,,,Illness,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0028924,Tashaun Gipson,S,,,,Back,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0036564,Talanoa Hufanga,S,,,,Knee,Not injury related - personal ,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0037525,Jordan Mason,RB,,,,Foot,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0034407,Ray-Ray McCloud,WR,,,,Wrist,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0038562,Jake Moody,K,,,,right Quadricep,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0034091,George Odum,S,,,,Shoulder,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0037834,Brock Purdy,QB,,,,right Elbow,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0027857,Trent Williams,T,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0033288,George Kittle,TE,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,SF,00-0034573,Charvarius Ward,CB,Heel,,Questionable,Heel,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,TB,00-0038823,Kaevon Merriweather,S,,,,Quadricep,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TB,00-0035254,Anthony Nelson,LB,,,,Hamstring,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TB,00-0036450,Ke'Shawn Vaughn,RB,,,,Not injury related - personal matter,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TB,00-0036411,Antoine Winfield,S,,,,Calf,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TB,00-0039157,Cody Mauch,G,Back,,Questionable,Back,,Did Not Participate In Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,TB,00-0039063,Calijah Kancey,DT,Calf,,Questionable,Calf,,Full Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0037742,Treylon Burks,WR,,,,Knee,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0030564,DeAndre Hopkins,WR,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0034825,Arden Key,LB,,,,Calf,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0039152,Will Levis,QB,,,,Quadricep,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0035259,Trevon Wesco,TE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0037593,Tre Avery,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-08,3,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0034828,Harold Landry,LB,Abdomen,,Questionable,Abdomen,,Full Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,TEN,00-0036619,Dillon Radunz,T,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,WAS,00-0036671,Dax Milne,WR,,,,Groin,,Did Not Participate In Practice,2023-09-07,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,WAS,00-0035659,Terry McLaurin,WR,,,,Toe,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,WAS,00-0036625,Benjamin St-Juste,CB,,,,Ankle,,Full Participation in Practice,2023-09-08,0,0,2025-10-05T19:30:59.527153
+2023,1,REG,WAS,00-0036351,James Smith-Williams,DE,Oblique,,Questionable,Oblique,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,1,REG,WAS,00-0036321,Chase Young,DE,Neck,,Questionable,Neck,,Limited Participation in Practice,2023-09-08,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,ARI,00-0033553,James Conner,RB,,,,Calf,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,ARI,00-0035636,L.J. Collier,DE,Biceps,,Out,Biceps,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,ARI,00-0034801,Josh Woods,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,ARI,00-0033890,Budda Baker,S,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,ARI,00-0029316,Kelvin Beachum,T,Hand,,Questionable,Hand,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,ARI,00-0036371,Leki Fotu,DT,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,ATL,00-0026190,Calais Campbell,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-13,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,ATL,00-0033858,Jonnu Smith,TE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-13,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,ATL,00-0030578,Cordarrelle Patterson,RB,,,,Thigh,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,ATL,00-0037810,Troy Andersen,LB,Concussion,,Out,Concussion,,Limited Participation in Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,ATL,00-0036274,Jeff Okudah,CB,Foot,,Questionable,Foot,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,BAL,00-0036369,John Simpson,G,,,,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,BAL,00-0033281,Marlon Humphrey,CB,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,BAL,00-0037825,Tyler Linderbaum,C,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,BAL,00-0032965,Ronnie Stanley,T,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,BAL,00-0033894,Marcus Williams,S,Pectoral,,Out,Pectoral,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,BAL,00-0034753,Mark Andrews,TE,Quadricep,,Questionable,Quadricep,,Full Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,BUF,00-0031936,Mitch Morse,C,,,,Finger,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CAR,00-0036944,Jaycee Horn,CB,,,,Hamstring,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CAR,00-0033284,Taylor Moton,T,,,,Biceps,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CAR,00-0034777,D.J. Chark,WR,Hamstring,,Questionable,Hamstring,,Full Participation in Practice,2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,CHI,00-0038111,Kyler Gordon,CB,,,,Hand,,Did Not Participate In Practice,2023-09-13,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CHI,00-0024243,Marcedes Lewis,TE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-14,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CHI,00-0033765,Dylan Cole,LB,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CHI,00-0035649,Nate Davis,G,Not injury related - personal matter,,Doubtful,,,"
+    ",2023-09-16,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,CHI,00-0037129,Josh Blackwell,CB,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0036442,Joe Burrow,QB,,,,Calf,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0037743,Dax Hill,S,,,,Hand,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0036850,Cam Sample,DE,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0036294,Logan Wilson,LB,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0033548,Chidobe Awuzie,CB,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0036314,Markus Bailey,LB,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0036857,Chris Evans,RB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,CIN,00-0036902,Joseph Ossai,DE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0031426,Joel Bitonio,G,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0033868,Myles Garrett,DE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0031270,Shelby Harris,DT,,,,Achilles,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0034746,Maurice Hurst,DT,,,,Hamstring,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0039014,Dawand Jones,T,,,,Wrist,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0033570,Anthony Walker,LB,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0036267,Jedrick Wills,T,,,,Foot,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0038561,Siaki Ika,DT,Foot,,Questionable,Foot,,Did Not Participate In Practice,2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0031544,Amari Cooper,WR,Groin,,Questionable,Not injury related - resting player,Groin,Limited Participation in Practice,2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,CLE,00-0035625,Juan Thornhill,S,Calf,,Questionable,Calf,,Limited Participation in Practice,2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,DAL,00-0037665,Sam Williams,DE,,,,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,DAL,00-0027947,Tyron Smith,T,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,DAL,00-0037243,Tyler Smith,T,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,DAL,00-0035301,Donovan Wilson,S,Calf,,Doubtful,Calf,,Limited Participation in Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,DAL,00-0031236,Brandin Cooks,WR,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,DAL,00-0031402,Zack Martin,G,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,DEN,00-0036407,Jerry Jeudy,WR,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,DEN,00-0033297,D.J. Jones,DT,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,DEN,00-0038552,Riley Moss,CB,,,,Abdomen,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,DEN,00-0032210,Frank Clark,LB,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,DEN,00-0037252,Greg Dulcich,TE,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,DET,00-0034345,Frank Ragnow,C,,,,Toe,Not injury related - resting p,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,DET,00-0036124,Khalil Dorsey,CB,Illness,,Out,Illness,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,DET,00-0034096,Emmanuel Moseley,CB,Knee,Hamstring,Out,Knee,Hamstring,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,DET,00-0038096,Josh Paschal,DE,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,DET,00-0032381,Taylor Decker,T,Ankle,,Doubtful,Ankle,,Did Not Participate In Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0037816,Romeo Doubs,WR,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0035526,Elgton Jenkins,G,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0038411,Anthony Johnson,S,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0037547,Daniel Whelan,P,,,,Finger,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0034967,Rashan Gary,LB,,,,Knee,,Limited Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0030074,David Bakhtiari,T,Not injury related - resting player,Knee,Questionable,Not injury related - resting player,Knee,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0033293,Aaron Jones,RB,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0037074,Quay Walker,LB,Concussion,,Questionable,Concussion,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,GB,00-0038124,Christian Watson,WR,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0035995,Grayland Arnold,S,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0035276,Blake Cashman,LB,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0032466,George Fant,T,,,,Shoulder,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0037614,John Metchie,WR,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0033854,Dare Ogunbowale,RB,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0032103,Denzel Perryman,LB,,,,Ankle,Wrist,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0034383,Dalton Schultz,TE,,,,Thigh,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0030431,Robert Woods,WR,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0037246,Jalen Pitre,S,Chest,,Out,Chest,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0031298,Jimmie Ward,S,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0032380,Laremy Tunsil,T,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0031740,Neville Hewitt,LB,Illness,,Questionable,Illness,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,HOU,00-0039163,C.J. Stroud,QB,right Shoulder,,Questionable,right Shoulder,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,IND,00-0033269,Rigoberto Sanchez,P,,,,Illness,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,IND,00-0036251,Zack Moss,RB,,,,Forearm,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,IND,00-0034836,Braden Smith,T,,,,Knee,Ankle,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,IND,00-0036876,Kylen Granson,TE,Hamstring,,Questionable,,,"
+    ",2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,9,REG,HOU,00-0036363,Josh Jones,G,,,,Hand,,Full Participation in Practice,2023-11-03,0,0,2025-10-05T19:30:59.975266
+2023,2,REG,IND,00-0037292,Andrew Ogletree,TE,Concussion,,Questionable,Concussion,,Full Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,IND,00-0034342,Quenton Nelson,G,Toe,,Questionable,Toe,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,JAX,00-0038596,Antonio Johnson,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,JAX,00-0037296,Gregory Junior,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,JAX,00-0037814,Luke Fortner,C,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,JAX,00-0038940,Tyler Lacy,DE,Hip,,Questionable,Hip,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,JAX,00-0032053,Brandon Scherff,G,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0036621,Nick Bolton,LB,,,,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0034286,Richie James,WR,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0038986,Nic Jones,CB,,,,Hand,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0036913,Kadarius Toney,WR,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0035890,Tershawn Wharton,DT,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0032762,Chris Jones,DT,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0036374,L'Jarius Sneed,CB,,,,Knee,,Limited Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0036360,Clyde Edwards-Helaire,RB,Illness,,Questionable,Illness,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,KC,00-0030506,Travis Kelce,TE,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0031388,Aaron Donald,DT,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0034803,Joseph Noteboom,T,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0033783,Ahkello Witherspoon,CB,,,,Hip,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0039060,Jason Taylor,S,,,,Groin,,Limited Participation in Practice,2023-09-14,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0036994,Ernest Jones,LB,Illness,,Questionable,Illness,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0039075,Puka Nacua,WR,Oblique,,Questionable,Oblique,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0034114,Coleman Shelton,C,Toe,,Questionable,Toe,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,LA,00-0037844,Russ Yeast,S,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,LAC,00-0033699,Austin Ekeler,RB,Ankle,,Doubtful,Ankle,,Did Not Participate In Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,LAC,00-0031554,Eric Kendricks,LB,Hamstring,Not injury related - personal matter,Doubtful,Hamstring,Not injury related - personal ,Did Not Participate In Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,LAC,00-0038553,Daiyan Henley,LB,Hamstring,,Doubtful,Hamstring,,Limited Participation in Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,LAC,00-0036867,Chris Rumph,DE,Hamstring,,Doubtful,Hamstring,,Limited Participation in Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,LAC,00-0033156,Joey Bosa,DE,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0031381,Davante Adams,WR,,,,Foot,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0031763,DeAndre Carter,WR,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0033290,Jermaine Eluemunor,T,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0031345,Jimmy Garoppolo,QB,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0036604,Jordan Meredith,G,,,,Calf,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0036962,Trevon Moehrig,S,,,,Thumb,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0029585,Chandler Jones,DE,Not injury related - personal matter,,Out,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,LV,00-0034960,Jakobi Meyers,WR,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0039040,Devon Achane,RB,,,,Shoulder,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0033050,Xavien Howard,CB,,,,Thumb,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0036221,Brandon Jones,S,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0031687,Raheem Mostert,RB,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0036613,Jaylen Waddle,WR,,,,Oblique,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0034352,Connor Williams,C,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0036935,Kelvin Joseph,CB,Not injury related - personal matter,,Out,,,"
+    ",2023-09-16,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0030067,Terron Armstead,T,"back, ankle, knee",,Questionable,"back, ankle, knee",,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0034248,Elijah Campbell,S,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0038720,Julian Hill,TE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIA,00-0036934,Jaelan Phillips,LB,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIN,00-0035588,Garrett Bradbury,C,Back,,Out,Back,,Did Not Participate In Practice,2023-09-13,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIN,00-0036616,Christian Darrisaw,T,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-13,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,MIN,00-0034344,Marcus Davenport,DE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-13,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0031852,David Andrews,C,,,,Hamstring,,Limited Participation in Practice,2023-09-14,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0038608,Kayshon Boutte,WR,,,,Hamstring,,Limited Participation in Practice,2023-09-14,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0032071,Trenton Brown,T,Concussion,,Questionable,Concussion,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0032580,Jonathan Jones,CB,Ankle,,Questionable,Ankle,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0038569,Sidy Sow,T,Concussion,,Questionable,Concussion,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0036198,Michael Onwenu,G,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0031547,DeVante Parker,WR,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NE,00-0038103,Cole Strange,G,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NO,00-0027696,Jimmy Graham,TE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NO,00-0036040,Juwan Johnson,TE,,,,Calf,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NO,00-0033888,Ryan Ramczyk,T,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NO,00-0034116,J.T. Gray,S,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NO,00-0038551,Kendre Miller,RB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-16,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0039000,Deonte Banks,CB,,,,Calf,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0036400,Cam Brown,LB,,,,Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0037758,Cordale Flott,CB,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0026858,Graham Gano,K,,,,right Ankle,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0038413,Gervarrius Owens,S,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0036392,Matt Peart,T,,,,Elbow,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0032385,Sterling Shepard,WR,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0031610,Darren Waller,TE,,,,Hamstring,,Limited Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0036552,Azeez Ojulari,DE,Hamstring,,Doubtful,Hamstring,,Limited Participation in Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0038117,Wan'Dale Robinson,WR,Knee,,Doubtful,Knee,,Limited Participation in Practice,2023-09-15,2,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYG,00-0036386,Andrew Thomas,T,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYJ,00-0029621,Greg Zuerlein,K,right Groin,,Questionable,right Groin,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYJ,00-0036284,Mekhi Becton,T,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYJ,00-0026166,Duane Brown,T,Shoulder,,Questionable,Shoulder,,Full Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,NYJ,00-0038120,Breece Hall,RB,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,PHI,00-0037615,Nakobe Dean,LB,,,,Foot,,Did Not Participate In Practice,2023-09-11,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PHI,00-0037130,Reed Blankenship,S,Ribs,,Out,Ribs,,Did Not Participate In Practice,2023-09-13,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,PHI,00-0032890,James Bradberry,CB,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-13,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,PHI,00-0036919,Kenneth Gainwell,RB,Ribs,,Out,Ribs,,Did Not Participate In Practice,2023-09-13,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,PHI,00-0029653,Fletcher Cox,DT,Ribs,,Questionable,Ribs,,Limited Participation in Practice,2023-09-13,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0034347,James Daniels,G,,,,Ankle,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0036894,Pat Freiermuth,TE,,,,Chest,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0033905,Larry Ogunjobi,DT,,,,Foot,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0034768,Chukwuma Okorafor,T,,,,Concussion,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0032954,Isaac Seumalo,G,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0037247,George Pickens,WR,,,,Hamstring,,Limited Participation in Practice,2023-09-16,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0035216,Diontae Johnson,WR,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-16,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,PIT,00-0036336,Anthony McFarland,RB,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-16,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0032387,Jarran Reed,DT,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0036409,Jordyn Brooks,LB,,,,Not injury related - resting player,Knee,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0034159,Will Dissly,TE,,,,Shoulder,,Full Participation in Practice,2023-09-13,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0039169,Devon Witherspoon,CB,,,,Hamstring,,Full Participation in Practice,2023-09-14,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0038572,Cameron Young,DT,,,,Knee,,Full Participation in Practice,2023-09-13,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0037821,Charles Cross,T,Toe,,Out,Toe,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0038591,Mike Morris,DE,Shoulder,,Out,Shoulder,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0033872,Jamal Adams,S,Knee,,Out,Knee,,Limited Participation in Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0038133,Boye Mafe,LB,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,SEA,00-0035525,Devin Bush,LB,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,SF,00-0034982,Dre Greenlaw,LB,,,,Groin,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SF,00-0033288,George Kittle,TE,,,,Groin,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SF,00-0034407,Ray-Ray McCloud,WR,,,,Wrist,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SF,00-0027857,Trent Williams,T,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,SF,00-0037830,Samuel Womack,CB,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0029562,Lavonte David,LB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0031408,Mike Evans,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0034855,Baker Mayfield,QB,,,,right Shoulder,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0034778,Carlton Davis,CB,Toe,,Out,Toe,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0039049,SirVocea Dennis,LB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0039063,Calijah Kancey,DT,Calf,,Out,Calf,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,TB,00-0038820,Christian Izien,S,Concussion,,Questionable,Concussion,,Full Participation in Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0037593,Tre Avery,CB,,,,Hamstring,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0037742,Treylon Burks,WR,,,,Not injury related - personal matter,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0036619,Dillon Radunz,T,,,,Knee,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0039032,Tyjae Spears,RB,,,,Groin,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0036181,Teair Tart,DT,,,,Groin,Knee,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0035632,Amani Hooker,S,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0036416,Kristian Fulton,CB,Hamstring,,Out,Hamstring,,Limited Participation in Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0030564,DeAndre Hopkins,WR,Ankle,,Questionable,Ankle,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,TEN,00-0039034,Peter Skoronski,T,Illness,,Questionable,Illness,,Did Not Participate In Practice,2023-09-15,1,0,2025-10-05T19:30:59.527153
+2023,2,REG,WAS,00-0036618,Samuel Cosmi,G,,,,Shoulder,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,WAS,00-0035659,Terry McLaurin,WR,,,,Toe,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,WAS,00-0036321,Chase Young,DE,,,,Neck,,Full Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,WAS,00-0033282,Curtis Samuel,WR,,,,Hip,,Limited Participation in Practice,2023-09-15,0,0,2025-10-05T19:30:59.527153
+2023,2,REG,WAS,00-0039149,Quan Martin,CB,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-15,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,ARI,00-0029316,Kelvin Beachum,T,,,,Hand,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,ARI,00-0033563,Carlos Watkins,DE,Biceps,,Out,Biceps,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,ARI,00-0034801,Josh Woods,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,ARI,00-0036371,Leki Fotu,DT,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,ATL,00-0026190,Calais Campbell,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,ATL,00-0032146,Bud Dupree,LB,,,,Illness,,Did Not Participate In Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,ATL,00-0037810,Troy Andersen,LB,,,,Concussion,,Full Participation in Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,ATL,00-0036274,Jeff Okudah,CB,Foot,,Questionable,Foot,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,ATL,00-0030578,Cordarrelle Patterson,RB,Thigh,,Questionable,Thigh,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0031364,Jadeveon Clowney,LB,,,,Illness,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0036331,Devin Duvernay,WR,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0031235,Odell Beckham,WR,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0034975,Justice Hill,RB,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0033281,Marlon Humphrey,CB,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0037825,Tyler Linderbaum,C,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0036940,Odafe Oweh,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0032965,Ronnie Stanley,T,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BAL,00-0033894,Marcus Williams,S,Pectoral,,Out,Pectoral,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0030114,Jordan Poyer,S,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0033884,Tre'Davious White,CB,,,,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0037254,Terrel Bernard,LB,,,,Knee,Quadricep,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0036976,Spencer Brown,T,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0037248,James Cook,RB,,,,Not injury related - personal matter,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0033072,Leonard Floyd,DE,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0030090,Micah Hyde,S,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0035689,Dawson Knox,TE,,,,Back,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,BUF,00-0031557,Jordan Phillips,DT,,,,Illness,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CAR,00-0037043,Amare Barno,LB,,,,Thigh,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CAR,00-0035713,Brian Burns,LB,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CAR,00-0035243,Miles Sanders,RB,,,,Pectoral,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CAR,00-0037560,Chandler Wooten,LB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CAR,00-0039150,Bryce Young,QB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,CAR,00-0028008,Justin Houston,LB,Calf,,Questionable,Calf,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0024243,Marcedes Lewis,TE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0037129,Josh Blackwell,CB,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0036309,Darnell Mooney,WR,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0033082,Lucas Patrick,C,,,,Illness,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0036341,Khalid Kareem,LB,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0033784,Eddie Jackson,S,Foot,,Doubtful,Foot,,Did Not Participate In Practice,2023-09-22,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,CHI,00-0035649,Nate Davis,G,Not injury related - personal matter,,Questionable,Not injury related - personal matter,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0036298,Akeem Davis-Gaither,LB,,,,Knee,,Did Not Participate In Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0037752,Tycen Anderson,S,,,,Calf,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0036902,Joseph Ossai,DE,,,,Ankle,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0035669,Nick Scott,S,,,,Concussion,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0033548,Chidobe Awuzie,CB,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0034970,Irv Smith,TE,Hamstring,,Doubtful,Hamstring,,Limited Participation in Practice,2023-09-23,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,CIN,00-0036442,Joe Burrow,QB,Calf,,Questionable,Calf,,Limited Participation in Practice,2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0031426,Joel Bitonio,G,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0033868,Myles Garrett,DE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0038561,Siaki Ika,DT,,,,Foot,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0033885,David Njoku,TE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0031576,Za'Darius Smith,DE,,,,Ankle,Thigh,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0035646,Sione Takitaki,LB,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0035625,Juan Thornhill,S,,,,Calf,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0033570,Anthony Walker,LB,,,,Pectoral,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0036267,Jedrick Wills,T,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0031544,Amari Cooper,WR,,,,Groin,Shoulder,Limited Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0036996,Greg Newsome,CB,Elbow,,Out,Elbow,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,CLE,00-0036866,James Hudson,T,Ankle,,Questionable,Ankle,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0031236,Brandin Cooks,WR,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0035698,Chuma Edoga,T,,,,Elbow,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0032454,Jayron Kearse,S,,,,Illness,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0037243,Tyler Smith,T,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0035301,Donovan Wilson,S,,,,Calf,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0036361,Trevon Diggs,CB,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0027947,Tyron Smith,T,Knee,,Questionable,,,"
+    ",2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0036376,Tyler Biadasz,C,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,DAL,00-0031402,Zack Martin,G,Ankle,,Questionable,Ankle,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,DEN,00-0033538,Garett Bolles,T,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DEN,00-0032210,Frank Clark,LB,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DEN,00-0032971,Justin Simmons,S,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DEN,00-0029890,Mike Purcell,DT,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0038627,Antoine Green,WR,,,,gameday concussion protocol evaluation,,Full Participation in Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0034345,Frank Ragnow,C,,,,Toe,Not injury related - resting p,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0032381,Taylor Decker,T,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0037667,Kerby Joseph,S,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0034096,Emmanuel Moseley,CB,Knee,Hamstring,Out,Knee,Hamstring,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0032785,Halapoulivaati Vaitai,G,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0035685,David Montgomery,RB,Thigh,,Doubtful,Thigh,,Did Not Participate In Practice,2023-09-22,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0033943,Josh Reynolds,WR,Groin,,Questionable,Groin,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,DET,00-0036963,Amon-Ra St. Brown,WR,Toe,,Questionable,Toe,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0037547,Daniel Whelan,P,,,,Finger,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0034967,Rashan Gary,LB,,,,Knee,,Limited Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0036677,Zayne Anderson,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0035526,Elgton Jenkins,G,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0030074,David Bakhtiari,T,Not injury related - resting player,Knee,Questionable,Not injury related - resting player,Knee,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0034728,Jaire Alexander,CB,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0033293,Aaron Jones,RB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0039112,Lukas Van Ness,LB,Elbow,,Questionable,Elbow,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,GB,00-0038124,Christian Watson,WR,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0038977,Tank Dell,WR,,,,Thigh,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0032466,George Fant,T,,,,Ankle,Knee,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0036224,Jonathan Greenard,DE,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0033038,Eric Murray,S,,,,Concussion,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0039163,C.J. Stroud,QB,,,,right Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0031298,Jimmie Ward,S,,,,Hip,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0030431,Robert Woods,WR,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0032103,Denzel Perryman,LB,Hand,Wrist,Out,Hand,Wrist,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0037246,Jalen Pitre,S,Chest,,Out,Chest,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0037237,Derek Stingley,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0034488,Tavierre Thomas,CB,Hand,,Out,Hand,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,HOU,00-0032380,Laremy Tunsil,T,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,IND,00-0033952,Grover Stewart,DT,,,,Foot,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,IND,00-0032383,Ryan Kelly,C,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,IND,00-0039164,Anthony Richardson,QB,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,IND,00-0034342,Quenton Nelson,G,Toe,,Questionable,Toe,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,IND,00-0037395,Dallis Flowers,CB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,IND,00-0033393,Kenny Moore,CB,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,JAX,00-0032053,Brandon Scherff,G,,,,Not injury related - personal matter,,Full Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,JAX,00-0038596,Antonio Johnson,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,JAX,00-0033891,Zay Jones,WR,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,JAX,00-0034275,Folorunso Fatukasi,DT,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,JAX,00-0035642,Josh Hines-Allen,LB,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,JAX,00-0035378,Andrew Wingard,S,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0038986,Nic Jones,CB,,,,Hand,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0036374,L'Jarius Sneed,CB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0035237,Jawaan Taylor,T,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0034386,Justin Watson,WR,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0037195,Jaylen Watson,CB,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0036621,Nick Bolton,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0034286,Richie James,WR,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0036362,Willie Gay,LB,Quadricep,,Questionable,Quadricep,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0037197,Isiah Pacheco,RB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,KC,00-0036913,Kadarius Toney,WR,Toe,,Questionable,Toe,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,LA,00-0034804,Brian Allen,C,,,,Illness,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LA,00-0037839,Cobie Durant,CB,,,,Groin,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LA,00-0034803,Joseph Noteboom,T,,,,Shoulder,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LA,00-0035944,Jonah Williams,DE,,,,Back,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LA,00-0039075,Puka Nacua,WR,Oblique,,Questionable,Oblique,,Limited Participation in Practice,2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0031040,Khalil Mack,DE,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0033536,Mike Williams,WR,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0033699,Austin Ekeler,RB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0031554,Eric Kendricks,LB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0038553,Daiyan Henley,LB,Hamstring,,Questionable,Hamstring,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0036867,Chris Rumph,DE,Hamstring,,Questionable,Hamstring,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0033156,Joey Bosa,DE,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,LAC,00-0037375,Christopher Hinton,DT,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0031381,Davante Adams,WR,,,,gameday concussion protocol evaluation,,Full Participation in Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0039072,Jakorian Bennett,CB,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0036990,Divine Deablo,LB,,,,Rib,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0034993,Marcus Epps,S,,,,Quadricep,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0034960,Jakobi Meyers,WR,,,,Concussion,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0038602,Christopher Smith,S,,,,Illness,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0034387,Bilal Nichols,DT,,,,Hamstring,Hand,Limited Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,LV,00-0038541,Tyree Wilson,DE,Illness,,Questionable,Illness,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0033050,Xavien Howard,CB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0033040,Tyreek Hill,WR,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0035272,Andrew Van Ginkel,LB,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0036020,Salvon Ahmed,RB,Groin,,Doubtful,Groin,,Limited Participation in Practice,2023-09-22,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0034248,Elijah Campbell,S,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0036213,Raekwon Davis,DT,Wrist,,Questionable,Wrist,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0038720,Julian Hill,TE,Ankle,,Questionable,Ankle,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0036934,Jaelan Phillips,LB,Back,,Questionable,Back,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0030067,Terron Armstead,T,"back, ankle, knee",,Questionable,"back, ankle, knee",,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0032214,Tyler Kroft,TE,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIA,00-0036613,Jaylen Waddle,WR,Concussion,,Questionable,Concussion,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIN,00-0036616,Christian Darrisaw,T,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIN,00-0032129,Jordan Hicks,LB,,,,Shin,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIN,00-0036348,Josh Metellus,S,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIN,00-0037291,Jalen Nailor,WR,,,,Hamstring,,Limited Participation in Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIN,00-0034344,Marcus Davenport,DE,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,MIN,00-0035588,Garrett Bradbury,C,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0033860,Davon Godchaux,DT,,,,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0037253,Marcus Jones,CB,,,,Shoulder,,Did Not Participate In Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0032071,Trenton Brown,T,,,,Concussion,,Limited Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0031547,DeVante Parker,WR,,,,Knee,,Limited Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0036981,Christian Barmore,DT,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0032580,Jonathan Jones,CB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0036198,Michael Onwenu,G,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0038569,Sidy Sow,T,Concussion,,Questionable,Concussion,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NE,00-0038103,Cole Strange,G,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0033357,Taysom Hill,QB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0038588,Jordan Howden,S,,,,Finger,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0038551,Kendre Miller,RB,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0033948,Jamaal Williams,RB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0034981,Foster Moreau,TE,Ankle,,Doubtful,Ankle,,Did Not Participate In Practice,2023-09-22,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0036937,Paulson Adebo,CB,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NO,00-0035142,Ugochukwu Amadi,S,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYG,00-0034844,Saquon Barkley,RB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-20,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYG,00-0036132,Ben Bredeson,G,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-20,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYG,00-0036552,Azeez Ojulari,DE,Hamstring,,Out,Hamstring,,Limited Participation in Practice,2023-09-20,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYG,00-0036386,Andrew Thomas,T,Hamstring,,Out,Hamstring,,Limited Participation in Practice,2023-09-20,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYG,00-0037259,Micah McFadden,LB,Neck,,Questionable,Neck,,Limited Participation in Practice,2023-09-20,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYG,00-0038117,Wan'Dale Robinson,WR,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-20,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0036284,Mekhi Becton,T,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0036501,Michael Carter,CB,,,,Elbow,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0038120,Breece Hall,RB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0035680,Quincy Williams,LB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0037155,Tony Adams,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0032432,Wes Schweitzer,G,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0026166,Duane Brown,T,Shoulder,Hip,Questionable,Shoulder,Hip,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0034805,John Franklin-Myers,DE,Hip,,Questionable,Hip,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,NYJ,00-0029621,Greg Zuerlein,K,right Groin,,Questionable,right Groin,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0037130,Reed Blankenship,S,,,,Ribs,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0032890,James Bradberry,CB,,,,Concussion,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0029653,Fletcher Cox,DT,,,,Ribs,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0033547,Zach Cunningham,LB,,,,Ribs,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0037073,Jordan Davis,DT,,,,Ankle,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0034858,Terrell Edmunds,S,,,,Illness,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0036919,Kenneth Gainwell,RB,,,,Ribs,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0036912,DeVonta Smith,WR,,,,Hamstring,Thigh,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0036741,Jack Stoll,TE,,,,Ankle,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0034381,Josh Sweat,DE,,,,Toe,,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0036271,Quez Watkins,WR,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-23,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,PHI,00-0034414,Boston Scott,RB,Concussion,,Out,Concussion,,Limited Participation in Practice,2023-09-23,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0034789,Minkah Fitzpatrick,S,,,,Chest,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0032127,Markus Golden,LB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0033512,Damontae Kazee,S,,,,Calf,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0033905,Larry Ogunjobi,DT,,,,Foot,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0027943,Patrick Peterson,CB,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0032954,Isaac Seumalo,G,,,,Not injury related - resting player,,Full Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0038558,Darnell Washington,TE,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,PIT,00-0035645,Gunner Olszewski,WR,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0036409,Jordyn Brooks,LB,,,,Not injury related - resting player,Knee,Did Not Participate In Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0034495,Evan Brown,C,,,,Knee,,Full Participation in Practice,2023-09-21,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0035525,Devin Bush,LB,,,,Shoulder,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0035644,Noah Fant,TE,,,,Ribs,,Full Participation in Practice,2023-09-20,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0036417,Damien Lewis,G,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0038133,Boye Mafe,LB,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0039047,Derick Hall,LB,,,,Shoulder,,Limited Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0038136,Coby Bryant,CB,Toe,,Out,Toe,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0037821,Charles Cross,T,Toe,,Out,Toe,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0034159,Will Dissly,TE,Shoulder,,Doubtful,Shoulder,,Did Not Participate In Practice,2023-09-22,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0037079,Tariq Woolen,CB,Chest,,Doubtful,Chest,,Did Not Participate In Practice,2023-09-22,2,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0036425,DeeJay Dallas,RB,Illness,,Questionable,Illness,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0031608,Quandre Diggs,S,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0033872,Jamal Adams,S,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0035640,DK Metcalf,WR,Ribs,,Questionable,Ribs,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0032387,Jarran Reed,DT,Groin,,Questionable,Groin,,Full Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0035141,Phil Haynes,G,Calf,,Questionable,Calf,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SEA,00-0034974,Julian Love,S,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SF,00-0036261,Brandon Aiyuk,WR,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-20,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,SF,00-0037008,Ambry Thomas,CB,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-20,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0029562,Lavonte David,LB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0031408,Mike Evans,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0034527,Ryan Neal,S,,,,Ribs,Knee,Full Participation in Practice,2023-09-23,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0039049,SirVocea Dennis,LB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-23,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0039063,Calijah Kancey,DT,Calf,,Out,Calf,,Did Not Participate In Practice,2023-09-23,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0039157,Cody Mauch,G,Back,,Questionable,Back,,Full Participation in Practice,2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0034778,Carlton Davis,CB,Toe,,Questionable,Toe,,Limited Participation in Practice,2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0034773,Vita Vea,DT,Pectoral,,Questionable,Pectoral,,Limited Participation in Practice,2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TB,00-0035707,Devin White,LB,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-23,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0036416,Kristian Fulton,CB,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0035413,Luke Gifford,LB,,,,Quadricep,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0032764,Derrick Henry,RB,,,,Toe,Not injury related - resting p,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0035632,Amani Hooker,S,,,,Concussion,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0034828,Harold Landry,LB,,,,Hamstring,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0036181,Teair Tart,DT,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0038969,Kearis Jackson,WR,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0039034,Peter Skoronski,T,Abdomen,,Out,Abdomen,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0030564,DeAndre Hopkins,WR,Ankle,,Questionable,Ankle,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0031254,Denico Autry,DE,Foot,Groin,Questionable,Foot,Groin,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,TEN,00-0038848,Anthony Kendall,CB,Hip,,Questionable,Hip,,Limited Participation in Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0034445,Nick Gates,C,,,,Knee,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0039149,Quan Martin,CB,,,,Concussion,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0034333,Daron Payne,DT,,,,Ankle,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0037746,Brian Robinson,RB,,,,Hip,,Full Participation in Practice,2023-09-22,0,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0031260,Logan Thomas,TE,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-22,3,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0036349,Kamren Curl,S,Illness,,Questionable,Illness,,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,3,REG,WAS,00-0033282,Curtis Samuel,WR,Illness,Hip,Questionable,Illness,Hip,Did Not Participate In Practice,2023-09-22,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0029316,Kelvin Beachum,T,,,,Hand,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0036933,Zaven Collins,LB,,,,Eye,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0033553,James Conner,RB,,,,Back,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0035343,Jonathan Ledbetter,DE,Finger,,Out,Finger,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0034801,Josh Woods,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0037299,Keaontay Ingram,RB,Neck,,Questionable,Neck,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0035961,Krys Barnes,LB,Finger,,Questionable,Finger,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0035662,Marquise Brown,WR,Thumb,,Questionable,Thumb,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,ARI,00-0038540,Paris Johnson,T,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,ATL,00-0026190,Calais Campbell,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,ATL,00-0038149,Josh Ali,WR,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,ATL,00-0030578,Cordarrelle Patterson,RB,Thigh,,Questionable,Thigh,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0034184,Gus Edwards,RB,,,,Concussion,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0036550,Rashod Bateman,WR,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0031235,Odell Beckham,WR,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0033281,Marlon Humphrey,CB,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0038142,David Ojabo,LB,Ankle,Knee,Out,Ankle,Knee,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0036940,Odafe Oweh,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0032965,Ronnie Stanley,T,Knee,,Doubtful,Knee,,Did Not Participate In Practice,2023-09-29,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0038038,Kyle Hamilton,S,Back,,Questionable,Back,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0034975,Justice Hill,RB,Foot,,Questionable,Foot,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0033894,Marcus Williams,S,Pectoral,,Questionable,Pectoral,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,BAL,00-0037825,Tyler Linderbaum,C,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0033884,Tre'Davious White,CB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0035382,Ryan Bates,C,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0032497,Reid Ferguson,LS,,,,Wrist,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0033072,Leonard Floyd,DE,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0030090,Micah Hyde,S,,,,Hamstring,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0034376,Taron Johnson,CB,,,,Hip,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0034391,Siran Neal,CB,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,BUF,00-0030114,Jordan Poyer,S,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0030035,Adam Thielen,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-28,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0034281,Bradley Bozeman,C,,,,Quadricep,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0034777,D.J. Chark,WR,,,,Hamstring,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0036281,C.J. Henderson,CB,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0033284,Taylor Moton,T,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0037203,LaBryan Ray,DE,,,,Finger,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0039150,Bryce Young,QB,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0038536,Chandler Zavala,G,,,,Calf,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0033579,Xavier Woods,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0035243,Miles Sanders,RB,Groin,,Questionable,Groin,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0039062,Jonathan Mingo,WR,Concussion,,Questionable,Concussion,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,CAR,00-0034302,Frankie Luvu,LB,Hip,,Questionable,Hip,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,CHI,00-0024243,Marcedes Lewis,TE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-28,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CHI,00-0039071,Tyrique Stevenson,CB,,,,Illness,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CHI,00-0037129,Josh Blackwell,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CHI,00-0033784,Eddie Jackson,S,Foot,,Out,Foot,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CHI,00-0036292,Jaylon Johnson,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CHI,00-0035594,Travis Homer,RB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,CIN,00-0036442,Joe Burrow,QB,,,,Calf,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CIN,00-0033548,Chidobe Awuzie,CB,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CIN,00-0038576,Charlie Jones,WR,Thumb,,Out,Thumb,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CIN,00-0034970,Irv Smith,TE,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,CIN,00-0036298,Akeem Davis-Gaither,LB,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0031544,Amari Cooper,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0033868,Myles Garrett,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0031576,Za'Darius Smith,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0037267,Jerome Ford,RB,,,,Shoulder,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0036866,James Hudson,T,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0036996,Greg Newsome,CB,,,,Elbow,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0031426,Joel Bitonio,G,,,,Not injury related - resting player,Ankle,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0033923,Kareem Hunt,RB,,,,Ribs,Groin,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0033885,David Njoku,TE,Face,Arm,Questionable,,,"
+    ",2023-09-30,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,CLE,00-0033537,Deshaun Watson,QB,right Shoulder,,Questionable,right Shoulder,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0036358,CeeDee Lamb,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0031411,Demarcus Lawrence,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0035698,Chuma Edoga,T,,,,Elbow,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0035261,Tony Pollard,RB,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-28,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0027947,Tyron Smith,T,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0036376,Tyler Biadasz,C,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0037569,Peyton Hendershot,TE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DAL,00-0031402,Zack Martin,G,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DEN,00-0036407,Jerry Jeudy,WR,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DEN,00-0036391,Lloyd Cushenberry,C,,,,Illness,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DEN,00-0032210,Frank Clark,LB,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DEN,00-0034368,Josey Jewell,LB,Hip,,Out,Hip,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DEN,00-0029890,Mike Purcell,DT,Ribs,,Out,Ribs,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DEN,00-0032971,Justin Simmons,S,Hip,,Questionable,Hip,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0034345,Frank Ragnow,C,,,,Toe,Not injury related - resting p,Full Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0034171,Jason Cabinda,FB,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0035328,Matt Nelson,T,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0032785,Halapoulivaati Vaitai,G,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0032381,Taylor Decker,T,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0036258,Jonah Jackson,G,Thigh,,Questionable,Thigh,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0037667,Kerby Joseph,S,Hip,,Questionable,Hip,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0035685,David Montgomery,RB,Thigh,,Questionable,Thigh,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,DET,00-0034096,Emmanuel Moseley,CB,Knee,Hamstring,Questionable,Knee,Hamstring,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0034967,Rashan Gary,LB,,,,Knee,,Limited Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0036677,Zayne Anderson,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0030074,David Bakhtiari,T,Not injury related - resting player,Knee,Out,Not injury related - resting player,Knee,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0032401,De'Vondre Campbell,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0035526,Elgton Jenkins,G,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-27,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0034728,Jaire Alexander,CB,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0033293,Aaron Jones,RB,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0037817,Zach Tom,T,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0038408,Carrington Valentine,CB,Biceps,,Questionable,Biceps,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,GB,00-0038124,Christian Watson,WR,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-09-27,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0030431,Robert Woods,WR,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0036224,Jonathan Greenard,DE,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0033926,Shaquill Griffin,CB,,,,Foot,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0031580,Shaquille Mason,G,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0037246,Jalen Pitre,S,,,,Chest,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0038977,Tank Dell,WR,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0032466,George Fant,T,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0031298,Jimmie Ward,S,,,,Not injury related - resting player,,Limited Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0036363,Josh Jones,G,Hand,,Out,Hand,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0032103,Denzel Perryman,LB,Hand,Wrist,Out,Hand,Wrist,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0034488,Tavierre Thomas,CB,Hand,,Out,Hand,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0032380,Laremy Tunsil,T,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,HOU,00-0035686,Michael Deiter,C,Chest,,Questionable,Chest,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0034836,Braden Smith,T,,,,Wrist,,Did Not Participate In Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0033952,Grover Stewart,DT,,,,Foot,,Did Not Participate In Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0037395,Dallis Flowers,CB,,,,Back,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0039164,Anthony Richardson,QB,,,,Concussion,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0032383,Ryan Kelly,C,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0037757,Bernhard Raimann,T,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0032378,DeForest Buckner,DT,Groin,Back,Questionable,Groin,Back,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0036879,Sam Ehlinger,QB,right Shoulder,,Questionable,right Shoulder,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,IND,00-0034342,Quenton Nelson,G,Toe,,Questionable,Toe,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0035642,Josh Hines-Allen,LB,,,,Shoulder,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0035378,Andrew Wingard,S,,,,Shoulder,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0033891,Zay Jones,WR,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0037244,Devin Lloyd,LB,Thumb,,Out,Thumb,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0038596,Antonio Johnson,S,Hamstring,,Out,Hamstring,,Limited Participation in Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0033572,Jamal Agnew,WR,Quadricep,,Questionable,Quadricep,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0034275,Folorunso Fatukasi,DT,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,JAX,00-0038934,Anton Harrison,T,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0037193,Bryan Cook,S,,,,Elbow,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0035681,Mike Edwards,S,,,,Biceps,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0036362,Willie Gay,LB,,,,Quadricep,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0036637,Noah Gray,TE,,,,Illness,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0038986,Nic Jones,CB,,,,Hand,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0033873,Patrick Mahomes,QB,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0037197,Isiah Pacheco,RB,,,,Abdomen,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0032217,Donovan Smith,T,,,,Rib,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0036374,L'Jarius Sneed,CB,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0034386,Justin Watson,WR,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0032762,Chris Jones,DT,,,,Groin,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0036913,Kadarius Toney,WR,,,,Toe,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0036621,Nick Bolton,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,KC,00-0037195,Jaylen Watson,CB,Shoulder,,Out,Shoulder,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0031388,Aaron Donald,DT,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0039075,Puka Nacua,WR,,,,Oblique,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0034803,Joseph Noteboom,T,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0036603,Alaric Jackson,T,Hamstring,,Questionable,Hamstring,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0033927,John Johnson,S,Face,,Questionable,Face,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0033110,Tyler Higbee,TE,Achilles,,Questionable,Achilles,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LA,00-0036862,Ben Skowronek,WR,Achilles,,Questionable,Achilles,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0031040,Khalil Mack,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0033895,Gerald Everett,TE,,,,Illness,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0031554,Eric Kendricks,LB,,,,Hamstring,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0036441,Kenneth Murray,LB,,,,Groin,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0037009,Rashawn Slater,T,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0030279,Keenan Allen,WR,,,,Hip,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0031019,Corey Linsley,C,Illness,,Out,Illness,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0038091,J.T. Woods,S,Illness,,Out,Illness,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0034790,Derwin James,S,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-29,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0037320,Deane Leonard,CB,Hamstring,,Doubtful,Hamstring,,Did Not Participate In Practice,2023-09-29,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0033699,Austin Ekeler,RB,Ankle,,Doubtful,Ankle,,Limited Participation in Practice,2023-09-29,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0033156,Joey Bosa,DE,Hamstring,Toe,Questionable,Hamstring,Toe,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LAC,00-0036380,Alohi Gilman,S,Heel,,Questionable,Heel,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0039072,Jakorian Bennett,CB,,,,Hamstring,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0038978,Byron Young,DT,,,,Ankle,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0035076,Curtis Bolton,LB,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0034973,Maxx Crosby,DE,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0031345,Jimmy Garoppolo,QB,Concussion,,Questionable,Concussion,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0036871,Nate Hobbs,CB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0036989,Malcolm Koonce,DE,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,LV,00-0035437,Roderic Teamer,S,Achilles,,Questionable,Achilles,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0034054,River Cracraft,WR,,,,Shoulder,,Did Not Participate In Practice,2023-09-28,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0038092,Erik Ezukanma,WR,,,,Neck,,Did Not Participate In Practice,2023-09-28,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0032379,Eli Apple,CB,,,,Neck,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0038720,Julian Hill,TE,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0032214,Tyler Kroft,TE,,,,Back,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0034798,Durham Smythe,TE,,,,Hamstring,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0036613,Jaylen Waddle,WR,,,,Concussion,,Full Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0036934,Jaelan Phillips,LB,Oblique,,Out,Oblique,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0036020,Salvon Ahmed,RB,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0030067,Terron Armstead,T,"back, ankle, knee",,Questionable,"back, ankle, knee",,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0034277,DeShon Elliott,S,Ankle,Groin,Questionable,Ankle,Groin,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIA,00-0034352,Connor Williams,C,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0034782,Harrison Phillips,DT,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0029606,Harrison Smith,S,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0037007,Patrick Jones,DE,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0036348,Josh Metellus,S,,,,Shoulder,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0035236,Byron Murphy,CB,,,,Hip,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0037245,Lewis Cine,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0038598,Jaren Hall,QB,Not injury related - personal matter,,Questionable,Not injury related - personal matter,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0034344,Marcus Davenport,DE,Ankle,,Questionable,Ankle,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,MIN,00-0035588,Garrett Bradbury,C,Back,,Questionable,Back,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NE,00-0038569,Sidy Sow,T,,,,Concussion,,Limited Participation in Practice,2023-09-28,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NE,00-0036981,Christian Barmore,DT,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NE,00-0033860,Davon Godchaux,DT,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NE,00-0032580,Jonathan Jones,CB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NE,00-0038103,Cole Strange,G,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NE,00-0036559,Shaun Wade,CB,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0027696,Jimmy Graham,TE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0033888,Ryan Ramczyk,T,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0036937,Paulson Adebo,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0038588,Jordan Howden,S,Finger,,Out,Finger,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0036408,Cesar Ruiz,G,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0031280,Derek Carr,QB,right Shoulder,,Questionable,right Shoulder,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NO,00-0034981,Foster Moreau,TE,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYG,00-0038115,Daniel Bellinger,TE,,,,Neck,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYG,00-0036132,Ben Bredeson,G,,,,Concussion,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYG,00-0037260,D.J. Davidson,DT,,,,Elbow,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYG,00-0036552,Azeez Ojulari,DE,,,,Hamstring,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYG,00-0036386,Andrew Thomas,T,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-30,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYG,00-0034844,Saquon Barkley,RB,Ankle,,Doubtful,Ankle,,Limited Participation in Practice,2023-09-30,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYJ,00-0036284,Mekhi Becton,T,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYJ,00-0038107,Micheal Clemons,DE,,,,Elbow,,Full Participation in Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYJ,00-0038120,Breece Hall,RB,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYJ,00-0029621,Greg Zuerlein,K,,,,right Groin,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYJ,00-0037155,Tony Adams,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,NYJ,00-0032432,Wes Schweitzer,G,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0037132,Britain Covey,WR,,,,Hamstring,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0033547,Zach Cunningham,LB,,,,Ribs,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0037002,Landon Dickerson,G,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0038112,Cam Jurgens,G,,,,Groin,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0034414,Boston Scott,RB,,,,Concussion,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0029653,Fletcher Cox,DT,,,,Knee,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0036912,DeVonta Smith,WR,,,,Illness,,Limited Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0039002,Sydney Brown,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0036271,Quez Watkins,WR,Hamstring,,Out,Hamstring,,Limited Participation in Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,PHI,00-0033898,Justin Evans,S,Neck,,Questionable,Neck,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0027943,Patrick Peterson,CB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0032954,Isaac Seumalo,G,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0037304,Connor Heyward,TE,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0032399,Miles Killebrew,S,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0033905,Larry Ogunjobi,DT,,,,Foot,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0034768,Chukwuma Okorafor,T,,,,Elbow,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0035645,Gunner Olszewski,WR,,,,Concussion,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0031428,Allen Robinson,WR,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0038558,Darnell Washington,TE,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0034347,James Daniels,G,Groin,,Out,Groin,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,PIT,00-0036847,Pressley Harvin,P,right Hamstring,,Out,right Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0033872,Jamal Adams,S,,,,Knee,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0031608,Quandre Diggs,S,,,,Hamstring,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0035141,Phil Haynes,G,,,,Calf,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0034974,Julian Love,S,,,,Hamstring,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0035640,DK Metcalf,WR,,,,Ribs,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0034350,Uchenna Nwosu,LB,,,,Ankle,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0032387,Jarran Reed,DT,,,,Quadricep,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0036413,Darrell Taylor,LB,,,,Shin,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0037079,Tariq Woolen,CB,,,,Chest,,Full Participation in Practice,2023-09-30,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0036885,Tre Brown,CB,Concussion,,Out,Concussion,,Did Not Participate In Practice,2023-09-30,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0033103,Artie Burns,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-30,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0038136,Coby Bryant,CB,Toe,,Doubtful,Toe,,Did Not Participate In Practice,2023-09-30,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0037821,Charles Cross,T,Toe,,Doubtful,Toe,,Did Not Participate In Practice,2023-09-30,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0034495,Evan Brown,C,Quadricep,,Questionable,Quadricep,,Did Not Participate In Practice,2023-09-30,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0035644,Noah Fant,TE,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-30,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0035678,Dre'Mont Jones,DE,Hip,,Questionable,Hip,,Did Not Participate In Practice,2023-09-30,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0034159,Will Dissly,TE,Shoulder,,Questionable,Shoulder,,Full Participation in Practice,2023-09-30,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SEA,00-0039047,Derick Hall,LB,Knee,,Questionable,Knee,,Full Participation in Practice,2023-09-30,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0027857,Trent Williams,T,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-09-27,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0036261,Brandon Aiyuk,WR,,,,Shoulder,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0037008,Ambry Thomas,CB,,,,Knee,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0036259,Jauan Jennings,WR,Shin,,Doubtful,Shin,,Did Not Participate In Practice,2023-09-29,2,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0036567,Elijah Mitchell,RB,Knee,,Questionable,Knee,,Did Not Participate In Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0035020,Demetrius Flannigan-Fowles,LB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0034982,Dre Greenlaw,LB,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,SF,00-0035719,Deebo Samuel,WR,Ribs,Knee,Questionable,Ribs,Knee,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0035699,Jamel Dean,CB,Neck,Shoulder,Out,Neck,Shoulder,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0039049,SirVocea Dennis,LB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0039063,Calijah Kancey,DT,Calf,,Out,Calf,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0038827,Derrek Pitts,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0034778,Carlton Davis,CB,Toe,,Questionable,Toe,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0034773,Vita Vea,DT,Pectoral,,Questionable,Pectoral,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,TB,00-0035707,Devin White,LB,Foot,,Questionable,Foot,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0032764,Derrick Henry,RB,,,,Toe,Not injury related - resting p,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0030564,DeAndre Hopkins,WR,,,,Ankle,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0034828,Harold Landry,LB,,,,Hamstring,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0038589,Josh Whyle,TE,,,,Illness,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0037742,Treylon Burks,WR,Knee,,Out,Knee,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0035413,Luke Gifford,LB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0036992,Elijah Molden,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0039034,Peter Skoronski,T,Abdomen,,Out,Abdomen,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0031254,Denico Autry,DE,Groin,,Questionable,Groin,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,TEN,00-0036181,Teair Tart,DT,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,4,REG,WAS,00-0039151,Emmanuel Forbes,CB,,,,Elbow,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,WAS,00-0036625,Benjamin St-Juste,CB,,,,Neck,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,WAS,00-0031260,Logan Thomas,TE,,,,Concussion,,Full Participation in Practice,2023-09-29,0,0,2025-10-05T19:30:59.527153
+2023,4,REG,WAS,00-0038611,Chris Rodriguez,RB,Illness,,Out,Illness,,Did Not Participate In Practice,2023-09-29,3,0,2025-10-05T19:30:59.527153
+2023,4,REG,WAS,00-0038100,Percy Butler,S,Foot,,Questionable,Foot,,Full Participation in Practice,2023-09-29,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0035961,Krys Barnes,LB,,,,Finger,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0029316,Kelvin Beachum,T,,,,Hand,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0035258,Hjalte Froholdt,C,,,,Neck,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0035343,Jonathan Ledbetter,DE,Finger,,Out,Finger,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0039007,Garrett Williams,CB,Knee,,Out,Knee,,Limited Participation in Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0034346,Will Hernandez,G,Back,,Questionable,Back,,Did Not Participate In Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0035300,Dennis Daley,T,Ankle,,Questionable,Ankle,,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0034801,Josh Woods,LB,Ankle,,Questionable,Ankle,,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,ARI,00-0037299,Keaontay Ingram,RB,Neck,,Questionable,Neck,,Limited Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0038119,Jalyn Armour-Davis,CB,,,,Hamstring,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0036550,Rashod Bateman,WR,,,,Hamstring,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0033894,Marcus Williams,S,,,,Pectoral,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0036940,Odafe Oweh,LB,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0032891,Daryl Worley,S,Shoulder,,Out,Shoulder,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0031330,Morgan Moses,T,Shoulder,,Doubtful,Shoulder,,Did Not Participate In Practice,2023-10-06,2,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0032965,Ronnie Stanley,T,Knee,Not injury related - resting player,Questionable,Knee,Not injury related - resting p,Did Not Participate In Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0034975,Justice Hill,RB,Foot,Hamstring,Questionable,Foot,Hamstring,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0033281,Marlon Humphrey,CB,Foot,,Questionable,Foot,,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0038454,Keaton Mitchell,RB,Shoulder,,Questionable,Shoulder,,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BAL,00-0031235,Odell Beckham,WR,Ankle,,Questionable,Ankle,,Limited Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0033072,Leonard Floyd,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0030090,Micah Hyde,S,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0033571,Matt Milano,LB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0035657,Damien Harris,RB,,,,Neck,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0035689,Dawson Knox,TE,,,,Quadricep,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0030114,Jordan Poyer,S,,,,Knee,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0033884,Tre'Davious White,CB,Achilles,,Out,Achilles,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0036914,Gregory Rousseau,DE,Foot,,Doubtful,Foot,,Did Not Participate In Practice,2023-10-06,2,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0033096,Shaq Lawson,DE,Toe,,Questionable,,,"
+    ",2023-10-07,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0037288,Christian Benford,CB,Shoulder,,Questionable,Shoulder,,Limited Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,BUF,00-0027940,Von Miller,LB,Knee,,Questionable,Knee,,Limited Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0028008,Justin Houston,LB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0038493,Claudin Cherelus,LB,,,,Ankle,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0035956,Giovanni Ricci,TE,,,,Shoulder,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0035243,Miles Sanders,RB,,,,Groin,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0031795,DeShawn Williams,DE,,,,Elbow,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0034302,Frankie Luvu,LB,,,,Hip,,Limited Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0033579,Xavier Woods,S,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0034261,Austin Corbett,G,Knee,,Out,Knee,,Full Participation in Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0036438,Stephen Sullivan,TE,Hip,,Out,Hip,,Full Participation in Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CAR,00-0034356,Donte Jackson,CB,Shoulder,,Questionable,Shoulder,,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CHI,00-0036326,Chase Claypool,WR,not injury related - team decision,,Out,not injury related - team decision,,Did Not Participate In Practice,2023-10-04,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CHI,00-0033784,Eddie Jackson,S,Foot,,Out,Foot,,Did Not Participate In Practice,2023-10-04,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CHI,00-0036292,Jaylon Johnson,CB,Hamstring,,Out,Hamstring,,Did Not Participate In Practice,2023-10-04,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CHI,00-0036953,Teven Jenkins,T,Calf,,Questionable,Calf,,Full Participation in Practice,2023-10-04,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CHI,00-0038135,Jaquan Brisker,S,Hamstring,,Questionable,Hamstring,,Limited Participation in Practice,2023-10-04,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0034752,Orlando Brown,T,,,,Groin,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0034970,Irv Smith,TE,,,,Hamstring,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0036298,Akeem Davis-Gaither,LB,Knee,,Out,Knee,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0033548,Chidobe Awuzie,CB,Back,,Questionable,Back,,Did Not Participate In Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0033935,Trey Hendrickson,DE,Back,,Questionable,Back,,Did Not Participate In Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0037753,Cam Taylor-Britt,CB,Concussion,,Questionable,Concussion,,Full Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,CIN,00-0036410,Tee Higgins,WR,Ribs,,Questionable,Ribs,,Limited Participation in Practice,2023-10-06,1,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0029542,Stephon Gilmore,CB,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0030063,Johnathan Hankins,DT,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0031411,Demarcus Lawrence,DE,,,,Not injury related - resting player,,Did Not Participate In Practice,2023-10-04,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0036139,Rico Dowdle,RB,,,,Hip,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0035698,Chuma Edoga,T,,,,Knee,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0033877,Malik Hooker,S,,,,Shoulder,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0036358,CeeDee Lamb,WR,,,,Not injury related - resting player,Knee,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0031402,Zack Martin,G,,,,Not injury related - resting player,Thigh,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0036932,Micah Parsons,LB,,,,Knee,,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0027947,Tyron Smith,T,,,,Not injury related - resting player,Knee,Full Participation in Practice,2023-10-06,0,0,2025-10-05T19:30:59.527153
+2023,5,REG,DAL,00-0037569,Peyton Hendershot,TE,Ankle,,Out,Ankle,,Did Not Participate In Practice,2023-10-06,3,0,2025-10-05T19:30:59.527153

@@ -1,0 +1,12 @@
+Database Stats:
+  Size: 59 MB
+  Tables: 23
+
+Record Counts:
+  Games: 2476
+  NGS Passing: 5328
+  NGS Receiving: 13329
+  NGS Rushing: 5411
+  Injuries: 49488
+  Snap Counts: 224078
+  Teams: 36
