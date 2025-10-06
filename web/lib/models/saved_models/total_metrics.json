@@ -1,0 +1,21 @@
+{
+  "model": "total",
+  "timestamp": "2025-10-02T12:46:41.383494",
+  "median_total": 44.0,
+  "training": {
+    "samples": 2351,
+    "features": 17,
+    "best_iteration": 159
+  },
+  "validation": {
+    "accuracy": 0.5514705882352942,
+    "log_loss": 0.6788940017525418,
+    "auc_roc": 0.5836721418116767,
+    "brier_score": 0.24305121142411382,
+    "calibrated_log_loss": 0.6606101739002771
+  },
+  "test": {
+    "accuracy": 0.453125,
+    "log_loss": 0.713355483282857
+  }
+}

@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  # ML Training Service
+  ml-training:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.ml
+    environment:
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+      - PYTHONPATH=/app
+    volumes:
+      - ../ml_training_data:/app/data
+      - ../saved_models:/app/models
+      - ../src:/app/src
+      - ../database:/app/database
+    depends_on:
+      - database
+    networks:
+      - nfl-ml
+    ports:
+      - "8888:8888"  # Jupyter Lab
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+
+  # ML Data Processing
+  ml-data-processor:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.ml
+    environment:
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+      - PYTHONPATH=/app
+    volumes:
+      - ../ml_training_data:/app/data
+      - ../saved_models:/app/models
+      - ../src:/app/src
+      - ../database:/app/database
+    depends_on:
+      - database
+    networks:
+      - nfl-ml
+    command: python -c "import sys; sys.path.append('/app'); from src.data_processor import main; main()"
+
+  # Model Training Pipeline
+  ml-pipeline:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.ml
+    environment:
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+      - PYTHONPATH=/app
+    volumes:
+      - ../ml_training_data:/app/data
+      - ../saved_models:/app/models
+      - ../src:/app/src
+      - ../database:/app/database
+    depends_on:
+      - database
+    networks:
+      - nfl-ml
+    command: python -c "import sys; sys.path.append('/app'); from src.model_trainer import main; main()"
+
+  # PostgreSQL Database (shared with main app)
+  database:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=nfl_betting
+      - POSTGRES_USER=nfl_user
+      - POSTGRES_PASSWORD=nfl_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../database:/docker-entrypoint-initdb.d
+    networks:
+      - nfl-ml
+
+volumes:
+  postgres_data:
+
+networks:
+  nfl-ml:
+    driver: bridge

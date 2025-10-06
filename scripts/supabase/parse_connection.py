@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 #!/usr/bin/env python3
 """
 Parse the connection string to extract correct components
@@ -6,10 +11,10 @@ Parse the connection string to extract correct components
 from urllib.parse import urlparse, unquote
 
 # Your provided connection string
-connection_string = "postgresql://postgres:P@ssword9804746196$@db.cqslvbxsqsgjagjkpiro.supabase.co:5432/postgres"
+connection_string = "postgresql://postgres:{os.getenv("SUPABASE_DB_PASSWORD")}@db.cqslvbxsqsgjagjkpiro.supabase.co:5432/postgres"
 
 # Alternative parsing - maybe the password has brackets
-alt_string1 = "postgresql://postgres:[P@ssword9804746196$]@db.cqslvbxsqsgjagjkpiro.supabase.co:5432/postgres"
+alt_string1 = "postgresql://postgres:[{os.getenv("SUPABASE_DB_PASSWORD")}]@db.cqslvbxsqsgjagjkpiro.supabase.co:5432/postgres"
 
 # Parse both
 for cs in [connection_string, alt_string1]:
@@ -58,6 +63,6 @@ for cs in [connection_string, alt_string1]:
 
 print("\n" + "="*60)
 print("Based on the connection string format:")
-print("It appears the password might be: P@ssword9804746196$")
+print("It appears the password might be: {os.getenv("SUPABASE_DB_PASSWORD")}")
 print("And the host should be: db.cqslvbxsqsgjagjkpiro.supabase.co")
 print("="*60)

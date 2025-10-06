@@ -1,0 +1,49 @@
+# Test files
+*.test.ts
+*.test.tsx
+*.test.js
+*.spec.ts
+*.spec.tsx
+*.spec.js
+__tests__/
+tests/
+
+# Development files
+*.local
+.env.local
+.env.development
+
+# Database files - exclude test and backup data
+lib/database/backups/
+lib/database/*.db-wal
+lib/database/*.db-shm
+lib/database/test_*.db
+lib/database/validation_data.db
+
+# Only keep essential database file
+# lib/database/nfl_suggestions.db will be included
+
+# Documentation
+*.md
+!README.md
+
+# Development scripts
+scripts/
+
+# Build artifacts
+.next/
+.turbo/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

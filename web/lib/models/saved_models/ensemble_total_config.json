@@ -1,0 +1,60 @@
+{
+  "model_type": "ensemble_total",
+  "timestamp": "2025-10-05T15:23:19.179514",
+  "weights": {
+    "xgboost": 0.8,
+    "random_forest": 0.19999999999999996
+  },
+  "feature_sets": {
+    "xgboost": [
+      "is_home",
+      "week_number",
+      "is_divisional",
+      "epa_differential",
+      "home_off_epa",
+      "home_def_epa",
+      "away_off_epa",
+      "away_def_epa",
+      "home_off_success_rate",
+      "away_off_success_rate",
+      "home_redzone_td_pct",
+      "away_redzone_td_pct",
+      "home_third_down_pct",
+      "away_third_down_pct",
+      "home_games_played",
+      "away_games_played",
+      "is_outdoor"
+    ],
+    "random_forest": [
+      "is_home",
+      "week_number",
+      "is_divisional",
+      "home_off_epa",
+      "home_def_epa",
+      "away_off_epa",
+      "away_def_epa",
+      "epa_differential",
+      "home_off_success_rate",
+      "away_off_success_rate",
+      "home_redzone_td_pct",
+      "away_redzone_td_pct",
+      "home_third_down_pct",
+      "away_third_down_pct",
+      "home_games_played",
+      "away_games_played",
+      "is_outdoor",
+      "is_playoff"
+    ]
+  },
+  "median_total": 45.0,
+  "validation_metrics": {
+    "accuracy": 0.7226277372262774,
+    "log_loss": 0.5975898829893822,
+    "auc": 0.7406120126657431
+  },
+  "test_metrics": {
+    "accuracy": 0.6529126213592233,
+    "log_loss": 0.6230113890277146,
+    "auc": 0.6702290796706538
+  }
+}

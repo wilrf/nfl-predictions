@@ -1,0 +1,77 @@
+services:
+  # Next.js Frontend - Local Development
+  frontend:
+    build:
+      context: ../web
+      dockerfile: ../docker-usage/Dockerfile.frontend.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    volumes:
+      - ../web:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+    networks:
+      - nfl-local
+    command: npm run dev
+
+  # Python API Backend - Local Development
+  backend:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.backend.dev
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ../api:/app/api
+      - ../src:/app/src
+      - ../database:/app/database
+      - ../simple_api.py:/app/simple_api.py
+    depends_on:
+      - database
+      - redis
+    networks:
+      - nfl-local
+    command: python3 simple_api.py
+
+  # PostgreSQL Database
+  database:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=nfl_betting
+      - POSTGRES_USER=nfl_user
+      - POSTGRES_PASSWORD=nfl_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../database:/docker-entrypoint-initdb.d
+    networks:
+      - nfl-local
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - nfl-local
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  nfl-local:
+    driver: bridge

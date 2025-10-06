@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  # Next.js Frontend - Production
+  frontend:
+    build:
+      context: ../web
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    networks:
+      - nfl-prod
+    restart: unless-stopped
+
+  # Python API Backend - Production
+  backend:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.backend.prod
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - database
+      - redis
+    networks:
+      - nfl-prod
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PostgreSQL Database - Production
+  database:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=nfl_betting
+      - POSTGRES_USER=nfl_user
+      - POSTGRES_PASSWORD=nfl_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../database:/docker-entrypoint-initdb.d
+    networks:
+      - nfl-prod
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nfl_user -d nfl_betting"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis Cache - Production
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - nfl-prod
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  nfl-prod:
+    driver: bridge

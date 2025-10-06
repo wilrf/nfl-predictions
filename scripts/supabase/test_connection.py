@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 #!/usr/bin/env python3
 """
 Test PostgreSQL connection to Supabase
@@ -10,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # The connection string you provided
-# postgresql://postgres:[P@ssword9804746196$]@db.cqslvbxsqsgjagjkpiro.supabase.co:5432/postgres
+# postgresql://postgres:[{os.getenv("SUPABASE_DB_PASSWORD")}]@db.cqslvbxsqsgjagjkpiro.supabase.co:5432/postgres
 
 connections_to_try = [
     {
@@ -18,8 +23,8 @@ connections_to_try = [
         'host': 'aws-0-us-east-1.pooler.supabase.com',
         'port': 6543,  # Try pooler port
         'database': 'postgres',
-        'user': 'postgres.cqslvbxsqsgjagjkpiro',
-        'password': 'P@ssword9804746196$',
+        'user': 'postgres.{os.getenv("SUPABASE_PROJECT_REF", "cqslvbxsqsgjagjkpiro")}',
+        'password': os.getenv('SUPABASE_DB_PASSWORD'),
         'connect_timeout': 5
     },
     {
@@ -28,7 +33,7 @@ connections_to_try = [
         'port': 5432,
         'database': 'postgres',
         'user': 'postgres',
-        'password': 'P@ssword9804746196$',
+        'password': os.getenv('SUPABASE_DB_PASSWORD'),
         'connect_timeout': 5
     },
     {
@@ -36,8 +41,8 @@ connections_to_try = [
         'host': 'aws-0-us-east-1.pooler.supabase.com',
         'port': 5432,
         'database': 'postgres',
-        'user': 'postgres.cqslvbxsqsgjagjkpiro',
-        'password': 'P@ssword9804746196$',
+        'user': 'postgres.{os.getenv("SUPABASE_PROJECT_REF", "cqslvbxsqsgjagjkpiro")}',
+        'password': os.getenv('SUPABASE_DB_PASSWORD'),
         'connect_timeout': 5
     }
 ]

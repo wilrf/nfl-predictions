@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+  # Next.js Frontend
+  frontend:
+    build:
+      context: ../web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    volumes:
+      - ../web:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - nfl-network
+
+  # Python API Backend
+  backend:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ../api:/app/api
+      - ../src:/app/src
+      - ../database:/app/database
+    depends_on:
+      - database
+      - redis
+    networks:
+      - nfl-network
+
+  # PostgreSQL Database
+  database:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=nfl_betting
+      - POSTGRES_USER=nfl_user
+      - POSTGRES_PASSWORD=nfl_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../database:/docker-entrypoint-initdb.d
+    networks:
+      - nfl-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - nfl-network
+
+  # ML Training Service
+  ml-training:
+    build:
+      context: ..
+      dockerfile: docker-usage/Dockerfile.ml
+    environment:
+      - DATABASE_URL=postgresql://nfl_user:nfl_pass@database:5432/nfl_betting
+    volumes:
+      - ../ml_training_data:/app/data
+      - ../saved_models:/app/models
+    depends_on:
+      - database
+    networks:
+      - nfl-network
+    profiles:
+      - training
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  nfl-network:
+    driver: bridge

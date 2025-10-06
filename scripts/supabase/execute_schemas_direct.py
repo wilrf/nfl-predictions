@@ -10,6 +10,10 @@ import os
 from pathlib import Path
 import logging
 from urllib.parse import quote_plus
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -62,21 +66,29 @@ def main():
 
     # Supabase connection details
     # Using the actual database password (not JWT)
+    # Get database credentials from environment
+    db_password = os.getenv('SUPABASE_DB_PASSWORD')
+    project_ref = os.getenv('SUPABASE_PROJECT_REF', 'cqslvbxsqsgjagjkpiro')
+
+    if not db_password:
+        logger.error("❌ Missing SUPABASE_DB_PASSWORD environment variable")
+        return False
+
     # Try both pooler and direct connection
     connections_to_try = [
         {
             'host': 'aws-0-us-east-1.pooler.supabase.com',
             'port': 5432,
             'database': 'postgres',
-            'user': 'postgres.cqslvbxsqsgjagjkpiro',
-            'password': 'P@ssword9804746196$'
+            'user': f'postgres.{project_ref}',
+            'password': db_password
         },
         {
-            'host': 'db.cqslvbxsqsgjagjkpiro.supabase.co',
+            'host': f'db.{project_ref}.supabase.co',
             'port': 5432,
             'database': 'postgres',
             'user': 'postgres',
-            'password': 'P@ssword9804746196$'
+            'password': db_password
         }
     ]
 

@@ -8,6 +8,11 @@ import requests
 import json
 from pathlib import Path
 import logging
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -186,9 +191,16 @@ def execute_sql_file_via_api(executor: SupabaseAPIExecutor, file_path: str) -> b
 def main():
     """Execute schemas via Supabase REST API"""
 
-    # Supabase credentials
-    url = "https://cqslvbxsqsgjagjkpiro.supabase.co"
-    service_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxc2x2YnhzcXNnamFnamtwaXJvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1ODUwNDIwNSwiZXhwIjoyMDc0MDgwMjA1fQ.SS3leKKbOQkYAW2AxDeq6Td5_0S55Y86_27k2DIxfuY"
+    # Get Supabase credentials from environment variables
+    url = os.getenv('SUPABASE_URL')
+    service_key = os.getenv('SUPABASE_SERVICE_KEY')
+
+    if not url or not service_key:
+        logger.error("❌ Missing required environment variables:")
+        logger.error("   - SUPABASE_URL")
+        logger.error("   - SUPABASE_SERVICE_KEY")
+        logger.error("Please set them in your .env file or environment")
+        return False
 
     executor = SupabaseAPIExecutor(url, service_key)
 

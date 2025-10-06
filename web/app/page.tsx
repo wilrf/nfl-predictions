@@ -212,23 +212,43 @@ export default function Home() {
   return (
     <main className="min-h-screen p-6 md:p-12">
       <div className="max-w-7xl mx-auto space-y-12">
-        {/* Header - simplified animation */}
+        {/* Header - enhanced animation */}
         <motion.header
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="text-center space-y-4 py-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center space-y-4 py-8 relative"
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-6xl md:text-7xl font-bold text-white tracking-tight"
+          >
             NFL ML Predictions
-          </h1>
-          <p className="text-xl text-medium-gray">
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-medium-gray"
+          >
             XGBoost Machine Learning • Real-time Analytics • Premium Insights
-          </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-medium-gray">
-            <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            <span>Live Dashboard</span>
-          </div>
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex items-center justify-center gap-2 text-sm text-medium-gray"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span className="text-green-400 font-medium">Live Dashboard</span>
+          </motion.div>
         </motion.header>
 
         {/* Stats Grid - removed individual animations */}
@@ -294,27 +314,36 @@ export default function Home() {
             Game Predictions & Results
           </h2>
 
-          {/* Week Tabs - simplified animations */}
+          {/* Week Tabs - enhanced animations */}
           <div className="flex flex-wrap justify-center gap-3">
             {weeks.map((week) => (
-              <button
+              <motion.button
                 key={week}
                 onClick={() => handleWeekSelect(week)}
-                className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className={`relative px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   selectedWeek === week
-                    ? 'bg-white text-black'
-                    : 'glass text-white hover:bg-white/10'
+                    ? 'bg-white text-black shadow-lg shadow-white/20'
+                    : 'glass text-white hover:bg-white/15 border border-white/10'
                 }`}
               >
-                Week {week}
-              </button>
+                {selectedWeek === week && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-white rounded-xl -z-10"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className="relative z-10">Week {week}</span>
+              </motion.button>
             ))}
           </div>
 
           {/* Games Grid - virtualized rendering for large lists */}
           <div className="space-y-4">
             {filteredGames.slice(0, 20).map((game, index) => (
-              <GameCard key={game.game_id} game={game} index={index} />
+              <GameCard key={game.game_id || `game-${index}`} game={game} index={index} />
             ))}
           </div>
         </motion.section>

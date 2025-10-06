@@ -1,0 +1,96 @@
+{
+  "model": "random_forest_total",
+  "timestamp": "2025-10-05T15:21:51.218256",
+  "training": {
+    "samples": 1920,
+    "features": 18,
+    "n_estimators": 200,
+    "max_depth": 10
+  },
+  "validation": {
+    "rmse": 13.408183157496538,
+    "r2": 0.011079580727039628,
+    "mae": 10.823184364457168,
+    "mse": 179.77937558497382
+  },
+  "test": {
+    "rmse": 13.25155295639899,
+    "r2": 0.04495576406336255,
+    "mae": 10.296479899746274,
+    "mse": 175.60365575624684
+  },
+  "feature_importance": [
+    {
+      "feature": "home_off_epa",
+      "importance": 0.09877647886090093
+    },
+    {
+      "feature": "away_off_epa",
+      "importance": 0.08727241894189004
+    },
+    {
+      "feature": "away_redzone_td_pct",
+      "importance": 0.08234788889700102
+    },
+    {
+      "feature": "away_third_down_pct",
+      "importance": 0.0794995229540039
+    },
+    {
+      "feature": "away_off_success_rate",
+      "importance": 0.0779683395897855
+    },
+    {
+      "feature": "away_def_epa",
+      "importance": 0.07481874221511026
+    },
+    {
+      "feature": "home_off_success_rate",
+      "importance": 0.07465973382967249
+    },
+    {
+      "feature": "home_third_down_pct",
+      "importance": 0.07243522622523367
+    },
+    {
+      "feature": "home_def_epa",
+      "importance": 0.07077241794273335
+    },
+    {
+      "feature": "epa_differential",
+      "importance": 0.06984565059456643
+    },
+    {
+      "feature": "home_redzone_td_pct",
+      "importance": 0.06110282638858694
+    },
+    {
+      "feature": "home_games_played",
+      "importance": 0.03883321832367277
+    },
+    {
+      "feature": "week_number",
+      "importance": 0.037473918496072
+    },
+    {
+      "feature": "away_games_played",
+      "importance": 0.035646889403877134
+    },
+    {
+      "feature": "is_outdoor",
+      "importance": 0.02780854327380079
+    },
+    {
+      "feature": "is_divisional",
+      "importance": 0.009642559517919558
+    },
+    {
+      "feature": "is_playoff",
+      "importance": 0.0010956245451732207
+    },
+    {
+      "feature": "is_home",
+      "importance": 0.0
+    }
+  ]
+}

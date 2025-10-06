@@ -1,0 +1,16 @@
+{
+  "backup_timestamp": "2025-10-05T14:25:55.794106",
+  "source": "Supabase Production",
+  "project_ref": "cqslvbxsqsgjagjkpiro",
+  "tables": {},
+  "record_counts": {
+    "games": 1343,
+    "historical_games": 523,
+    "teams": 32,
+    "team_epa_stats": 0,
+    "game_features": 0,
+    "team_features": 0,
+    "epa_metrics": 0,
+    "betting_outcomes": 0
+  }
+}

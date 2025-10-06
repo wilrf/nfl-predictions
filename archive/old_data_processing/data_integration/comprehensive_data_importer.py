@@ -12,18 +12,28 @@ import logging
 from datetime import datetime
 from pathlib import Path
 import json
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class ComprehensiveDataImporter:
     """Import all available NFL data sources with validation gates"""
-    
+
     def __init__(self):
-        # Use service role key for full database access
-        self.supabase_url = "https://cqslvbxsqsgjagjkpiro.supabase.co"
-        self.supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxc2x2YnhzcXNnamFnamtwaXJvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1ODUwNDIwNSwiZXhwIjoyMDc0MDgwMjA1fQ.SS3leKKbOQkYAW2AxDeq6Td5_0S55Y86_27k2DIxfuY"
-        
+        # Get Supabase credentials from environment variables
+        self.supabase_url = os.getenv('SUPABASE_URL')
+        self.supabase_key = os.getenv('SUPABASE_SERVICE_KEY')
+
+        if not self.supabase_url or not self.supabase_key:
+            raise ValueError(
+                "Missing required environment variables: SUPABASE_URL and/or SUPABASE_SERVICE_KEY. "
+                "Please set them in your .env file."
+            )
+
         self.supabase = create_client(self.supabase_url, self.supabase_key)
         self.output_dir = Path('data_integration/output')
         self.output_dir.mkdir(parents=True, exist_ok=True)
